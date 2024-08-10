@@ -1,0 +1,32 @@
+.carSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: black; /* Background color for the section */
+  color: white; /* Text color */
+}
+
+.canvasContainer {
+  width: 80vw; /* Responsive width */
+  height: 60vh; /* Responsive height */
+  max-width: 1200px; /* Max width */
+  max-height: 800px; /* Max height */
+  margin-bottom: 20px;
+}
+
+.infoBox {
+  max-width: 600px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.infoBox h2 {
+  margin: 0 0 10px;
+}
+
+.infoBox p {
+  margin: 0;
+}

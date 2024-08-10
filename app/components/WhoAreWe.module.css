@@ -1,0 +1,58 @@
+/* styles/WhoAreWe.module.css */
+.whoAreWeSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background-color: black; /* Black background */
+  position: relative;
+  overflow: hidden;
+  color: white; /* White text color */
+}
+
+.textContainer {
+  flex: 1;
+  padding-right: 20px;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s; /* Slight delay for image */
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.link {
+  display: block;
+  color: #ff4d4d; /* Bright red for links */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #d43f3f; /* Darker red on hover */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
