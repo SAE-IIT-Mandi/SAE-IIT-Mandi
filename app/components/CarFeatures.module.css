@@ -1,0 +1,39 @@
+/* styles/CarFeatures.module.css */
+.featuresSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px;
+  position: relative;
+  background-color: #000; /* Black background */
+}
+
+.featureCard {
+  background-color: #000;
+  border: 3px solid #ff4d4d; /* Bright red border */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logoContainer {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000; /* Same as background */
+  /* border: 3px solid #ff4d4d; Bright red border */
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.logoContainer img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
