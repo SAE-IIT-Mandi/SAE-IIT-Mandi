@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Prevents any overflow */
+  position: relative;
 }
 
 .CarViewer_canvas__TiFc_ {
@@ -17,6 +18,30 @@
   position: absolute; /* Ensures the Canvas fills the section */
   top: 0;
   left: 0;
+}
+
+.CarViewer_specs__BH4sv {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.CarViewer_specsButton__XeTfr {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f00; /* Red background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.CarViewer_specsButton__XeTfr:hover {
+  background-color: #d00; /* Darker red on hover */
 }
 
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
