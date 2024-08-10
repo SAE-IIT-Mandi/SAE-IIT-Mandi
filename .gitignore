@@ -28,3 +28,5 @@ TestResults.xml
 
 # Ignore SASS config files
 *.sass-cache
+node_modules
+.next
