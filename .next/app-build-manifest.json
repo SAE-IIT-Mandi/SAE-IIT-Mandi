@@ -15,8 +15,12 @@
     "/sponsorship/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/sponsorship/page.css",
       "static/chunks/app/sponsorship/page.js"
+    ],
+    "/contactus/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/contactus/page.js"
     ]
   }
 }
