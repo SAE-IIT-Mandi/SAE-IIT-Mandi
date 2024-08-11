@@ -111,3 +111,6 @@
         transform: translateX(-50%); /* Move to half the width of the container */
     }
 }
+.h2tag{
+    text-align: center;
+}
