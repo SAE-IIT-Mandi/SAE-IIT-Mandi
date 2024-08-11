@@ -1,13 +1,13 @@
 // app/sponsorship/page.tsx
 import Navbar from '../components/Navbar';
+import Spon from '../components/Spon';
 
 export default function Sponsorship() {
   return (
     <div>
       <Navbar />
       <main>
-        <h1>Sponsorship Page</h1>
-        <p>Information about sponsorship opportunities.</p>
+        <Spon />
       </main>
     </div>
   );

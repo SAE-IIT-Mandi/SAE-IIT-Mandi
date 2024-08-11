@@ -1,0 +1,113 @@
+/* Projects Section */
+.projects {
+    display: flex;
+    overflow: hidden; /* Hide overflow to create the carousel effect */
+    padding: 20px 0;
+    background-color: #000; /* Black background */
+    position: relative; /* Position relative for carousel container */
+}
+
+.carousel {
+    display: flex; /* Flex to allow horizontal scrolling */
+    transition: transform 0.5s ease; /* Smooth transition for scrolling */
+}
+
+.project_item {
+    background-color: #111; /* Slightly lighter black */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px; /* Width of each project card */
+    height: 400px;
+    margin-right: 20px; /* Space between cards */
+    position: relative; /* Position relative for hover effect */
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+    background-size: cover; /* Ensure background image covers the entire block */
+    background-position: center; /* Center the background image */
+}
+
+.project_item img {
+    display: none; /* Hide the image element if using a background image */
+}
+
+.project_name {
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #f00; /* Red text */
+}
+
+.project_item .content {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #ddd; /* Light gray text */
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project_item:hover .content {
+    display: block;
+    transform: translateY(0);
+}
+
+.project_item:hover {
+    /* Optional: Add a slight scale or shadow effect on hover */
+    transform: scale(1.05);
+    z-index: 1; /* Bring the hovered item above others */
+}
+
+/* Sponsor Section */
+.sponsorSection {
+    padding: 50px 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+}
+
+.sponsorSection h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f00; /* Red text */
+}
+
+.sponsorSection p {
+    font-size: 1rem;
+    color: #ddd; /* Light gray text */
+}
+
+/* Carousel */
+.sponsorCarousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Full width for the carousel container */
+}
+
+.carouselTrack {
+    display: flex;
+    width: calc(100% * 2); /* Track width to accommodate duplicate images */
+    animation: scroll 20s linear infinite; /* Infinite scrolling animation */
+}
+
+.carouselTrack img {
+    max-width: 100px;
+    height: 100px; /* Fixed height to ensure images cover their block */
+    margin: 0 10px; /* Space between images */
+    border-radius: 15px; /* Rounded corners for images */
+    object-fit: cover; /* Ensure images cover the entire block */
+}
+
+/* Animation for carousel */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move to half the width of the container */
+    }
+}
