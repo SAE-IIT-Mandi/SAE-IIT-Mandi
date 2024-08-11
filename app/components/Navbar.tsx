@@ -27,8 +27,7 @@ const Navbar = () => {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/sponsorship">Sponsorship</Link></li>
           <li><Link href="/contactus">Contact Us</Link></li>
-          <li><a href="https://www.sae.org" target="_blank" rel="noopener noreferrer">SAE Website</a></li>
-          <li><Link href="/fourth-link">Fourth Link</Link></li>
+          <li><a href="https://clubsae.iitmandi.co.in/" target="_blank" rel="noopener noreferrer">SAE Website</a></li>
         </ul>
       </nav>
     </header>

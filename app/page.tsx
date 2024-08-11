@@ -5,6 +5,7 @@ import styles from './Home.module.css';
 import CarFeatures from './components/CarFeatures';
 import WhoAreWe from './components/WhoAreWe';
 import ContactUs from './components/ContactUs';
+import Sponser_flow from './components/Sponser_flow';
 
 export default function Home() {
   return (
@@ -26,8 +27,12 @@ export default function Home() {
         <section className={styles.section}>
           <WhoAreWe />
         </section>
+        {/* Section 4: Sponsors */}
+        <section className={styles.section}>
+          <Sponser_flow />
+        </section>
         
-        {/* Section 4: Sponsorship and Contact */}
+        {/* Section 5: Sponsorship and Contact */}
         <section className={styles.section}>
           <ContactUs />
         </section>
