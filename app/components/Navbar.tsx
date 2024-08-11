@@ -1,4 +1,4 @@
-// app/components/Navbar.js
+// app/components/Navbar.tsx
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
