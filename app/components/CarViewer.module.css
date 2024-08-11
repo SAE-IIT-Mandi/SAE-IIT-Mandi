@@ -1,42 +1,49 @@
 /* CarViewer.module.css */
+
 .section {
   height: 100vh;
-  background-color: #000; /* Black background */
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevents any overflow */
+  overflow: hidden;
   position: relative;
 }
 
 .canvas {
   width: 100%;
   height: 100%;
-  position: absolute; /* Ensures the Canvas fills the section */
+}
+
+.overlay {
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .specs {
-  position: absolute;
-  bottom: 10%;
-  left: 10%;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  border-radius: 10px;
+  color: white;
+  text-align: center;
+  z-index: 10;
 }
 
 .specsButton {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #f00; /* Red background */
-  color: #fff;
+  background-color: red;
+  color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.specsButton:hover {
-  background-color: #d00; /* Darker red on hover */
+.loader {
+  color: red;
+  font-size: 18px;
+  text-align: center;
 }
