@@ -1,46 +1,3 @@
-/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/components/CarFeatures.module.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************/
-/* styles/CarFeatures.module.css */
-.CarFeatures_featuresSection__GgwDm {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 40px;
-  position: relative;
-  background-color: #000; /* Black background */
-}
-
-.CarFeatures_featureCard__jmWyf {
-  background-color: #000;
-  border: 3px solid #ff4d4d; /* Bright red border */
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.CarFeatures_logoContainer__mK5c2 {
-  grid-column: span 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000; /* Same as background */
-  /* border: 3px solid #ff4d4d; Bright red border */
-  border-radius: 50%;
-  padding: 20px;
-}
-
-.CarFeatures_logoContainer__mK5c2 img {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-}
-
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/components/CarViewer.module.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************/
@@ -92,6 +49,122 @@
   color: red;
   font-size: 18px;
   text-align: center;
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/components/Navbar.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+/* app/components/Navbar.module.css */
+.Navbar_header__sQflO {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+.Navbar_logo__ycYQk {
+  flex-shrink: 0;
+}
+
+.Navbar_navbar__XlgWY {
+  background-color: #444;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.Navbar_navbar__XlgWY ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar_navbar__XlgWY li {
+  margin: 0 1rem;
+  position: relative; /* Required for the oval to work */
+}
+
+.Navbar_navbar__XlgWY a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  padding: .3rem;
+}
+
+.Navbar_navbar__XlgWY a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  border-radius: 40px; /* Oval shape */
+  color: #BE131A;
+  background-color: black;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: -1;
+}
+
+.Navbar_navbar__XlgWY a:hover::before {
+  width: 120%; /* Width expands to create an oval */
+  transform: translate(-50%, -50%) scale(1);
+  color: #BE131A;
+  
+}
+
+.Navbar_navbar__XlgWY a:hover {
+  color: #BE131A;
+  z-index: 2;
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/components/CarFeatures.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/* styles/CarFeatures.module.css */
+.CarFeatures_featuresSection__GgwDm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px;
+  position: relative;
+  background-color: #000; /* Black background */
+}
+
+.CarFeatures_featureCard__jmWyf {
+  background-color: #000;
+  border: 3px solid #ff4d4d; /* Bright red border */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.CarFeatures_logoContainer__mK5c2 {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000; /* Same as background */
+  /* border: 3px solid #ff4d4d; Bright red border */
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.CarFeatures_logoContainer__mK5c2 img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
 }
 
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\

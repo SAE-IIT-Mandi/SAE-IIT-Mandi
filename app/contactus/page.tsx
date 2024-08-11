@@ -1,4 +1,4 @@
-// app/contact-us/page.js
+// app/contact-us/page.tsx
 import Navbar from '../components/Navbar';
 
 export default function ContactUs() {

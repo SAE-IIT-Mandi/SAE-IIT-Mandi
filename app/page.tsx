@@ -1,4 +1,4 @@
-// app/page.js
+// app/page.tsx
 import Navbar from './components/Navbar';
 import CarViewer from './components/CarViewer';
 import styles from './globals.css';
