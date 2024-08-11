@@ -14,7 +14,7 @@ const CarFeatures = () => {
         <p>Details about the second feature.</p>
       </div>
       <div className={styles.logoContainer}>
-        {<Image src="/images/sae.png" alt="SAE Logo" width={200} height={200} />}
+        {<Image src="/images/Sae.png" alt="SAE Logo" width={200} height={200} />}
       </div>
       <div className={styles.featureCard}>
         <h2>Feature 3</h2>
