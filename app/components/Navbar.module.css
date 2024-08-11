@@ -1,4 +1,4 @@
-/* app/components/Navbar.module.css */
+/* Navbar styling */
 
 .header {
   display: flex;
@@ -66,32 +66,45 @@
   z-index: 2;
 }
 
-/* Dropdown menu styling */
+/* Dropdown button styling and animation */
 
 .navbarToggle {
   display: none; /* Hidden by default */
   cursor: pointer;
   position: absolute;
-  top: 1rem; /* Position from the top */
-  right: 1rem; /* Position from the right */
-  z-index: 1000; /* Ensure it is on top */
-}
-.navbarMenu {
-  display: flex;
-}
-
-.navbarMenu ul {
-  display: flex;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
 }
 
-.navbarMenu.active ul {
+.navbarToggle span {
   display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbarToggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbarToggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbarToggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Media Queries */
 
-
 @media (max-width: 840px) {
+  
   .header {
     flex-direction: column;
     align-items: flex-start;
@@ -102,6 +115,15 @@
     width: 100%;
     padding: 0.5rem;
     border-radius: 0;
+    background: none;
+  }
+  .navbar li{
+    margin: 0.5rem 0;
+    background-color: black;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
   }
 
   .navbar ul {
@@ -109,13 +131,16 @@
     flex-direction: column;
     align-items: center;
   }
+  
 
   .navbar.active ul {
     display: block; /* Show menu when active */
   }
 
   .navbarToggle {
-    display: block; /* Show hamburger icon */
+    display: block; /* Show hamburger icon on small screens */
+    padding-right:20px;
+    padding-top:20px;
   }
 
   .navbarMenu {
@@ -126,4 +151,3 @@
     display: block; /* Show menu when active */
   }
 }
-
