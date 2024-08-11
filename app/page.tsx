@@ -5,7 +5,7 @@ import styles from './Home.module.css';
 import CarFeatures from './components/CarFeatures';
 import WhoAreWe from './components/WhoAreWe';
 import ContactUs from './components/ContactUs';
-import Sponser_flow from './components/Sponser_flow';
+import Sponser_flow from './components/Sponsor_flow';
 
 export default function Home() {
   return (
