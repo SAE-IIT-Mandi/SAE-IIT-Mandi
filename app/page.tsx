@@ -1,7 +1,7 @@
 // app/page.tsx
 import Navbar from './components/Navbar';
 import CarViewer from './components/CarViewer';
-import styles from './globals.css';
+import styles from './Home.module.css';
 import CarFeatures from './components/CarFeatures';
 import WhoAreWe from './components/WhoAreWe';
 import ContactUs from './components/ContactUs';
