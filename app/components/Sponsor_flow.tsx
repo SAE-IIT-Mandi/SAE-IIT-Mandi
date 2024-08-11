@@ -67,6 +67,7 @@ const Sponsor_flow: React.FC = () => {
                     <a href="https://efillelectric.com/usa/" target="_blank" rel="noopener noreferrer">
                         <Image src="/spon/efillelectric.png" alt="Sponsor 19 Logo" width={100} height={100} />
                     </a>
+
                 </div>
             </div>
         </section>

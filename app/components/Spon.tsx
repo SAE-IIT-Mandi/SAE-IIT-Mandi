@@ -59,13 +59,7 @@ const Spon: React.FC = () => {
                             harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
                             temporibus ditiu" 
                 />
-                <Project_card  
-                  src="/spon/p4.jpeg" 
-                  name="Enduro 2021" 
-                  writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
-                            harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
-                            temporibus ditiu" 
-                />
+                
             </div>
             </div>
         </section>

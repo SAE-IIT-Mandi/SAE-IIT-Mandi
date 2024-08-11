@@ -8,9 +8,9 @@
 }
 
 .carousel {
-    display: flex; /* Flex to allow horizontal scrolling */
-    transition: transform 0.5s ease; /* Smooth transition for scrolling */
-    animation: scroll 30s linear infinite; /* Infinite scrolling animation */
+    display: flex; 
+    transition: transform 0.1s ease; 
+    animation: scroll 5s linear infinite; 
 }
 
 .project_item {

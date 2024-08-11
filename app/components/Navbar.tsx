@@ -19,8 +19,13 @@ const Navbar = () => {
           <Image src="/images/Sae.png" alt="SAE Logo" width={100} height={100} />
         </Link>
       </div>
-      <div className={styles.navbarToggle} onClick={toggleMenu}>
-        ☰ {/* Hamburger icon */}
+      <div 
+        className={`${styles.navbarToggle} ${isMenuOpen ? styles.open : ''}`} 
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <nav className={`${styles.navbar} ${isMenuOpen ? styles.navbarMenu + ' ' + styles.active : styles.navbarMenu}`}>
         <ul>
