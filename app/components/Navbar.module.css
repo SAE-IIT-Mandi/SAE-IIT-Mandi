@@ -1,4 +1,5 @@
 /* app/components/Navbar.module.css */
+
 .header {
   display: flex;
   align-items: center;
@@ -29,7 +30,7 @@
 
 .navbar li {
   margin: 0 1rem;
-  position: relative; /* Required for the oval to work */
+  position: relative;
 }
 
 .navbar a {
@@ -38,7 +39,7 @@
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
-  padding: .3rem;
+  padding: 0.3rem;
 }
 
 .navbar a::before {
@@ -48,8 +49,7 @@
   left: 50%;
   width: 0%;
   height: 100%;
-  border-radius: 40px; /* Oval shape */
-  color: #BE131A;
+  border-radius: 40px;
   background-color: black;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.3s ease, width 0.3s ease;
@@ -57,13 +57,73 @@
 }
 
 .navbar a:hover::before {
-  width: 120%; /* Width expands to create an oval */
+  width: 120%;
   transform: translate(-50%, -50%) scale(1);
-  color: #BE131A;
-  
 }
 
 .navbar a:hover {
   color: #BE131A;
   z-index: 2;
 }
+
+/* Dropdown menu styling */
+
+.navbarToggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  position: absolute;
+  top: 1rem; /* Position from the top */
+  right: 1rem; /* Position from the right */
+  z-index: 1000; /* Ensure it is on top */
+}
+.navbarMenu {
+  display: flex;
+}
+
+.navbarMenu ul {
+  display: flex;
+}
+
+.navbarMenu.active ul {
+  display: block;
+}
+
+/* Media Queries */
+
+
+@media (max-width: 840px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0;
+  }
+
+  .navbar ul {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar.active ul {
+    display: block; /* Show menu when active */
+  }
+
+  .navbarToggle {
+    display: block; /* Show hamburger icon */
+  }
+
+  .navbarMenu {
+    display: none; /* Hidden by default */
+  }
+
+  .navbarMenu.active {
+    display: block; /* Show menu when active */
+  }
+}
+

@@ -1,4 +1,5 @@
 /* app/globals.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,6 +15,7 @@ main {
   margin: 0 auto; /* Center main content */
 }
 
+/* Section styling */
 section {
   margin-bottom: 1rem; /* Margin between sections */
   background-color: #1a1a1a; /* Dark background for sections */
@@ -22,27 +24,80 @@ section {
   padding: 2rem; /* Add padding inside sections */
 }
 
+/* Heading styling */
 h1 {
   margin-bottom: 1.5rem;
   color: #f5f5f5; /* Lighter text color for headings */
   font-size: 2rem;
 }
 
+/* Paragraph styling */
 p {
   font-size: 1.1rem;
   color: #e0e0e0; /* Slightly muted text color for paragraphs */
   line-height: 1.6;
 }
 
+/* Footer styling */
 footer p {
   color: #f5f5f5;
   text-align: center;
 }
 
+/* Part info styling */
 .part-info {
   padding: 2rem;
   background-color: #f9f9f9;
   border-radius: 10px;
   margin-top: 1rem;
   text-align: left;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (iPads) */
+@media (max-width: 1024px) {
+  main {
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  section {
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  h1 {
+    font-size: 1.75rem; /* Adjust font size */
+  }
+
+  p {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .part-info {
+    padding: 1.5rem; /* Adjust padding */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  section {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduce font size */
+  }
+
+  p {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .part-info {
+    padding: 1rem; /* Reduce padding */
+    text-align: center; /* Center align text for better readability */
+  }
 }

@@ -8,6 +8,7 @@
   background-color: #000; /* Black background */
 }
 
+/* Feature card styles */
 .featureCard {
   background-color: #000;
   border: 3px solid #ff4d4d; /* Bright red border */
@@ -18,6 +19,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Logo container styles */
 .logoContainer {
   grid-column: span 2;
   display: flex;
@@ -28,7 +30,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #000; /* Same as background */
-  /* border: 3px solid #ff4d4d; Bright red border */
   border-radius: 50%;
   padding: 20px;
 }
@@ -36,4 +37,41 @@
 .logoContainer img {
   width: 100px; /* Adjust size as needed */
   height: auto;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (iPads) */
+@media (max-width: 1024px) {
+  .featuresSection {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    padding: 20px; /* Adjust padding */
+  }
+
+  .logoContainer {
+    display: none;
+
+  }
+
+  .logoContainer img {
+    width: 80px; /* Adjust size as needed */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .featuresSection {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    gap: 15px; /* Adjust gap */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .logoContainer {
+    display: none;
+
+  }
+
+  .logoContainer img {
+    width: 60px;
+  }
 }
