@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Spon.module.css';
 import Project_card from './Project_card';
-import Sponser_flow from './Sponser_flow';
+import Sponsor_flow from './Sponsor_flow';
 
 const Spon: React.FC = () => {
   return (
@@ -72,7 +72,7 @@ const Spon: React.FC = () => {
 
         {/* Sponsors Section */}
         <section className={styles.sponsorSection}>
-            <Sponser_flow />
+            <Sponsor_flow />
         </section>
     </div>
   );

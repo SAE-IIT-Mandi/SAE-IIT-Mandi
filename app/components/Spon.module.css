@@ -10,6 +10,7 @@
 .carousel {
     display: flex; /* Flex to allow horizontal scrolling */
     transition: transform 0.5s ease; /* Smooth transition for scrolling */
+    animation: scroll 30s linear infinite; /* Infinite scrolling animation */
 }
 
 .project_item {
@@ -25,16 +26,14 @@
     transition: transform 0.3s ease;
     background-size: cover; /* Ensure background image covers the entire block */
     background-position: center; /* Center the background image */
-}
-
-.project_item img {
-    display: none; /* Hide the image element if using a background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
 }
 
 .project_name {
     align-items: center;
     margin: 10px 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
     color: #f00; /* Red text */
 }
 
@@ -91,7 +90,7 @@
 .carouselTrack {
     display: flex;
     width: calc(100% * 2); /* Track width to accommodate duplicate images */
-    animation: scroll 20s linear infinite; /* Infinite scrolling animation */
+    animation: scroll 30s linear infinite; /* Infinite scrolling animation */
 }
 
 .carouselTrack img {
@@ -111,6 +110,9 @@
         transform: translateX(-50%); /* Move to half the width of the container */
     }
 }
-.h2tag{
+
+.h2tag {
     text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
 }

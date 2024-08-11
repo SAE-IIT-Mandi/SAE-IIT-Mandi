@@ -2,13 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Spon.module.css';
 
-interface MyComponentProps {
-    src: string;
-    name: string;
-    writeup: string;
-  }
 
-const Sponser_flow: React.FC<MyComponentProps> = ({src,name, writeup} ) => {
+const Sponsor_flow: React.FC = () => {
     return (
         <div>
             <section className={styles.sponsorSection}>
@@ -81,4 +76,4 @@ const Sponser_flow: React.FC<MyComponentProps> = ({src,name, writeup} ) => {
 
 };
 
-export default Sponser_flow;
+export default Sponsor_flow;
