@@ -1,25 +1,48 @@
 /* app/globals.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg,#000000, #ff4d4d,black); /* Gradient background */
-    min-height: 100vh; /* Ensure the body covers the full viewport height */
-    color: #fff; /* Optional: Set text color to ensure readability against dark background */
-  }
-  
-  main {
-    padding: 2rem 2rem; /* Increase padding for more space around content */
-    max-width: 1200px;
-    margin: 0 auto; /* Center main content */
-  }
-  
-  
-  
-  section {
-    margin-bottom: 1rem; /* Increase margin between sections */
-    background-color: #0000; /* White background for each section */
-    border-radius: 8px; /* Slight rounding of section corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #000000, #ff4d4d, black); /* Gradient background */
+  min-height: 100vh; /* Ensure the body covers the full viewport height */
+  color: #fff; /* Text color for readability against dark background */
+}
+
+main {
+  padding: 2rem; /* Increased padding for more space around content */
+  max-width: 1200px;
+  margin: 0 auto; /* Center main content */
+}
+
+section {
+  margin-bottom: 1rem; /* Margin between sections */
+  background-color: #1a1a1a; /* Dark background for sections */
+  border-radius: 8px; /* Slight rounding of section corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 2rem; /* Add padding inside sections */
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: #f5f5f5; /* Lighter text color for headings */
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #e0e0e0; /* Slightly muted text color for paragraphs */
+  line-height: 1.6;
+}
+
+footer p {
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.part-info {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-top: 1rem;
+  text-align: left;
+}
