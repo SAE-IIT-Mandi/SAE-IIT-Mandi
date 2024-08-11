@@ -1,6 +1,4 @@
-
-
-
+/* General section styling */
 .main section {
   margin-bottom: 1rem; /* Margin between sections */
   background-color: #1a1a1a; /* Dark background for sections */
@@ -9,16 +7,42 @@
   padding: 2rem; /* Add padding inside sections */
 }
 
-
+/* Footer paragraph styling */
 .footer p {
   color: #f5f5f5;
   text-align: center;
 }
 
+/* Part info styling */
 .part-info {
   padding: 2rem;
   background-color: #f9f9f9;
   border-radius: 10px;
   margin-top: 1rem;
   text-align: left;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (iPads) */
+@media (max-width: 1024px) {
+  .main section {
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  .part-info {
+    padding: 1.5rem; /* Adjust padding */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .main section {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .part-info {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    text-align: center; /* Center align text for smaller screens */
+  }
 }

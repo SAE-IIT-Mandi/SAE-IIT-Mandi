@@ -31,6 +31,8 @@
   color: white;
   text-align: center;
   z-index: 10;
+  max-width: 90%; /* Ensure text does not overflow */
+  padding: 0 10px; /* Add padding for better readability */
 }
 
 .specsButton {
@@ -40,10 +42,52 @@
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5px; /* Rounded corners for the button */
 }
 
+/* Loader styles */
 .loader {
   color: red;
   font-size: 18px;
   text-align: center;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (iPads) */
+@media (max-width: 1024px) {
+  .specs {
+    max-width: 80%; /* Adjust max width for tablets */
+    padding: 0 15px; /* Adjust padding */
+  }
+
+  .specsButton {
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  .loader {
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .section {
+    height: 300px; /* Allow section height to adjust based on content */
+    padding: 20px; /* Add padding to prevent content from touching edges */
+  }
+
+  .specs {
+    max-width: 100%; /* Full width for mobile */
+    padding: 0 10px; /* Adjust padding */
+  }
+
+  .specsButton {
+    padding: 8px 14px; /* Adjust button padding */
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .loader {
+    font-size: 14px; /* Adjust font size */
+  }
 }

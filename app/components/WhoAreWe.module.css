@@ -1,4 +1,5 @@
 /* styles/WhoAreWe.module.css */
+
 .whoAreWeSection {
   display: flex;
   align-items: center;
@@ -10,6 +11,7 @@
   color: white; /* White text color */
 }
 
+/* Text container styling */
 .textContainer {
   flex: 1;
   padding-right: 20px;
@@ -18,6 +20,7 @@
   animation: fadeInUp 1s forwards;
 }
 
+/* Image container styling */
 .imageContainer {
   flex: 1;
   display: flex;
@@ -29,6 +32,7 @@
   animation-delay: 0.5s; /* Slight delay for image */
 }
 
+/* Links styling */
 .links {
   margin-top: 20px;
 }
@@ -46,6 +50,7 @@
   color: #d43f3f; /* Darker red on hover */
 }
 
+/* Keyframes for fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -55,4 +60,50 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (iPads) */
+@media (max-width: 1024px) {
+  .whoAreWeSection {
+    padding: 40px;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+  }
+
+  .textContainer {
+    padding-right: 0; /* Remove padding for stacked layout */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    transform: translateX(0); /* Reset transformation */
+  }
+
+  .imageContainer {
+    transform: translateX(0); /* Reset transformation */
+    animation-delay: 0; /* Remove animation delay */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .whoAreWeSection {
+    padding: 20px;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+  }
+
+  .textContainer {
+    padding-right: 0; /* Remove padding for stacked layout */
+    margin-bottom: 20px; /* Add margin at the bottom */
+  }
+
+  .imageContainer {
+    margin-top: 20px; /* Add margin at the top */
+  }
+  .link {
+    display: inline-flex;
+  padding-left: .3rem;
+padding-right: .3rem;}
 }
