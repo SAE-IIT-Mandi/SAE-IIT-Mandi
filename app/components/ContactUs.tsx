@@ -30,7 +30,7 @@ const ContactUs = () => {
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows={4} required></textarea>
           </div>
           <button type="submit" className={styles.submitButton}>Send</button>
         </form>
