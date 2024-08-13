@@ -10,8 +10,13 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.querySelector(`.${styles.logo}`).classList.toggle(styles.hidden);
+    
+    const logoElement = document.querySelector(`.${styles.logo}`);
+    if (logoElement) {
+      logoElement.classList.toggle(styles.hidden);
+    }
   };
+  
 
   return (
     <header className={styles.header}>
