@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000000, #781919, black); /* Gradient background */
+  background: linear-gradient(135deg, #000000, #9c2222, black); /* Gradient background */
   min-height: 100vh; /* Ensure the body covers the full viewport height */
   color: #fff; /* Text color for readability against dark background */
 }
@@ -20,7 +20,7 @@ section {
   margin-bottom: 1rem; /* Margin between sections */
   background-color: #1a1a1a; /* Dark background for sections */
   border-radius: 8px; /* Slight rounding of section corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 0 8px 2px #C1131A;
   padding: 2rem; /* Add padding inside sections */
 }
 
