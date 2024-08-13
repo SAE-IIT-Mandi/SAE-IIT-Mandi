@@ -1,10 +1,10 @@
 /* General section styling */
 .main section {
-  margin-bottom: 1rem; /* Margin between sections */
-  background-color: #1a1a1a; /* Dark background for sections */
-  border-radius: 8px; /* Slight rounding of section corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 2rem; /* Add padding inside sections */
+  margin-bottom: 1rem; 
+  background-color: #1a1a1a; 
+  border-radius: 8px; 
+  box-shadow: 2px 2px 2px 2px #C1131A; /* Subtle shadow for depth */
+  padding: 2rem; 
 }
 
 /* Footer paragraph styling */

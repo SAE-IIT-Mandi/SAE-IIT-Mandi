@@ -1,4 +1,12 @@
 /* Projects Section */
+.section {
+    margin-bottom: 1rem; 
+    background-color: #1a1a1a; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 2px 2px #C1131A; /* Subtle shadow for depth */
+    padding: 2rem; 
+  }
+  
 .projects {
     display: flex;
     overflow: hidden; /* Hide overflow to create the carousel effect */
