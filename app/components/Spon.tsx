@@ -8,7 +8,7 @@ const Spon: React.FC = () => {
   return (
     <div>
         {/* Why Sponsor Us Section */}
-        <section>
+        <section className={styles.section}>
             <h2 className={styles.h2tag}>Why Sponsor Us?</h2>
             <p>
             The SAE Club of IIT Mandi is a hub of innovation, creativity, and technical excellence. Our members are
@@ -27,7 +27,7 @@ const Spon: React.FC = () => {
         </section>
 
         {/* Our Projects Section */}
-        <section>
+        <section className={styles.section}>
             <h2 className={styles.h2tag}>Our Projects</h2>
             <div className={styles.sponsorCarousel}>
                 <div className={styles.carouselTrack}>

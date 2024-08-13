@@ -19,23 +19,23 @@ export default function Home() {
         </section>
         
         {/* Section 2: Proper Features */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}> */}
           <CarFeatures />
-        </section>
+        {/* </section> */}
         
         {/* Section 3: Our Journey */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}> */}
           <WhoAreWe />
-        </section>
+        {/* </section> */}
         {/* Section 4: Sponsors */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}> */}
           <Sponser_flow />
-        </section>
+        {/* </section> */}
         
         {/* Section 5: Sponsorship and Contact */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}> */}
           <ContactUs />
-        </section>
+        {/* </section> */}
         
       </main>
 
