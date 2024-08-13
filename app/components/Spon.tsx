@@ -65,9 +65,7 @@ const Spon: React.FC = () => {
         </section>
 
         {/* Sponsors Section */}
-        <section className={styles.sponsorSection}>
             <Sponsor_flow />
-        </section>
     </div>
   );
 };
