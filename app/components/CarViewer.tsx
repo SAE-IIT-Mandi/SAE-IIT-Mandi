@@ -108,7 +108,7 @@ const GLBModelViewer: React.FC = () => {
             <OrbitControls
               enablePan={false}
               enableZoom={scrollEnabled} 
-              onZoom={handleZoomChange}
+              // onZoom={handleZoomChange}
               zoomSpeed={0.7} 
             />
           </Canvas>
