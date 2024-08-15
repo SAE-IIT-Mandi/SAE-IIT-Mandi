@@ -1,50 +1,43 @@
-/* app/globals.css */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000000, #9c2222, black); /* Gradient background */
-  min-height: 100vh; /* Ensure the body covers the full viewport height */
-  color: #fff; /* Text color for readability against dark background */
+  background: linear-gradient(135deg, #000000, #9c2222, black); 
+  min-height: 100vh; 
+  color: #fff; 
 }
 
 main {
-  padding: 2rem; /* Increased padding for more space around content */
+  padding: 2rem; 
   max-width: 1200px;
-  margin: 0 auto; /* Center main content */
+  margin: 0 auto; 
 }
 
-/* Section styling */
 section {
-  margin-bottom: 1rem; /* Margin between sections */
-  background-color: #1a1a1a; /* Dark background for sections */
-  border-radius: 8px; /* Slight rounding of section corners */
+  margin-bottom: 1rem; 
+  background-color: #1a1a1a;
+  border-radius: 8px; 
   box-shadow: 0 0 8px 2px #C1131A;
-  padding: 2rem; /* Add padding inside sections */
+  padding: 2rem;
 }
 
-/* Heading styling */
 h1 {
   margin-bottom: 1.5rem;
-  color: #f5f5f5; /* Lighter text color for headings */
+  color: #f5f5f5; 
   font-size: 2rem;
 }
 
-/* Paragraph styling */
 p {
   font-size: 1.1rem;
-  color: #e0e0e0; /* Slightly muted text color for paragraphs */
+  color: #e0e0e0; 
   line-height: 1.6;
 }
 
-/* Footer styling */
 footer p {
   color: #f5f5f5;
   text-align: center;
 }
 
-/* Part info styling */
 .part-info {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -53,51 +46,47 @@ footer p {
   text-align: left;
 }
 
-/* Media Queries for responsiveness */
 
-/* For tablets (iPads) */
 @media (max-width: 1024px) {
   main {
-    padding: 1.5rem; /* Adjust padding */
-  }
+    padding: 1.5rem; }
 
   section {
-    padding: 1.5rem; /* Adjust padding */
+    padding: 1.5rem;
   }
 
   h1 {
-    font-size: 1.75rem; /* Adjust font size */
+    font-size: 1.75rem; 
   }
 
   p {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1rem; 
   }
 
   .part-info {
-    padding: 1.5rem; /* Adjust padding */
+    padding: 1.5rem; 
   }
 }
 
-/* For mobile devices */
 @media (max-width: 768px) {
   main {
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem; 
   }
 
   section {
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem; 
   }
 
   h1 {
-    font-size: 1.5rem; /* Reduce font size */
+    font-size: 1.5rem; 
   }
 
   p {
-    font-size: 0.9rem; /* Reduce font size */
+    font-size: 0.9rem;
   }
 
   .part-info {
-    padding: 1rem; /* Reduce padding */
-    text-align: center; /* Center align text for better readability */
+    padding: 1rem;
+    text-align: center; 
   }
 }

@@ -1,0 +1,30 @@
+.carSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.carImage {
+  width: 50%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.carDetails {
+  margin-left: 20px;
+  max-width: 400px;
+}
+
+.carName {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.carDescription {
+  font-size: 16px;
+}

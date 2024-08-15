@@ -1,13 +1,13 @@
-// app/contact-us/page.tsx
 import Navbar from '../components/Navbar';
+import Spon from '../components/Spon';
 import styles from '../Home.module.css';
-export default function ContactUs() {
+
+export default function Sponsors() {
   return (
     <div>
       <Navbar />
       <main>
-        <h1>Contact Us</h1>
-        <p>Contact information and form.</p>
+        <Spon />
       </main>
       <footer className={styles.footer}>
         <p>Copyright &copy; 2024  All rights reserved by SAE,IIT Mandi</p>
@@ -15,4 +15,3 @@ export default function ContactUs() {
     </div>
   );
 }
-

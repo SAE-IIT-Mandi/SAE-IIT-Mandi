@@ -1,7 +1,6 @@
 // components/WhoAreWe.tsx
 import styles from './WhoAreWe.module.css';
 import Image from 'next/image';
-// import teamPic from '../public/images/team-pic.png'; 
 
 const WhoAreWe = () => {
   return (
@@ -18,7 +17,7 @@ const WhoAreWe = () => {
         </div>
       </div>
       <div className={styles.imageContainer}>
-      {<Image src="/images/car.jpeg" alt="SAE Logo" width={400} height={400} />}
+      {<Image src="/images/car.jpeg" alt="SAE Logo" width={300} height={300} />}
       </div>
     </section>
   );

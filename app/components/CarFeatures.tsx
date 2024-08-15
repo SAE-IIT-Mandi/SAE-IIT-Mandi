@@ -1,4 +1,3 @@
-// components/CarFeatures.tsx
 import styles from './CarFeatures.module.css';
 import Image from 'next/image';
 
