@@ -1,6 +1,5 @@
 'use client';
-
-import React, { useState, useCallback, useRef, Suspense } from 'react'; // Added useRef to the import
+import React, { useState, useCallback, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import styles from './CarViewer.module.css';
@@ -9,18 +8,18 @@ import styles from './CarViewer.module.css';
 const useIsometricCamera = (camera: any) => {
   useFrame(() => {
     if (camera) {
-      camera.position.set(35, 35, 35); // Isometric view angle
-      camera.lookAt(0, 0, 0); // Look at the center of the model
+      camera.position.set(35, 35, 35); 
+      camera.lookAt(0, 0, 0); 
       camera.updateProjectionMatrix();
     }
   });
 };
 
 const GLBModel: React.FC<{ onPartClick: (part: string) => void }> = ({ onPartClick }) => {
-  const { scene } = useGLTF('/red_car.glb'); // Adjust the path to your .glb file
-  scene.scale.set(0.07, 0.07, 0.07); // Further reduce the car model size
-  scene.position.set(0, -2, -2); // Shift the car model down slightly
-  scene.rotation.y = 3.4 * Math.PI / 2; // Rotate the car to make the front visible in isometric view
+  const { scene } = useGLTF('/red_car.glb');
+  scene.scale.set(0.07, 0.07, 0.07); 
+  scene.position.set(0, -2, -2); 
+  scene.rotation.y = 3.4 * Math.PI / 2; 
 
   const isDragging = useRef(false);
 
@@ -76,6 +75,8 @@ const PartDetails: React.FC<{ part: string; onBack: () => void }> = ({ part, onB
 
 const GLBModelViewer: React.FC = () => {
   const [selectedPart, setSelectedPart] = useState<string | null>(null);
+  const [zoomLevel, setZoomLevel] = useState(1); // Track zoom level
+  const [scrollEnabled, setScrollEnabled] = useState(true); // Track if scrolling should be enabled
 
   const handlePartClick = (partName: string) => {
     setSelectedPart(partName);
@@ -83,6 +84,16 @@ const GLBModelViewer: React.FC = () => {
 
   const handleBack = () => {
     setSelectedPart(null);
+  };
+
+  const handleZoomChange = (event: any) => {
+    const cameraZoom = event.target.object.zoom;
+    setZoomLevel(cameraZoom);
+
+    if (cameraZoom >= 2 && scrollEnabled) { 
+      setScrollEnabled(false); // Disable further zooming
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -94,7 +105,12 @@ const GLBModelViewer: React.FC = () => {
           <Canvas className={styles.canvas}>
             <ambientLight intensity={0.5} />
             <GLBModel onPartClick={handlePartClick} />
-            <OrbitControls enablePan={false} enableZoom={true} enableRotate={true} />
+            <OrbitControls
+              enablePan={false}
+              enableZoom={scrollEnabled} 
+              onZoom={handleZoomChange}
+              zoomSpeed={0.7} 
+            />
           </Canvas>
         </Suspense>
       )}
@@ -103,7 +119,7 @@ const GLBModelViewer: React.FC = () => {
 };
 
 const Loader: React.FC = () => (
-  <div className={styles.loader}>Wecome to experience the thrill...<br/>Click on the part for further details.</div>
+  <div className={styles.loader}>Welcome to experience the thrill...<br />Click on the part for further details.</div>
 );
 
 const ClientGLBModelSection: React.FC = () => {

@@ -1,19 +1,22 @@
 // app/contact-us/page.tsx
 import Navbar from '../components/Navbar';
 import styles from '../Home.module.css';
+import React from 'react';
+import NewsSection from '../components/News';
+// import EventSection from '../components/Event';
 
-export default function ContactUs() {
+export default function Highlights() {
   return (
     <div>
       <Navbar />
-      <main>
-        <h1>Highlights</h1>
-        <p>Contact information and form.</p>
-      </main>
-      <footer className={styles.footer}>
-        <p>Copyright &copy; 2024  All rights reserved by SAE,IIT Mandi</p>
-      </footer>
-    </div>
+    <main>
+      <NewsSection/>
+      {/* <EventSection/> */}
+    </main>
+     <footer className={styles.footer}>
+     <p>Copyright &copy; 2024  All rights reserved by SAE,IIT Mandi</p>
+   </footer>
+   </div>
   );
-}
+};
 

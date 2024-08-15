@@ -1,45 +1,56 @@
-// app/page.tsx
 import Navbar from './components/Navbar';
-import CarViewer from './components/CarViewer';
 import styles from './Home.module.css';
-import CarFeatures from './components/CarFeatures';
 import WhoAreWe from './components/WhoAreWe';
-import ContactUs from './components/ContactUs';
+import ContactUs from './components/Teammain';
 import Sponser_flow from './components/Sponsor_flow';
-
+import Project_card from './components/Project_card';
+import Welcome from './components/Welcome';
 export default function Home() {
   return (
     <div>
       <Navbar />
       <main className={styles.main}>
-        
-        {/* Section 1: 3D Car Model with Clickable Parts */}
-        <section className={styles.section}>
-          <CarViewer />
-        </section>
-        
-        {/* Section 2: Proper Features */}
-        {/* <section className={styles.section}> */}
-          <CarFeatures />
-        {/* </section> */}
-        
-        {/* Section 3: Our Journey */}
-        {/* <section className={styles.section}> */}
+        <Welcome />
           <WhoAreWe />
-        {/* </section> */}
-        {/* Section 4: Sponsors */}
-        {/* <section className={styles.section}> */}
-          <Sponser_flow />
-        {/* </section> */}
-        
-        {/* Section 5: Sponsorship and Contact */}
-        {/* <section className={styles.section}> */}
-          <ContactUs />
-        {/* </section> */}
-        
-      </main>
 
-      {/* Footer */}
+          <section className={styles.section}>
+            <h2 className={styles.h2tag}>Our Projects</h2>
+            <div className={styles.projects}>
+                <Project_card  
+                  src="/spon/ER7.0.png" 
+                  name="SAE Supra 2019" 
+                  writeup="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia pariatur adipisci
+                            recusandae autem accusamus reiciendis enim quibusdam placeat maxime est animi laborum amet quia deserunt
+                            earum, ex," 
+                />
+                <Project_card  
+                  src="/spon/p2.jpg" 
+                  name="Quad Torc 2019" 
+                  writeup="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia pariatur adipisci
+                            recusandae autem accusamus reiciendis enim quibusdam placeat maxime est animi laborum amet quia deserunt
+                            earum, ex," 
+                />
+                <Project_card  
+                  src="/spon/p4.jpeg" 
+                  name="Enduro 2021" 
+                  writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
+                            harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
+                            temporibus ditiu" 
+                />
+                <Project_card  
+                  src="/spon/p4.jpeg" 
+                  name="Enduro 2021" 
+                  writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
+                            harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
+                            temporibus ditiu" 
+                />
+                </div>
+            </section>
+            
+          <Sponser_flow />
+
+          <ContactUs />
+      </main>
       <footer className={styles.footer}>
         <p>Copyright &copy; 2024  All rights reserved by SAE,IIT Mandi</p>
       </footer>

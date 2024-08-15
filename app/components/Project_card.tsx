@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Spon.module.css';
+import styles from '../Home.module.css';
 
 interface MyComponentProps {
     src: string;

@@ -1,17 +1,14 @@
-/* styles/WhoAreWe.module.css */
-
 .whoAreWeSection {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px;
-  background-color: black; /* Black background */
+  background-color: black; 
   position: relative;
   overflow: hidden;
-  color: white; /* White text color */
+  color: white; 
 }
 
-/* Text container styling */
 .textContainer {
   flex: 1;
   padding-right: 20px;
@@ -20,7 +17,6 @@
   animation: fadeInUp 1s forwards;
 }
 
-/* Image container styling */
 .imageContainer {
   flex: 1;
   display: flex;
@@ -29,17 +25,16 @@
   opacity: 0;
   transform: translateX(30px);
   animation: fadeInUp 1s forwards;
-  animation-delay: 0.5s; /* Slight delay for image */
+  animation-delay: 0.5s;
 }
 
-/* Links styling */
 .links {
   margin-top: 20px;
 }
 
 .link {
   display: block;
-  color: #ff4d4d; /* Bright red for links */
+  color: #ff4d4d;
   text-decoration: none;
   font-weight: bold;
   margin: 5px 0;
@@ -47,10 +42,9 @@
 }
 
 .link:hover {
-  color: #d43f3f; /* Darker red on hover */
+  color: #d43f3f;
 }
 
-/* Keyframes for fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -62,48 +56,44 @@
   }
 }
 
-/* Media Queries for responsiveness */
-
-/* For tablets (iPads) */
 @media (max-width: 1024px) {
   .whoAreWeSection {
     padding: 40px;
-    flex-direction: column; /* Stack text and image vertically */
-    align-items: center; /* Center align items */
-    text-align: center; /* Center text */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
   }
 
   .textContainer {
-    padding-right: 0; /* Remove padding for stacked layout */
-    margin-bottom: 20px; /* Add margin at the bottom */
-    transform: translateX(0); /* Reset transformation */
+    padding-right: 0;
+    margin-bottom: 20px; 
+    transform: translateX(0); 
   }
 
   .imageContainer {
-    transform: translateX(0); /* Reset transformation */
-    animation-delay: 0; /* Remove animation delay */
+    transform: translateX(0); 
+    animation-delay: 0; 
   }
 }
 
-/* For mobile devices */
 @media (max-width: 768px) {
   .whoAreWeSection {
     padding: 20px;
-    flex-direction: column; /* Stack text and image vertically */
-    align-items: center; /* Center align items */
-    text-align: center; /* Center text */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
   }
 
   .textContainer {
-    padding-right: 0; /* Remove padding for stacked layout */
-    margin-bottom: 20px; /* Add margin at the bottom */
+    padding-right: 0; 
+    margin-bottom: 20px;
   }
 
   .imageContainer {
-    margin-top: 20px; /* Add margin at the top */
+    margin-top: 20px;
   }
   .link {
     display: inline-flex;
-  padding-left: .3rem;
-padding-right: .3rem;}
+    padding-left: .3rem;
+    padding-right: .3rem;}
 }

@@ -1,13 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
 import styles from './Spon.module.css';
-import Project_card from './Project_card';
 import Sponsor_flow from './Sponsor_flow';
 
 const Spon: React.FC = () => {
   return (
     <div>
-        {/* Why Sponsor Us Section */}
         <section className={styles.section}>
             <h2 className={styles.h2tag}>Why Sponsor Us?</h2>
             <p>
@@ -25,47 +22,8 @@ const Spon: React.FC = () => {
             mobility and engineering.
             </p>
         </section>
-
-        {/* Our Projects Section */}
-        <section className={styles.section}>
-            <h2 className={styles.h2tag}>Our Projects</h2>
-            <div className={styles.sponsorCarousel}>
-                <div className={styles.carouselTrack}>
-                <Project_card  
-                  src="/spon/ER7.0.png" 
-                  name="SAE Supra 2019" 
-                  writeup="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia pariatur adipisci
-                            recusandae autem accusamus reiciendis enim quibusdam placeat maxime est animi laborum amet quia deserunt
-                            earum, ex," 
-                />
-                <Project_card  
-                  src="/spon/p2.jpg" 
-                  name="Quad Torc 2019" 
-                  writeup="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia pariatur adipisci
-                            recusandae autem accusamus reiciendis enim quibusdam placeat maxime est animi laborum amet quia deserunt
-                            earum, ex," 
-                />
-                <Project_card  
-                  src="/spon/p4.jpeg" 
-                  name="Enduro 2021" 
-                  writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
-                            harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
-                            temporibus ditiu" 
-                />
-                <Project_card  
-                  src="/spon/p4.jpeg" 
-                  name="Enduro 2021" 
-                  writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
-                            harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
-                            temporibus ditiu" 
-                />
-                
-            </div>
-            </div>
-        </section>
-
-        {/* Sponsors Section */}
             <Sponsor_flow />
+          
     </div>
   );
 };
