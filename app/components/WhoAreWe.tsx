@@ -1,4 +1,3 @@
-// components/WhoAreWe.tsx
 import styles from './WhoAreWe.module.css';
 import Image from 'next/image';
 
@@ -6,7 +5,7 @@ const WhoAreWe = () => {
   return (
     <section className={styles.whoAreWeSection}>
       <div className={styles.textContainer}>
-        <h1>Who Are We</h1>
+        <h1>Vision and Mission</h1>
         <p>
           We are a dedicated team of professionals committed to delivering exceptional results. Our expertise spans across various domains, ensuring comprehensive solutions to meet your needs. With a focus on innovation and excellence, we strive to make a significant impact in our field.
         </p>

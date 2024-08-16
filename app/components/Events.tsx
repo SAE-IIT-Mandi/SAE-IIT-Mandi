@@ -1,37 +1,41 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { auth, db } from './firebase';
-import { collection, getDocs, updateDoc, doc, addDoc } from 'firebase/firestore';
+import { collection, getDocs, updateDoc, doc, addDoc, Timestamp } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 import { signInWithGoogle, logout } from './authservice';
-import styles from './News.module.css';
+import styles from './Events.module.css';
 
-interface NewsItem {
+interface EventsItem {
   id: string;
   Headline: string;
   Content: string;
-  Image: string;
+  Date: Timestamp;
+  Venue: string;
+  Picture: string;
 }
 
-const News: React.FC = () => {
-  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+const Events: React.FC = () => {
+  const [eventsItems, setEventsItems] = useState<EventsItem[]>([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [editing, setEditing] = useState<string | null>(null);
   const [editContent, setEditContent] = useState<string>('');
   const [newHeadline, setNewHeadline] = useState<string>('');
   const [newContent, setNewContent] = useState<string>('');
   const [newPicture, setNewPicture] = useState<string>('');
+  const [newTime, setNewTime] = useState<Timestamp>(Timestamp.now());
+  const [newVenue, setNewVenue] = useState<string>('');
 
   useEffect(() => {
-    const fetchNews = async () => {
-      const querySnapshot = await getDocs(collection(db, 'News'));
-      const newsData = querySnapshot.docs.map(doc => ({
+    const fetchEvents = async () => {
+      const querySnapshot = await getDocs(collection(db, 'Events'));
+      const eventsData = querySnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
-      })) as NewsItem[];
-      setNewsItems(newsData);
+      })) as EventsItem[];
+      setEventsItems(eventsData);
     };
-    fetchNews();
+    fetchEvents();
   }, []);
 
   useEffect(() => {
@@ -58,25 +62,29 @@ const News: React.FC = () => {
     }
   };
 
-  const handleAddNews = async () => {
+  const handleAddEvents = async () => {
     if (!newHeadline || !newContent) return;
     try {
-      const docRef = await addDoc(collection(db, 'News'), {
+      const docRef = await addDoc(collection(db, 'Events'), {
         Headline: newHeadline,
         Content: newContent,
-        Image: newPicture,
+        Picture: newPicture,
+        Date: newTime,
+        Venue: newVenue,
       });
 
-      setNewsItems(prevItems => [
+      setEventsItems(prevItems => [
         ...prevItems,
-        { id: docRef.id, Headline: newHeadline, Content: newContent, Image: newPicture },
+        { id: docRef.id, Headline: newHeadline, Content: newContent, Picture: newPicture, Date: newTime, Venue: newVenue},
       ]);
 
       setNewHeadline('');
       setNewContent('');
       setNewPicture('');
+      setNewTime(Timestamp.now());
+    setNewVenue('');
     } catch (error: any) {
-      console.error('Error adding news:', error);
+      console.error('Error adding events:', error);
     }
   };
 
@@ -87,9 +95,9 @@ const News: React.FC = () => {
 
   const saveEdit = async (id: string) => {
     try {
-      const newsRef = doc(db, 'News', id);
-      await updateDoc(newsRef, { content: editContent });
-      setNewsItems(prevItems =>
+      const eventsRef = doc(db, 'Events', id);
+      await updateDoc(eventsRef, { content: editContent });
+      setEventsItems(prevItems =>
         prevItems.map(item =>
           item.id === id ? { ...item, Content: editContent } : item
         )
@@ -102,28 +110,32 @@ const News: React.FC = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.h2}>News</h2>
+      <h2 className={styles.h2}>Events</h2>
 
       {isAuthenticated ? (
         <>
-          <div className={styles.addNewsForm}>
+          <div className={styles.addEventsForm}>
             <input type="text" placeholder="Headline" value={newHeadline} onChange={(e) => setNewHeadline(e.target.value)} className={styles.input} />
             <textarea placeholder="Content" value={newContent} onChange={(e) => setNewContent(e.target.value)} className={styles.textarea} />
             <input type="text" placeholder="Image Link" value={newPicture} onChange={(e) => setNewPicture(e.target.value)} className={styles.input} />
-            <button onClick={handleAddNews} className={styles.button}>Add News</button>
+            <input type="text" placeholder="Venue" value={newVenue} onChange={(e) => setNewVenue(e.target.value)} className={styles.input} />
+            <input type="text" placeholder="Date and Time" value={newTime} onChange={(e) => setNewTime(e.target.value)} className={styles.input} />
+            <button onClick={handleAddEvents} className={styles.button}>Add Events</button>
           </div>
           <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>Sign Out</button>
         </>
       ) : (
-        <button onClick={handleSignIn} className={`${styles.button} ${styles.signInOutButton}`}>Sign In to Add News</button>
+        <button onClick={handleSignIn} className={`${styles.button} ${styles.signInOutButton}`}>Sign In to Add Events</button>
       )}
 
       <ul className={styles.ul}>
-        {newsItems.map(news => (
-          <li key={news.id} className={styles.li}>
-            <h3 className={styles.h3}>{news.Headline}</h3>
-            <img src={news.Image} alt="news image" className={styles.Image} />
-            {editing === news.id ? (
+        {eventsItems.map(events => (
+          <li key={events.id} className={styles.li}>
+            <h3 className={styles.h3}>{events.Headline}</h3>
+            <img src={events.Picture} alt="events image" className={styles.Image} />
+            <h3 className={styles.h3}>{events.Venue}</h3>
+            {/* <h3 className={styles.h3}>{events.Date}</h3> */}
+            {editing === events.id ? (
               <div>
                 <textarea
                   value={editContent}
@@ -131,7 +143,7 @@ const News: React.FC = () => {
                   className={styles.textarea}
                 />
                 <div className={styles.editingButtons}>
-                  <button onClick={() => saveEdit(news.id)} className={styles.button}>
+                  <button onClick={() => saveEdit(events.id)} className={styles.button}>
                     Save
                   </button>
                   <button
@@ -143,11 +155,11 @@ const News: React.FC = () => {
                 </div>
               </div>
             ) : (
-              <p className={styles.p}>{news.Content}</p>
+              <p className={styles.p}>{events.Content}</p>
             )}
-            {isAuthenticated && editing !== news.id && (
+            {isAuthenticated && editing !== events.id && (
               <button
-                onClick={() => handleEdit(news.id, news.Content)}
+                onClick={() => handleEdit(events.id, events.Content)}
                 className={styles.button}
               >
                 Edit
@@ -160,4 +172,4 @@ const News: React.FC = () => {
   );
 };
 
-export default News;
+export default Events;
