@@ -46,7 +46,7 @@ const Navbar = () => {
         </ul>
         <div className={`${styles.logo} ${isMenuOpen ? styles.hidden : ""}`}>
           <Link href="sae.iitmandi.ac.in">
-            <Image src="/images/Sae.png" alt="SAE Logo" width={150} height={150} />
+            <Image src="/images/Sae.png" alt="SAE Logo" width={150} height={120} />
           </Link>
         </div>
         <ul className={styles.navRight}>
