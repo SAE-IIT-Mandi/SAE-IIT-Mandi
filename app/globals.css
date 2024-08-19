@@ -2,14 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000000, #9c2222, black); 
+  background: linear-gradient(115deg, black, #d11d1d, black); 
   min-height: 100vh; 
   color: #fff; 
 }
 
 main {
   padding: 2rem; 
-  max-width: 1200px;
+
   margin: 0 auto; 
 }
 
