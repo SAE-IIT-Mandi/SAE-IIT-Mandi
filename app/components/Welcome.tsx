@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Welcome = () => {
   return (
-    <section className={styles.welcome}>
+    <div className={styles.welcome}>
       <div className={styles.textContainer}>
         <h1>Welcome IIT Mandi Racing</h1>
         <p>
@@ -13,7 +13,7 @@ const Welcome = () => {
       <div className={styles.imageContainer}>
       {<Image src="/images/car.jpeg" alt="SAE Logo" width={300} height={300} />}
       </div>
-    </section>
+    </div>
   );
 };
 
