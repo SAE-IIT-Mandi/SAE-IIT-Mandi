@@ -22,7 +22,7 @@ rad.json
 #Test results file
 TestResults.xml
 # Ignore files related to API keys
-*.env
+# *.env
 # Ignore Mac system files
 .DS_store
 
