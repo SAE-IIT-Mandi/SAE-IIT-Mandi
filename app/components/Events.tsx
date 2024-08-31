@@ -23,7 +23,7 @@ const Events: React.FC = () => {
   const [newHeadline, setNewHeadline] = useState<string>('');
   const [newContent, setNewContent] = useState<string>('');
   const [newPicture, setNewPicture] = useState<string>('');
-  const [newTime, setNewTime] = useState<Timestamp>(Timestamp.now());
+  const [newTime, setNewTime] = useState<string>(new Date().toISOString().slice(0, 16)); // Initial value as ISO string
   const [newVenue, setNewVenue] = useState<string>('');
 
   useEffect(() => {
@@ -64,25 +64,27 @@ const Events: React.FC = () => {
 
   const handleAddEvents = async () => {
     if (!newHeadline || !newContent) return;
+
+    const date = Timestamp.fromDate(new Date(newTime)); // Convert string to Timestamp
     try {
       const docRef = await addDoc(collection(db, 'Events'), {
         Headline: newHeadline,
         Content: newContent,
         Picture: newPicture,
-        Date: newTime,
+        Date: date,
         Venue: newVenue,
       });
 
       setEventsItems(prevItems => [
         ...prevItems,
-        { id: docRef.id, Headline: newHeadline, Content: newContent, Picture: newPicture, Date: newTime, Venue: newVenue},
+        { id: docRef.id, Headline: newHeadline, Content: newContent, Picture: newPicture, Date: date, Venue: newVenue},
       ]);
 
       setNewHeadline('');
       setNewContent('');
       setNewPicture('');
-      setNewTime(Timestamp.now());
-    setNewVenue('');
+      setNewTime(new Date().toISOString().slice(0, 16)); // Reset to current date and time
+      setNewVenue('');
     } catch (error: any) {
       console.error('Error adding events:', error);
     }
@@ -96,7 +98,7 @@ const Events: React.FC = () => {
   const saveEdit = async (id: string) => {
     try {
       const eventsRef = doc(db, 'Events', id);
-      await updateDoc(eventsRef, { content: editContent });
+      await updateDoc(eventsRef, { Content: editContent });
       setEventsItems(prevItems =>
         prevItems.map(item =>
           item.id === id ? { ...item, Content: editContent } : item
@@ -119,7 +121,7 @@ const Events: React.FC = () => {
             <textarea placeholder="Content" value={newContent} onChange={(e) => setNewContent(e.target.value)} className={styles.textarea} />
             <input type="text" placeholder="Image Link" value={newPicture} onChange={(e) => setNewPicture(e.target.value)} className={styles.input} />
             <input type="text" placeholder="Venue" value={newVenue} onChange={(e) => setNewVenue(e.target.value)} className={styles.input} />
-            <input type="text" placeholder="Date and Time" value={newTime} onChange={(e) => setNewTime(e.target.value)} className={styles.input} />
+            <input type="datetime-local" placeholder="Date and Time" value={newTime} onChange={(e) => setNewTime(e.target.value)} className={styles.input} />
             <button onClick={handleAddEvents} className={styles.button}>Add Events</button>
           </div>
           <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>Sign Out</button>
@@ -134,7 +136,8 @@ const Events: React.FC = () => {
             <h3 className={styles.h3}>{events.Headline}</h3>
             <img src={events.Picture} alt="events image" className={styles.Image} />
             <h3 className={styles.h3}>{events.Venue}</h3>
-            {/* <h3 className={styles.h3}>{events.Date}</h3> */}
+            {/* Display formatted date */}
+            <h3 className={styles.h3}>{events.Date.toDate().toLocaleString()}</h3>
             {editing === events.id ? (
               <div>
                 <textarea
