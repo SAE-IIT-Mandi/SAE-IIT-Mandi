@@ -15,15 +15,6 @@ const ContacttoUs: React.FC = () => {
                     <p>Address: SAE Club, IIT Mandi, Kamand, Himachal Pradesh, 175075 India</p>
                 </div>
 
-                <div className={styles.contact_form}>
-                    <h2 className={styles.h2}>Send Us a Message</h2>
-                    <form action="/submit-form" method="post" className={styles.formin}>
-                        <input type="text" name="name" placeholder="Your Name" required />
-                        <input type="email" name="email" placeholder="Your Email" required />
-                        <textarea name="message" placeholder="Your Message" rows={6} required></textarea>
-                        <a href="mailto:sae@iitmandi.ac.in">Submit</a>
-                    </form>
-                </div>
             </section>
         </div>
     );
