@@ -1,0 +1,60 @@
+/* Gallerybox.module.css */
+
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-color: #ff4500;
+  box-shadow: 0 0 10px #ff4500, 0 0 20px #ff0000;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Specific grid area styling for a collage effect */
+.galleryContainer > div:nth-child(3n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.galleryContainer > div:nth-child(4n) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.galleryContainer > div:nth-child(5n) {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .galleryContainer {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 5px;
+  }
+
+  .galleryContainer > div:nth-child(3n), .galleryContainer > div:nth-child(4n), .galleryContainer > div:nth-child(5n) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
