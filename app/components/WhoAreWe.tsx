@@ -10,9 +10,8 @@ const WhoAreWe = () => {
           We are a dedicated team of professionals committed to delivering exceptional results. Our expertise spans across various domains, ensuring comprehensive solutions to meet your needs. With a focus on innovation and excellence, we strive to make a significant impact in our field.
         </p>
         <div className={styles.links}>
-          <a href="#about" className={styles.link}>About Us</a>
-          <a href="#services" className={styles.link}>Services</a>
-          <a href="#contact" className={styles.link}>Contact</a>
+          <a href="contactus" className={styles.link}>About Us</a>
+          <a href="cars" className={styles.link}>Our Projects</a>
         </div>
       </div>
       <div className={styles.imageContainer}>
