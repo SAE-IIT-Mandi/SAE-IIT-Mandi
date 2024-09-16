@@ -2,7 +2,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(110deg, black 40%, #d11d1d 40%, #d11d1d 60%, black 60%);
+  background: 
+  linear-gradient(125deg, transparent 38.5%, #d11d1d 38.5%, #d11d1d 42%, transparent 42%), 
+  linear-gradient(145deg, transparent 40%, #d11d1d 40%, #d11d1d 43%, transparent 43%);
+  background-color: #1a1a1a;
   min-height: 100vh; 
   color: #fff; 
 }
