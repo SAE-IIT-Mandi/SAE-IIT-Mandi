@@ -24,21 +24,21 @@ export default function Home() {
                             earum, ex," 
                 />
                 <Project_card  
-                  src="/spon/p2.jpg" 
+                  src="/spon/ER7.0.png" 
                   name="Quad Torc 2019" 
                   writeup="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia pariatur adipisci
                             recusandae autem accusamus reiciendis enim quibusdam placeat maxime est animi laborum amet quia deserunt
                             earum, ex," 
                 />
                 <Project_card  
-                  src="/spon/p4.jpeg" 
+                  src="/spon/ER7.0.png" 
                   name="Enduro 2021" 
                   writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
                             harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
                             temporibus ditiu" 
                 />
                 <Project_card  
-                  src="/spon/p4.jpeg" 
+                  src="/spon/ER7.0.png" 
                   name="Enduro 2021" 
                   writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
                             harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
