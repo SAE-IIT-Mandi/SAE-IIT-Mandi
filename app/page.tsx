@@ -5,6 +5,7 @@ import Sponser_flow from './components/Sponsor_flow';
 import Project_card from './components/ProjectCard';
 import Welcome from './components/Welcome';
 import Cordi from './components/Cordi';
+import Image from 'next/image';
 
 export default function Home() {
   return (

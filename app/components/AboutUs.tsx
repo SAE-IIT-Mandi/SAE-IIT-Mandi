@@ -5,7 +5,7 @@ const AboutUs: React.FC = () => {
     return (
         <div>
             <section className={styles.section}>
-                <h1 className={styles.h}>About Us</h1>
+                <h1 className={styles.h2}>About Us</h1>
                 <p>The Automobile Club of IIT Mandi is a collective of highly motivated and skilled individuals dedicated to pushing the boundaries of automotive engineering. Fueled by a passion for cutting-edge technology and innovation, our team designs and fabricates high-performance vehicles for national competitions such as SAE SUPRA, EffiCycle, and the upcoming Formula Bharat 2026.
 <br></br>
 With a history of success in SAE SUPRA (2014, 2019) and EffiCycle (2024), we continually refine our expertise through practical experience and advanced methodologies. Our commitment extends beyond competition; we aim to foster a deep understanding of automotive systems within the broader student community.

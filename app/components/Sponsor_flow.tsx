@@ -43,9 +43,6 @@ const Sponsor_flow: React.FC = () => {
                     <a href="https://www.flomicgroup.com/" target="_blank" rel="noopener noreferrer">
                         <Image src="/spon/Flomic_new_logo-sq.jpg" alt="Sponsor 11 Logo" width={100} height={100} />
                     </a>
-                    <a href="https://www.godrej.com/godrejandboyce/" target="_blank" rel="noopener noreferrer">
-                        <Image src="/spon/godrej.jpg" alt="Sponsor 12 Logo" width={100} height={100} />
-                    </a>
                     <a href="https://www.siemens.com/in/en.html?gclid=Cj0KCQjwwuG1BhCnARIsAFWBUC21Lu7JdtPzHyfDNhz02cqgF01Uwgq3_KIBMy2oYSa2xFspS1sfPckaAiEHEALw_wcB&acz=1&gad_source=1" target="_blank" rel="noopener noreferrer">
                         <img src="/spon/sie-logo-claim-petrol-rgb-SITE.jpg" alt="Sponsor 13 Logo" width={100} height={100} />
                     </a>
@@ -63,9 +60,6 @@ const Sponsor_flow: React.FC = () => {
                     </a>
                     <a href="https://igdrones.com/" target="_blank" rel="noopener noreferrer">
                         <Image src="/spon/Website-Feature-Image.png" alt="Sponsor 18 Logo" width={100} height={100} />
-                    </a>
-                    <a href="https://efillelectric.com/usa/" target="_blank" rel="noopener noreferrer">
-                        <Image src="/spon/efillelectric.png" alt="Sponsor 19 Logo" width={100} height={100} />
                     </a>
 
                 </div>

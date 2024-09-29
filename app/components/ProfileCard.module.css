@@ -1,7 +1,7 @@
-/* ProfileCard.module.css */
 .profile_card {
     position: relative;
-    width: 320px;
+    width: 300px;
+    align-items: center;
     height: 400px;
     border-radius: 15px;
     overflow: hidden;
@@ -11,7 +11,8 @@
   
   .profile_card:hover {
     transform: scale(1.05);
-  }
+    border: 2px solid #FF4D4D; 
+}
   
   .profile_Image {
     width: 100%;
@@ -56,42 +57,13 @@
   
   .social_icon {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .social_icon svg {
-    width: 20px;
-    height: 20px;
-    fill: #333;
-    transition: fill 0.3s ease;
+    width: 40px;
+    height: 40px;
   }
-  
-  .social_icon:hover {
-    background-color: #333;
-    transform: scale(1.1);
-  }
-  
-  .social_icon.linkedin:hover svg {
-    fill: #0077b5;
-  }
-  
-  .social_icon.instagram:hover svg {
-    fill: #e4405f;
-  }
-  
-  .social_icon.linkedin {
-    background-color: #0077b5;
-  }
-  
-  .social_icon.instagram {
-    background-color: #e4405f;
-  }
-  
   

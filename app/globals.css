@@ -3,7 +3,7 @@ body {
   background: 
     linear-gradient(129deg, transparent 50%, #FF4D4D 50%, #FF4D4D 52.5%, transparent 52.5%), 
     linear-gradient(129deg, transparent 53%, #FF4D4D 53%, #FF4D4D 54.5%, transparent 54.5%);
-  background-color: #1a1a1a;
+  background-color: black;
   background-size: cover; 
   background-attachment: fixed; 
   min-height: 100vh;
