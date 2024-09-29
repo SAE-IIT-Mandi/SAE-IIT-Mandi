@@ -57,7 +57,7 @@ const Navbar = () => {
             <Link href="/gallery">Gallery</Link>
           </li>
           <li>
-            <Link href="/contactus">Contact Us</Link>
+            <Link href="/contactus">About Us</Link>
           </li>
           <li>
             <a href="https://www.sae.org/" target="_blank" rel="noopener noreferrer">SAE Website</a>
