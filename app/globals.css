@@ -1,13 +1,13 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background: 
-  linear-gradient(125deg, transparent 38.5%, #d11d1d 38.5%, #d11d1d 42%, transparent 42%), 
-  linear-gradient(145deg, transparent 40%, #d11d1d 40%, #d11d1d 43%, transparent 43%);
+    linear-gradient(129deg, transparent 50%, #FF4D4D 50%, #FF4D4D 52.5%, transparent 52.5%), 
+    linear-gradient(129deg, transparent 53%, #FF4D4D 53%, #FF4D4D 54.5%, transparent 54.5%);
   background-color: #1a1a1a;
-  min-height: 100vh; 
-  color: #fff; 
+  background-size: cover; 
+  background-attachment: fixed; 
+  min-height: 100vh;
+  color: #fff;
 }
 
 main {
@@ -20,7 +20,7 @@ section {
   margin-bottom: 1rem; 
   background-color: #1a1a1a;
   border-radius: 8px; 
-  box-shadow: 0 0 8px 2px #C1131A;
+  box-shadow: 0 0 8px 2px #FF4D4D;
   padding: 2rem;
 }
 
@@ -36,10 +36,56 @@ p {
   line-height: 1.6;
 }
 
-footer p {
-  color: #f5f5f5;
+.footer {
+  background-color: #1a202c;
+  color: #e2e8f0;
+  padding: 20px;
   text-align: center;
 }
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.social-link {
+  color: #a0aec0;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.facebook:hover {
+  color: #1877f2;
+}
+
+.github:hover {
+  color: #333;
+}
+
+.instagram:hover {
+  color: #e1306c;
+}
+
+.youtube:hover {
+  color: #ff0000;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #cbd5e0;
+}
+
 
 .part-info {
   padding: 2rem;
