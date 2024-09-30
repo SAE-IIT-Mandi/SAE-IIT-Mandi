@@ -26,7 +26,11 @@
   color: #f5f5f5;
   text-align: center;
 }
-
+.footerDiv{
+  background-color: #1a202c;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .part-info {
   padding: 2rem;
   background-color: #f9f9f9;

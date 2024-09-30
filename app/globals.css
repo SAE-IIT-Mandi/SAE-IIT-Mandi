@@ -35,9 +35,13 @@ p {
   color: #e0e0e0; 
   line-height: 1.6;
 }
-
-.footer {
+.footerDiv{
   background-color: #1a202c;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer {
+
   color: #e2e8f0;
   padding: 20px;
   text-align: center;
