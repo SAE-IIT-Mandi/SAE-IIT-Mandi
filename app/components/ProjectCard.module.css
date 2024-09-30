@@ -47,8 +47,7 @@
   background: rgba(0, 0, 0, 0.7);
   color: white;
   opacity: 0;
-  padding: 20px;
-  display: flex;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   transition: bottom 0.3s ease, opacity 0.3s ease;
@@ -63,7 +62,6 @@
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  padding: 10px;
   transition: transform 0.3s ease;
 }
 

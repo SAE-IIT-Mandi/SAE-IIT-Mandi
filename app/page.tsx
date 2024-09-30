@@ -6,6 +6,7 @@ import Project_card from './components/ProjectCard';
 import Welcome from './components/Welcome';
 import Cordi from './components/Cordi';
 import Image from 'next/image';
+import Team from './components/Team';
 
 export default function Home() {
   return (
@@ -48,7 +49,7 @@ export default function Home() {
                 </div>
             
           <Sponser_flow />
-
+          <Team />
           
           <Cordi />
       </main>
