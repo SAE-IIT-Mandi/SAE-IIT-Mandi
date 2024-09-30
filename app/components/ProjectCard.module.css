@@ -7,7 +7,7 @@
 
 .project_item {
   position: relative;
-  flex: 1 1 calc(33.33% - 20px); /* 3 cards per row on large screens */
+  flex: 1 1 calc(33.33% - 20px);
   height: 400px;
   background-size: cover;
   background-position: center;
