@@ -6,11 +6,15 @@ const Footer = () => {
   return (
     <div className={styles.footerDiv}>
       <div className={styles.footerDiv1}>
-        <Image src="/images/main.jpg" alt="Formula Bharat" width={150} height={100} />
-        <p>This space is left for all new updates and other items to be placed we can place anything like...subscribe</p>
+        <Image src="/images/main.jpg" alt="Formula Bharat" width={170} height={120} />
+        <div className={styles.contact_info}>
+                    <h2>Get in Touch</h2>
+                    <p><a href="mailto:sae@iitmandi.ac.in">sae@iitmandi.ac.in</a></p>
+                    <p>Address: SAE Club,IIT Mandi, Kamand, Himachal Pradesh, 175075 India</p>
+                </div>
         <div className={styles.footerAnchor}>
         <a href="https://www.facebook.com/SAEiitmandi/" target="_blank" rel="noopener noreferrer">
-            Contact Us
+            Highlights
           </a>
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
             Sponsors
