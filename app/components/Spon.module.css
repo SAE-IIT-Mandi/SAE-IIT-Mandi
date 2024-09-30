@@ -2,12 +2,12 @@
 .carousel {
     display: flex; 
     transition: transform 0.1s ease; 
-    animation: scroll 5s linear infinite; 
+    animation: scroll 4s linear infinite; 
 }
 
 .sponsorSection {
     padding: 50px 0;
-    background-color: #000;
+    background-color: #793737;
     color: #fff;
     text-align: center;
 }

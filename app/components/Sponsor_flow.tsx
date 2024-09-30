@@ -13,6 +13,12 @@ const Sponsor_flow: React.FC = () => {
                     <a href="https://www.ansys.com/en-in/academic/students/student-teams" target="_blank" rel="noopener noreferrer">
                         <Image src="/spon/ansys-cover.jpg" alt="Sponsor 1 Logo" width={100} height={100} />
                     </a>
+                    <a href="https://www.ansys.com/en-in/academic/students/student-teams" target="_blank" rel="noopener noreferrer">
+                        <Image src="/spon/ansys-cover.jpg" alt="Sponsor 1 Logo" width={100} height={100} />
+                    </a>
+                    <a href="https://www.ansys.com/en-in/academic/students/student-teams" target="_blank" rel="noopener noreferrer">
+                        <Image src="/spon/ansys-cover.jpg" alt="Sponsor 1 Logo" width={100} height={100} />
+                    </a>
                     <a href="https://altair.com/" target="_blank" rel="noopener noreferrer">
                         <Image src="/spon/Altair-Cover.jpg" alt="Sponsor 2 Logo" width={100} height={100} />
                     </a>

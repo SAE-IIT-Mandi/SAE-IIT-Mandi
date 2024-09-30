@@ -1,0 +1,92 @@
+.teamSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.teamContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+}
+
+.teamHeading {
+    font-size: 3rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.teamSubheading {
+    font-size: 1.5rem;
+    color: #00ccff;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.teamPoints {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.teamPoint {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 30px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.teamPoint:hover {
+    color: #ffcc00;
+}
+
+.checkIcon {
+    position: absolute;
+    left: 0;
+    color: #00ccff;
+    font-size: 1.5rem;
+}
+
+.teamImageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.teamImage {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 204, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.teamImage:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .teamSection {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .teamContent {
+        width: 50%;
+    }
+
+    .teamImageWrapper {
+        width: 50%;
+    }
+}
