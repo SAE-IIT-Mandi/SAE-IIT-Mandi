@@ -7,7 +7,7 @@ const WhoAreWe = () => {
       <div className={styles.textContainer}>
         <h1>Vision and Mission</h1>
         <p>
-          We are a dedicated team of professionals committed to delivering exceptional results. Our expertise spans across various domains, ensuring comprehensive solutions to meet your needs. With a focus on innovation and excellence, we strive to make a significant impact in our field.
+        The vision of the Automobile Club of IIT Mandi is to become a leading force in automotive innovation by cultivating a culture of creativity, engineering excellence, and hands-on experience. We aim to empower students to push technological boundaries and make a lasting impact in the world of automotive design and sustainable mobility solutions.
         </p>
         <div className={styles.links}>
           <a href="contactus" className={styles.link}>About Us</a>

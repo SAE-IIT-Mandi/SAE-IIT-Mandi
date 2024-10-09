@@ -7,7 +7,7 @@ const Welcome = () => {
       <div className={styles.textContainer}>
         <h1 className={styles.heading}>IIT Mandi Racing</h1>
         <p className={styles.paragraph}>
-          The Automobile Club of IIT Mandi is committed to excellence and innovation in the realm of automotive engineering. We are a dedicated team of young engineers, passionate about pushing the boundaries of design, fabrication, and technology. Our diverse portfolio includes participation in prestigious competitions such as SAE SUPRA (2014, 2019), Efficycle (2024), and our current efforts toward Formula Bharat 2026. Through these initiatives, we foster a culture of innovation, creativity, and hands-on learning that not only advances our own skills but also elevates the entire IIT Mandi community.
+        The Automobile Club of IIT Mandi is a dynamic team of young engineers driven by a shared passion for automotive innovation and engineering excellence. With a strong commitment to pushing the frontiers of design, fabrication, and cutting-edge technology, we continuously strive to turn visionary concepts into reality. Our journey has seen us compete in elite challenges like SAE SUPRA (2014, 2019), Efficycle (2024), and we are now gearing up for our ambitious participation in Formula Bharat 2026. Through these endeavors, we not only sharpen our technical skills but also foster a culture of creativity, collaboration, and hands-on learning that inspires and uplifts the entire IIT Mandi community. Our goal is to redefine what's possible and leave a lasting impact in the world of automotive engineering.
         </p>
        
       </div>
