@@ -1,12 +1,8 @@
-import Navbar from '../components/Navbar';
 import CarViewer from '../components/CarViewer';
 import Cars from '../components/Cars';
 import styles from './Cars.module.css';
-import Footer from '../components/Footer';
 export default function ContactUs() {
   return (
-    <div>
-      <Navbar />
       <main>
       <nav className={styles.ovalNavbar}>
         <div className={styles.navbarContent}>
@@ -22,8 +18,6 @@ export default function ContactUs() {
         <Cars />
         
       </main>
-      <Footer />
-    </div>
   );
 }
 
