@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './ProfileCard.module.css';
 
 interface ProfileCardProps {
@@ -12,7 +11,7 @@ const ProfileCard = ({ name, imageSrc, linkedinUrl, instagramUrl }: ProfileCardP
   return (
     <div className={styles.profile_card}>
       <div className={styles.profile_Image}>
-        <Image
+        <img
           src={imageSrc}
           alt={name}
           height={300}
