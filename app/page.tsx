@@ -18,16 +18,12 @@ export default function Home() {
                 <Project_card  
                   src="/spon/ER7.0.png" 
                   name="SAE Supra 2019" 
-                  writeup="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia pariatur adipisci
-                            recusandae autem accusamus reiciendis enim quibusdam placeat maxime est animi laborum amet quia deserunt
-                            earum, ex," 
+                  writeup="SAE SUPRA 2019 was a landmark event in the world of automotive engineering, bringing together some of the brightest young minds from across India to design, build, and race Formula-style vehicles. For the Automobile Club of IIT Mandi, it was an extraordinary opportunity to showcase innovation, teamwork, and engineering prowess on a national stage. Competing against top institutions, the team pushed the limits of design, fabrication, and performance, gaining invaluable experience in real-world problem-solving and project management. SAE SUPRA 2019 was more than just a competition—it was a celebration of passion, precision, and the relentless pursuit of excellence in automotive engineering." 
                 />
                 <Project_card  
                   src="/spon/ER7.0.png" 
-                  name="Quad Torc 2019" 
-                  writeup="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia pariatur adipisci
-                            recusandae autem accusamus reiciendis enim quibusdam placeat maxime est animi laborum amet quia deserunt
-                            earum, ex," 
+                  name="Efficycle 2024" 
+                  writeup=" Our club's hybrid three-wheeled electric vehicle, Team Trikona, was designed and fabricated for dual operation (battery-powered and manually powered via pedal). Despite being our first competition in three years, we successfully completed the vehicle and presented it at LPU University. Our efforts reflect our resilience and commitment to continuous improvement as we prepare for next year's iteration." 
                 />
                 <Project_card  
                   src="/spon/ER7.0.png" 
