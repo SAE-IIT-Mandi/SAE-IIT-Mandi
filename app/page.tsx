@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar';
+
 import styles from './Home.module.css';
 import WhoAreWe from './components/WhoAreWe';
 import Sponser_flow from './components/Sponsor_flow';
@@ -6,12 +6,9 @@ import Project_card from './components/ProjectCard';
 import Welcome from './components/Welcome';
 import Cordi from './components/Cordi';
 import Team from './components/Team';
-import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
       <main className={styles.main}>
           <Welcome />
           <WhoAreWe />
@@ -53,7 +50,5 @@ export default function Home() {
           
           <Cordi />
       </main>
-      <Footer />
-    </div>
   );
 }
