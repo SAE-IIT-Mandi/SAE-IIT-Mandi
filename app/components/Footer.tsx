@@ -13,18 +13,18 @@ const Footer = () => {
                     <p>Address: SAE Club,IIT Mandi, Kamand, Himachal Pradesh, 175075 India</p>
                 </div>
         <div className={styles.footerAnchor}>
-        <a href="https://www.facebook.com/SAEiitmandi/" target="_blank" rel="noopener noreferrer">
+        <a href="/highlights" target="_blank" rel="noopener noreferrer">
             Highlights
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <a href="/sponsors" target="_blank" rel="noopener noreferrer">
             Sponsors
           </a>
           </div>
         <div className={styles.footerAnchor}>
-          <a href="https://www.instagram.com/sae.iitmandi/" target="_blank" rel="noopener noreferrer">
+          <a href="/teamsae" target="_blank" rel="noopener noreferrer">
             Team
           </a>
-          <a href="https://www.instagram.com/sae.iitmandi/" target="_blank" rel="noopener noreferrer">
+          <a href="/cars" target="_blank" rel="noopener noreferrer">
             Projects
           </a>
           </div>
