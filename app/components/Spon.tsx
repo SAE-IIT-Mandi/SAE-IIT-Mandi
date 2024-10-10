@@ -16,10 +16,7 @@ const Spon: React.FC = () => {
             sustainable technologies, and host events that bring together experts from across the industry.
             </p>
             <p>
-            Sponsoring the SAE Club at IIT Mandi offers your brand a unique opportunity to associate with a prestigious
-            institution and engage with a highly motivated and skilled community. With your sponsorship, we can achieve
-            greater milestones, bringing innovation and creativity to new heights. Together, we can drive the future of
-            mobility and engineering.
+            Sponsoring the IIT Mandi SAE Club is an opportunity to invest in the next generation of innovative engineers and automotive leaders. By supporting our club, sponsors align with a team dedicated to excellence in design, fabrication, and technology, with a proven track record in prestigious competitions like SAE SUPRA and Formula Bharat. Your sponsorship helps us push boundaries in automotive engineering, while also providing visibility at national events and fostering a culture of creativity and hands-on learning. Partnering with us means contributing to cutting-edge solutions and the future of sustainable mobility. 
             </p>
         </section>
             <Sponsor_flow />

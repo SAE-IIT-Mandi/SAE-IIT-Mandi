@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {auth, db } from "./firebase";
+import { auth, db, storage } from "./firebase";
 import { collection, getDocs, updateDoc, doc, addDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { onAuthStateChanged } from "firebase/auth";
 import { signInWithGoogle, logout } from "./authservice";
 import styles from "./SAETeam.module.css";
-import ProfileCard from './ProfileCard';
+import ProfileCard from "./ProfileCard";
 
 interface Member {
   id: string;
@@ -20,11 +21,12 @@ const SAETeam: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [editing, setEditing] = useState<string | null>(null);
   const [editName, setEditName] = useState<string>("");
-  const [editImage, setEditImage] = useState<string>("");
+  const [editImageFile, setEditImageFile] = useState<File | null>(null);
+  const [editImageURL, setEditImageURL] = useState<string>(""); 
   const [editLinkedin, setEditLinkedin] = useState<string>("");
   const [editInstagram, setEditInstagram] = useState<string>("");
   const [newName, setNewName] = useState<string>("");
-  const [newImage, setNewImage] = useState<string>("");
+  const [newImage, setNewImage] = useState<File | null>(null); 
   const [newLinkedin, setNewLinkedin] = useState<string>("");
   const [newInstagram, setNewInstagram] = useState<string>("");
 
@@ -36,14 +38,14 @@ const SAETeam: React.FC = () => {
     };
     fetchItems();
   }, []);
-  
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsAuthenticated(!!user);
     });
     return () => unsubscribe();
   }, []);
- 
+
   const handleSignIn = async () => {
     try {
       await signInWithGoogle();
@@ -65,22 +67,26 @@ const SAETeam: React.FC = () => {
 
   const handleAddItem = async () => {
     if (!newName || !newImage) return;
+
     try {
+      const storageRef = ref(storage, `Members/${newImage.name}`);
+      await uploadBytes(storageRef, newImage);
+      const imageUrl = await getDownloadURL(storageRef);
+
       const docRef = await addDoc(collection(db, "Members"), {
         Name: newName,
-        Image: newImage,
+        Image: imageUrl,
         Linkedin: newLinkedin,
         Instagram: newInstagram,
       });
 
       setItems((prevItems) => [
         ...prevItems,
-        { id: docRef.id, Name: newName, Image: newImage, Linkedin: newLinkedin, Instagram: newInstagram },
+        { id: docRef.id, Name: newName, Image: imageUrl, Linkedin: newLinkedin, Instagram: newInstagram },
       ]);
 
-      // Clear the form for new member
       setNewName("");
-      setNewImage("");
+      setNewImage(null);
       setNewLinkedin("");
       setNewInstagram("");
     } catch (error: any) {
@@ -91,17 +97,26 @@ const SAETeam: React.FC = () => {
   const handleEdit = (id: string, Name: string, Image: string, Linkedin: string, Instagram: string) => {
     setEditing(id);
     setEditName(Name);
-    setEditImage(Image);
+    setEditImageURL(Image); 
     setEditLinkedin(Linkedin);
     setEditInstagram(Instagram);
+    setEditImageFile(null); 
   };
 
   const saveEdit = async (id: string) => {
     try {
+      let imageUrl = editImageURL; 
+
+      if (editImageFile) {
+        const storageRef = ref(storage, `Members/${editImageFile.name}`);
+        await uploadBytes(storageRef, editImageFile);
+        imageUrl = await getDownloadURL(storageRef);
+      }
+
       const itemRef = doc(db, "Members", id);
       await updateDoc(itemRef, {
         Name: editName,
-        Image: editImage,
+        Image: imageUrl,
         Linkedin: editLinkedin,
         Instagram: editInstagram,
       });
@@ -109,7 +124,7 @@ const SAETeam: React.FC = () => {
       setItems((prevItems) =>
         prevItems.map((item) =>
           item.id === id
-            ? { ...item, Name: editName, Image: editImage, Linkedin: editLinkedin, Instagram: editInstagram }
+            ? { ...item, Name: editName, Image: imageUrl, Linkedin: editLinkedin, Instagram: editInstagram }
             : item
         )
       );
@@ -121,67 +136,65 @@ const SAETeam: React.FC = () => {
 
   return (
     <div>
-        <h3 className={styles.sectionTitle}>Core Team</h3>
+      <h3 className={styles.sectionTitle}>Core Team</h3>
       <section className={styles.profile}>
-        
-          {items.map((member) => (
-            <div key={member.id}>
-              {editing === member.id ? (
-                <div>
-                  <input
-                    type="text"
-                    value={editName}
-                    onChange={(e) => setEditName(e.target.value)}
-                    className={styles.input}
-                  />
-                  <input
-                    type="text"
-                    value={editImage}
-                    onChange={(e) => setEditImage(e.target.value)}
-                    className={styles.input}
-                  />
-                  <input
-                    type="text"
-                    value={editLinkedin}
-                    onChange={(e) => setEditLinkedin(e.target.value)}
-                    className={styles.input}
-                  />
-                  <input
-                    type="text"
-                    value={editInstagram}
-                    onChange={(e) => setEditInstagram(e.target.value)}
-                    className={styles.input}
-                  />
-                  <div className={styles.editingButtons}>
-                    <button onClick={() => saveEdit(member.id)} className={styles.button}>
-                      Save
-                    </button>
-                    <button
-                      onClick={() => setEditing(null)}
-                      className={`${styles.button} ${styles.cancelButton}`}
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <ProfileCard
-                  name={member.Name}
-                  imageSrc={member.Image}
-                  linkedinUrl={member.Linkedin}
-                  instagramUrl={member.Instagram}
+        {items.map((member) => (
+          <div key={member.id}>
+            {editing === member.id ? (
+              <div>
+                <input
+                  type="text"
+                  value={editName}
+                  onChange={(e) => setEditName(e.target.value)}
+                  className={styles.input}
                 />
-              )}
-              {isAuthenticated && editing !== member.id && (
-                <button
-                  onClick={() => handleEdit(member.id, member.Name, member.Image, member.Linkedin, member.Instagram)}
-                  className={styles.button}
-                >
-                  Edit
-                </button>
-              )}
-            </div>
-          ))}
+                <input
+                  type="file"
+                  onChange={(e) => setEditImageFile(e.target.files ? e.target.files[0] : null)} // Update file state
+                  className={styles.input}
+                />
+                <input
+                  type="text"
+                  value={editLinkedin}
+                  onChange={(e) => setEditLinkedin(e.target.value)}
+                  className={styles.input}
+                />
+                <input
+                  type="text"
+                  value={editInstagram}
+                  onChange={(e) => setEditInstagram(e.target.value)}
+                  className={styles.input}
+                />
+                <div className={styles.editingButtons}>
+                  <button onClick={() => saveEdit(member.id)} className={styles.button}>
+                    Save
+                  </button>
+                  <button
+                    onClick={() => setEditing(null)}
+                    className={`${styles.button} ${styles.cancelButton}`}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <ProfileCard
+                name={member.Name}
+                imageSrc={member.Image}
+                linkedinUrl={member.Linkedin}
+                instagramUrl={member.Instagram}
+              />
+            )}
+            {isAuthenticated && editing !== member.id && (
+              <button
+                onClick={() => handleEdit(member.id, member.Name, member.Image, member.Linkedin, member.Instagram)}
+                className={styles.button}
+              >
+                Edit
+              </button>
+            )}
+          </div>
+        ))}
       </section>
 
       <div className={styles.container}>
@@ -195,10 +208,8 @@ const SAETeam: React.FC = () => {
               className={styles.input}
             />
             <input
-              type="text"
-              placeholder="Image URL"
-              value={newImage}
-              onChange={(e) => setNewImage(e.target.value)}
+              type="file"
+              onChange={(e) => setNewImage(e.target.files ? e.target.files[0] : null)}
               className={styles.input}
             />
             <input
