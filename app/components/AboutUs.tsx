@@ -6,12 +6,12 @@ const AboutUs: React.FC = () => {
         <div>
             <section className={styles.section}>
                 <h1 className={styles.h2}>About Us</h1>
-                <p>The Automobile Club of IIT Mandi is a collective of highly motivated and skilled individuals dedicated to pushing the boundaries of automotive engineering. Fueled by a passion for cutting-edge technology and innovation, our team designs and fabricates high-performance vehicles for national competitions such as SAE SUPRA, EffiCycle, and the upcoming Formula Bharat 2026.
-<br></br>
-With a history of success in SAE SUPRA (2014, 2019) and EffiCycle (2024), we continually refine our expertise through practical experience and advanced methodologies. Our commitment extends beyond competition; we aim to foster a deep understanding of automotive systems within the broader student community.
-<br></br>
-We organize expert lectures on vehicle dynamics, and modern automotive technologies and their production directly form Industrial experts like from Hero Motor Corp. We also conduct workshops on live engine demonstration(Pulsar and Royal Enfield Twin Spark 350cc) and essential engineering tools like SolidWorks, MATLAB, and ANSYS. Our hackathons and training sessions provide hands-on experience with advanced simulation, design, and manufacturing processes, enabling the next generation of engineers to lead in the evolving automotive landscape.</p>
+                <p>  The Automobile Club of IIT Mandi is a dynamic collective of highly skilled and driven individuals, united by a shared passion for pushing the frontiers of automotive engineering. With a focus on cutting-edge technology and innovation, our team excels in designing and fabricating high-performance vehicles for renowned national competitions such as SAE SUPRA, EffiCycle, and the forthcoming Formula Bharat 2026.
 
+<br></br>
+Having achieved significant success in SAE SUPRA (2014, 2019) and EffiCycle (2024), we continuously hone our expertise through rigorous hands-on experience and advanced engineering methodologies. Our mission extends beyond mere competition; we are dedicated to cultivating a profound understanding of automotive systems within the wider student body.
+<br></br>
+To that end, we regularly organize expert lectures on vehicle dynamics, modern automotive technologies, and manufacturing processes, featuring industry leaders from organizations like Hero MotorCorp. Additionally, we host workshops that offer live engine demonstrations (including Pulsar and Royal Enfield Twin Spark 350cc engines), alongside training in essential engineering tools such as SolidWorks, MATLAB, and ANSYS. Through hackathons and immersive training sessions, we provide students with practical experience in advanced simulation, design, and manufacturing, equipping the next generation of engineers to lead in the rapidly evolving world of automotive engineering.</p>
                 <div className={styles.contact_info}>
                     <h2 className={styles.h2}>Get in Touch</h2>
                     <p>If you have any questions, suggestions, or just want to reach out, feel free to contact us through the details provided below.</p>
