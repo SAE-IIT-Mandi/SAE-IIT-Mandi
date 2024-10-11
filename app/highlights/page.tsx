@@ -1,10 +1,10 @@
 import React from 'react';
-import NewsSection from '../components/News';
+import NewsAndEvents from '../components/Highlights';
 
 export default function Highlights() {
   return (
     <main>
-      <NewsSection/>
+      <NewsAndEvents/>
     </main>
   );
 };

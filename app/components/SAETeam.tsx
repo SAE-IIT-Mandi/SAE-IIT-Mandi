@@ -1,8 +1,8 @@
-"use client";
+"use client"
 import React, { useEffect, useState } from "react";
 import { auth, db, storage } from "./firebase";
-import { collection, getDocs, updateDoc, doc, addDoc } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { collection, getDocs, updateDoc, doc, addDoc, deleteDoc } from "firebase/firestore"; 
+import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage"; 
 import { onAuthStateChanged } from "firebase/auth";
 import { signInWithGoogle, logout } from "./authservice";
 import styles from "./SAETeam.module.css";
@@ -134,6 +134,21 @@ const SAETeam: React.FC = () => {
     }
   };
 
+  const handleDelete = async (id: string, imageUrl: string) => {
+    try {
+      const itemRef = doc(db, "Members", id);
+      await deleteDoc(itemRef); 
+      const imageRef = ref(storage, imageUrl);
+      if(imageRef){
+        await deleteObject(imageRef);
+      }
+      setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    } 
+    catch (error: any) {
+      console.error("Error deleting member:", error);
+    }
+  };
+
   return (
     <div>
       <h3 className={styles.sectionTitle}>Core Team</h3>
@@ -186,12 +201,20 @@ const SAETeam: React.FC = () => {
               />
             )}
             {isAuthenticated && editing !== member.id && (
-              <button
-                onClick={() => handleEdit(member.id, member.Name, member.Image, member.Linkedin, member.Instagram)}
-                className={styles.button}
-              >
-                Edit
-              </button>
+              <div>
+                <button
+                  onClick={() => handleEdit(member.id, member.Name, member.Image, member.Linkedin, member.Instagram)}
+                  className={styles.button}
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDelete(member.id, member.Image)}
+                  className={`${styles.button} ${styles.deleteButton}`}
+                >
+                  Delete
+                </button>
+              </div>
             )}
           </div>
         ))}
