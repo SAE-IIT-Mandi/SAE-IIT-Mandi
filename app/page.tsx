@@ -41,7 +41,6 @@ export default function Home() {
                 />
                 </div>
             
-          <Sponser_flow />
           <Team />
           
           <Cordi />

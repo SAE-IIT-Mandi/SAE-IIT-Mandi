@@ -8,20 +8,20 @@ const Team: React.FC = () => {
             <div className={styles.teamContent}>
                 <h2 className={styles.teamHeading}>The Team</h2>
                 <p className={styles.teamSubheading}>
-                    Driving Innovation, Powering Sustainability: IITB Racing
+                    Driving Innovation, Powering Sustainability: IIT Mandi Racing
                 </p>
                 <ul className={styles.teamPoints}>
                     <li className={styles.teamPoint}>
                         <span className={styles.checkIcon}>✔</span>
-                        Leading India’s charge in Formula Student Electric with innovative, sustainable solutions.
+                        Aiming for innovative, sustainable solutions.
                     </li>
                     <li className={styles.teamPoint}>
                         <span className={styles.checkIcon}>✔</span>
-                        Pioneering the future of electric mobility with passion and excellence.
+                        Pioneering the future of racing with passion and excellence.
                     </li>
                     <li className={styles.teamPoint}>
                         <span className={styles.checkIcon}>✔</span>
-                        Driving sustainable electric mobility, propelling India onto the global stage.
+                        Designing sustainable electric mobility, propelling India onto the global stage.
                     </li>
                 </ul>
             </div>

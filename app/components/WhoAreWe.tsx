@@ -13,6 +13,7 @@ const WhoAreWe = () => {
         if (entry.isIntersecting) {
           if (entry.target.classList.contains(styles.textContainer)) {
             entry.target.classList.add(styles.fadeInLeft);
+          } else if (entry.target.classList.contains(styles.imageContainer)) {
             entry.target.classList.add(styles.fadeInRight);
           }
           observer.unobserve(entry.target);
@@ -37,12 +38,12 @@ const WhoAreWe = () => {
           The vision of the Automobile Club of IIT Mandi is to become a leading force in automotive innovation by cultivating a culture of creativity, engineering excellence, and hands-on experience. We aim to empower students to push technological boundaries and make a lasting impact in the world of automotive design and sustainable mobility solutions.
         </p>
         <div className={styles.links}>
-          <a href="contactus" className={styles.link}>About Us</a>
+          <a href="gallery" className={styles.link}>Gallery</a>
           <a href="cars" className={styles.link}>Our Projects</a>
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <Image src="/images/vision.png" alt="SAE Logo" width={450} height={200} />
+        <Image className='image' src="/images/vision.png" alt="SAE Logo" width={500} height={200} />
       </div>
     </section>
   );
