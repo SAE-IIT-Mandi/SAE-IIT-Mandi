@@ -29,8 +29,8 @@ const Team: React.FC = () => {
                 <Image 
                     src="/spon/ansys-cover.jpg" 
                     alt="The Team" 
-                    width={400} 
-                    height={400} 
+                    width={300} 
+                    height={300} 
                     className={styles.teamImage} 
                 />
             </div>
