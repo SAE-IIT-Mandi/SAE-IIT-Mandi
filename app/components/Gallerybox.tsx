@@ -47,6 +47,8 @@ const Gallerybox: React.FC = () => {
               src={src}
               alt={`Gallery item ${index}`}
               className={styles.image}
+              width={200}
+              height={200}
             />
           </div>
         ))}
