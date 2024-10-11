@@ -120,7 +120,7 @@
 
   .navRight ul, .navLeft ul {
     padding: 0;
-    justify-content: center; /* Center links within each section */
+    justify-content: center; 
   }
 
   .logo.hidden {
