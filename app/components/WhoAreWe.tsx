@@ -15,7 +15,7 @@ const WhoAreWe = () => {
         </div>
       </div>
       <div className={styles.imageContainer}>
-      {<Image src="/images/car.jpeg" alt="SAE Logo" width={300} height={300} />}
+      {<Image src="/images/vision.jpeg" alt="SAE Logo" width={400} height={300} />}
       </div>
     </section>
   );
