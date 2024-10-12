@@ -27,10 +27,10 @@ const Team: React.FC = () => {
             </div>
             <div className={styles.teamImageWrapper}>
                 <Image 
-                    src="/spon/ansys-cover.jpg" 
+                    src="/gallery/19.webp" 
                     alt="The Team" 
-                    width={300} 
-                    height={300} 
+                    width={500} 
+                    height={400} 
                     className={styles.teamImage} 
                 />
             </div>

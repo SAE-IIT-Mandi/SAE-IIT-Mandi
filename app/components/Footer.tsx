@@ -11,23 +11,8 @@ const Footer = () => {
                     <h2>Get in Touch</h2>
                     <p><a href="mailto:sae@iitmandi.ac.in">sae@iitmandi.ac.in</a></p>
                     <p>Address: SAE Club,IIT Mandi, Kamand, Himachal Pradesh, 175075 India</p>
-                </div>
-        <div className={styles.footerAnchor}>
-        <a href="/highlights" target="_blank" rel="noopener noreferrer">
-            Highlights
-          </a>
-          <a href="/sponsors" target="_blank" rel="noopener noreferrer">
-            Sponsors
-          </a>
-          </div>
-        <div className={styles.footerAnchor}>
-          <a href="/teamsae" target="_blank" rel="noopener noreferrer">
-            Team
-          </a>
-          <a href="/cars" target="_blank" rel="noopener noreferrer">
-            Projects
-          </a>
-          </div>
+              </div>
+            <Image src="/images/sae.png" alt="Formula Bharat" width={170} height={120} />
         </div>
         <footer className={styles.footer}>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />

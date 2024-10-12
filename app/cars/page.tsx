@@ -6,10 +6,10 @@ export default function ContactUs() {
       <main>
       <nav className={styles.ovalNavbar}>
         <div className={styles.navbarContent}>
-          <div><a href="#">Efficycle</a></div>
+          <div><a href="/efficycleBrochure">Efficycle'24</a></div>
           <div><a href="#">Formula Bharat</a></div>
-          <div><a href="#">Car 1</a></div>
-          <div><a href="#">Car 2</a></div>
+          <div><a href="#">Efficycle'19</a></div>
+          <div><a href="#">SAE Supra</a></div>
         </div>
       </nav>
         <section className={styles.section}>

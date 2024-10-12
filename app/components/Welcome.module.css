@@ -5,6 +5,7 @@
   align-items: center;
   text-align: left;
   overflow: hidden;
+  flex-direction: row; 
 }
 
 .textContainer {
@@ -18,8 +19,8 @@
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #FF4D4D; 
-  animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end 4s forwards; 
+  border-right: 2px solid #FF4D4D;
+  animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end 4s forwards;
 }
 
 @keyframes typing {
@@ -39,7 +40,6 @@
     border-color: #FF4D4D;
   }
 }
-
 
 .paragraph {
   font-size: 1.25rem;
@@ -76,11 +76,35 @@
   }
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
+@media (max-width: 768px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 65%; 
+    }
   }
-  100% {
-    transform: translateY(-10px);
+  .welcome {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .heading {
+    font-size: 2rem; 
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem; 
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
   }
 }
