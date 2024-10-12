@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    padding: 40px 20px; /* Adjusted padding for better spacing */
+    padding: 10px 15px;
 }
 
 .teamContent {
@@ -14,13 +14,12 @@
     align-items: flex-start;
     width: 100%;
     max-width: 800px;
-    padding: 20px; /* Added padding for content inside the box */
 }
 
 .teamHeading {
     font-size: 3rem;
     color: #ffcc00;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -40,11 +39,11 @@
 
 .teamPoint {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     color: #ffffff;
-    padding-left: 40px; /* Adjusted padding for space between icon and text */
+    padding-left: 40px;
     position: relative;
     transition: color 0.3s ease;
 }
@@ -65,7 +64,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    padding: 0 20px; /* Added padding for better spacing */
+    padding: 0 20px;
 }
 
 .teamImage {
@@ -82,16 +81,60 @@
     .teamSection {
         flex-direction: row;
         justify-content: space-between;
-        padding: 60px 40px; /* Increased padding for larger screens */
+        padding: 60px 40px;
     }
 
     .teamContent {
         width: 50%;
-        padding-right: 40px; /* Added padding between content and image */
+        padding-right: 40px;
     }
 
     .teamImageWrapper {
         width: 50%;
-        padding-left: 40px; /* Added padding for image on larger screens */
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .teamHeading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .teamSubheading {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .teamPoint {
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+
+    .teamImageWrapper {
+        margin-top: 30px;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teamHeading {
+        font-size: 2rem;
+    }
+
+    .teamSubheading {
+        font-size: 1.1rem;
+    }
+
+    .teamPoint {
+        font-size: 0.9rem;
+        padding-left: 15px;
+    }
+
+    .teamImage {
+        width: 80%; 
+        height: 200px;
     }
 }
