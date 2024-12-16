@@ -1,4 +1,4 @@
-import CarViewer from '../components/CarViewer';
+// import CarViewer from '../components/CarViewer';
 import Cars from '../components/Cars';
 import styles from './Cars.module.css';
 export default function ContactUs() {
@@ -12,9 +12,9 @@ export default function ContactUs() {
           <div><a href="#">SAE Supra</a></div>
         </div>
       </nav>
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <CarViewer />
-        </section>
+        </section> */}
         <Cars />
         
       </main>

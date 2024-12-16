@@ -1,6 +1,5 @@
 
 import styles from './Home.module.css';
-import WhoAreWe from './components/WhoAreWe';
 import Sponser_flow from './components/Sponsor_flow';
 import Project_card from './components/ProjectCard';
 import Welcome from './components/Welcome';
@@ -11,9 +10,8 @@ export default function Home() {
   return (
       <main className={styles.main}>
           <Welcome />
-          <WhoAreWe />
 
-            <h2 className={styles.h2tag}>Our Projects</h2>
+            <h2 className={styles.heading}>Our Projects</h2>
             <div className={styles.projects}>
                 <Project_card  
                   src="/gallery/22.webp" 
@@ -24,21 +22,21 @@ export default function Home() {
                 />
                 <Project_card  
                   src="/gallery/22.webp" 
-                  name="Efficycle 2024" 
+                  name="Efficycle 2023" 
                   writeup=" rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
                             harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
                             temporibus ditiu" 
                 />
                 <Project_card  
                   src="/gallery/22.webp" 
-                  name="SAE Forumula Bharat" 
+                  name="Efficycle 2024" 
                   writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
                             harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
                             temporibus ditiu" 
                 />
                 <Project_card  
                   src="/gallery/22.webp" 
-                  name="Efficycle 2019" 
+                  name="SAE Forumula Bharat" 
                   writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
                             harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
                             temporibus ditiu" 

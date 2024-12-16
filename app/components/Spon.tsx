@@ -5,8 +5,8 @@ import Sponsor_flow from './Sponsor_flow';
 const Spon: React.FC = () => {
   return (
     <div>
-        <section className={styles.section}>
-            <h2 className={styles.h2tag}>Why Sponsor Us?</h2>
+        <section className={styles.sponsorSection}>
+            <h2>Why Sponsor Us?</h2>
             <p>
             The SAE Club of IIT Mandi is a hub of innovation, creativity, and technical excellence. Our members are
             committed to pushing the boundaries of automotive and aerospace engineering through cutting-edge projects,
@@ -19,7 +19,7 @@ const Spon: React.FC = () => {
             Sponsoring the IIT Mandi SAE Club is an opportunity to invest in the next generation of innovative engineers and automotive leaders. By supporting our club, sponsors align with a team dedicated to excellence in design, fabrication, and technology, with a proven track record in prestigious competitions like SAE SUPRA and Formula Bharat. Your sponsorship helps us push boundaries in automotive engineering, while also providing visibility at national events and fostering a culture of creativity and hands-on learning. Partnering with us means contributing to cutting-edge solutions and the future of sustainable mobility. 
             </p>
         </section>
-            <Sponsor_flow />
+            {/* <Sponsor_flow /> */}
           
     </div>
   );

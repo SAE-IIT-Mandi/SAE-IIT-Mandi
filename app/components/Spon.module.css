@@ -6,7 +6,7 @@
 }
 
 .sponsorSection {
-    padding: 50px 0;
+    padding: 20px;
     background-color: #1a202c;
     color: #fff;
     text-align: center;
@@ -19,7 +19,7 @@
 }
 
 .sponsorSection p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #ddd; 
 }
 
@@ -50,10 +50,4 @@
     100% {
         transform: translateX(-50%); 
     }
-}
-
-.h2tag {
-    text-align: center;
-    margin: 0;
-    margin-bottom: 10px;
 }

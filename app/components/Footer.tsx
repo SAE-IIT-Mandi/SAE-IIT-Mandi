@@ -1,8 +1,37 @@
+"use client";
 import React from "react";
 import styles from "./Footer.module.css";
 import Image from 'next/image';
+import { useState, useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { signInWithGoogle, logout } from "./authservice";
+import { auth } from "./firebase";
 
 const Footer = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const handleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+    } catch (error: any) {
+      console.error("Error signing in:", error);
+      alert("Sign-in failed: " + error.message);
+    }
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await logout();
+    } catch (error: any) {
+      console.error("Error signing out:", error);
+    }
+  };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsAuthenticated(!!user);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className={styles.footerDiv}>
       <div className={styles.footerDiv1}>
@@ -11,9 +40,20 @@ const Footer = () => {
                     <h2>Get in Touch</h2>
                     <p><a href="mailto:sae@iitmandi.ac.in">sae@iitmandi.ac.in</a></p>
                     <p>Address: SAE Club,IIT Mandi, Kamand, Himachal Pradesh, 175075 India</p>
-              </div>
-            <Image src="/images/sae.png" alt="Formula Bharat" width={170} height={120} />
         </div>
+        <div className={styles.contact_info}>
+          <Image src="/images/sae.png" alt="Formula Bharat" width={170} height={120} />
+          {isAuthenticated ? (
+            <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>
+            Sign Out 
+            </button>) : (
+            <button onClick={handleSignIn} className={`${styles.button} ${styles.signInOutButton}`}>
+            For Team
+            </button>
+            )
+          }
+        </div>
+      </div>
         <footer className={styles.footer}>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
         <div className="footer-social-icons">
