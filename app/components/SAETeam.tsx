@@ -4,7 +4,7 @@ import { auth, db, storage } from "./firebase";
 import { collection, getDocs, updateDoc, doc, addDoc, deleteDoc } from "firebase/firestore"; 
 import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage"; 
 import { onAuthStateChanged } from "firebase/auth";
-import { signInWithGoogle, logout } from "./authservice";
+import {  logout } from "./authservice";
 import styles from "./SAETeam.module.css";
 import ProfileCard from "./ProfileCard";
 
@@ -45,16 +45,6 @@ const SAETeam: React.FC = () => {
     });
     return () => unsubscribe();
   }, []);
-
-  const handleSignIn = async () => {
-    try {
-      await signInWithGoogle();
-      setIsAuthenticated(true);
-    } catch (error: any) {
-      console.error("Error signing in:", error);
-      alert("Sign-in failed: " + error.message);
-    }
-  };
 
   const handleSignOut = async () => {
     try {
@@ -221,7 +211,7 @@ const SAETeam: React.FC = () => {
       </section>
 
       <div className={styles.container}>
-        {isAuthenticated ? (
+        {isAuthenticated && (
           <div className={styles.addItemForm}>
             <input
               type="text"
@@ -258,10 +248,6 @@ const SAETeam: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : (
-          <button onClick={handleSignIn} className={`${styles.button} ${styles.signInOutButton}`}>
-            Sign In to Add Member
-          </button>
         )}
       </div>
     </div>

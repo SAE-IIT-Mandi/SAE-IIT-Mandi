@@ -2,6 +2,7 @@
   font-family: Arial, sans-serif;
   background-color: #000;
   padding-top: 10px;
+  
 }
 
 .footer {
@@ -46,6 +47,7 @@
   padding: 10px;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -122,6 +124,20 @@
   text-align: left;
 }
 
+
+.button {
+  background-color: #C1131A;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f02f35;
+}
 
 @media (max-width: 1024px) {
   .footerDiv1 {

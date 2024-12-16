@@ -1,9 +1,21 @@
+
 .header {
-  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: transparent;
+  background: 
+    linear-gradient(129deg, transparent 50%, #C0141A 50%, #C0141A 52.5%, transparent 52.5%), 
+    linear-gradient(129deg, transparent 53%, #C0141A 53%, #C0141A 54.5%, transparent 54.5%);
+  background-color: black;
+  background-size: cover; 
+  background-attachment: fixed; 
+  z-index: 10;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .navbar {
@@ -11,9 +23,7 @@
   display: flex;
   align-items: center;
   background-color: none;
-  /* border-radius: 10px; */
   justify-content: center;
-  /* box-shadow: 0 0 8px 2px #C1131A; */
 }
 
 .navbar ul {
@@ -22,7 +32,7 @@
   margin: 0;
   padding: 0;
   flex: 1;
-  justify-content: space-evenly; /* Ensure even spacing */
+  justify-content: space-evenly;
 }
 
 .navbar li {

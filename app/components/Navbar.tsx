@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +16,21 @@ const Navbar = () => {
       logoElement.classList.toggle(styles.hidden);
     }
   };
+  useEffect(() => {
+    const adjustBodyPadding = () => {
+      const header = document.querySelector("header");
+      if (header) {
+        const headerHeight = header.offsetHeight;
+        document.body.style.paddingTop = `${headerHeight}px`;
+      }
+    };
+    adjustBodyPadding();
+    window.addEventListener("resize", adjustBodyPadding);
+    return () => {
+      window.removeEventListener("resize", adjustBodyPadding);
+    };
+  }, []);
   
-
   return (
     <header className={styles.header}>
       <div className={styles.navbarToggle} onClick={toggleMenu}>
@@ -30,7 +43,10 @@ const Navbar = () => {
           isMenuOpen ? styles.navbarMenu + " " + styles.active : styles.navbarMenu
         }`}
       >
-        <ul className={styles.navLeft}>
+          <div className={`${styles.logo} ${isMenuOpen ? styles.hidden : ""}`}>
+              <Image src="/images/Sae.png" alt="SAE Logo" width={200} height={100} />
+          </div>
+          <ul>
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -43,13 +59,6 @@ const Navbar = () => {
           <li>
             <Link href="/teamsae">Team SAE </Link>
           </li>
-        </ul>
-        <div className={`${styles.logo} ${isMenuOpen ? styles.hidden : ""}`}>
-          <Link href="sae.iitmandi.ac.in">
-            <Image src="/images/Sae.png" alt="SAE Logo" width={200} height={100} />
-          </Link>
-        </div>
-        <ul className={styles.navRight}>
           <li>
             <Link href="/cars">  Cars</Link>
           </li>
@@ -57,12 +66,9 @@ const Navbar = () => {
             <Link href="/gallery">Gallery</Link>
           </li>
           <li>
-            <Link href="/contactus">About Us</Link>
+            <Link href="/aboutUs">About Us</Link>
           </li>
-          <li>
-            <a href="https://www.sae.org/" target="_blank" rel="noopener noreferrer">SAE Website</a>
-          </li>
-        </ul>
+          </ul>
       </nav>
     </header>
   );

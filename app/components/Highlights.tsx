@@ -4,7 +4,7 @@ import { auth, db, storage } from "./firebase";
 import { collection, getDocs, updateDoc, doc, addDoc, deleteDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage";
 import { onAuthStateChanged } from "firebase/auth";
-import { signInWithGoogle, logout } from "./authservice";
+import { logout } from "./authservice";
 import styles from "./Highlights.module.css";
 
 interface NewsItem {
@@ -46,15 +46,6 @@ const NewsAndEvents: React.FC = () => {
     });
     return () => unsubscribe();
   }, []);
-
-  const handleSignIn = async () => {
-    try {
-      await signInWithGoogle();
-    } catch (error: any) {
-      console.error("Error signing in:", error);
-      alert("Sign-in failed: " + error.message);
-    }
-  };
 
   const handleSignOut = async () => {
     try {
@@ -286,7 +277,7 @@ const NewsAndEvents: React.FC = () => {
       </section>
 
       <div className={styles.container}>
-        {isAuthenticated ? (
+        {isAuthenticated && (
           <>
             <div className={styles.addItemForm}>
               <input
@@ -315,19 +306,17 @@ const NewsAndEvents: React.FC = () => {
                 />
                 Is this news?
               </label>
-              <button onClick={handleAddItem} className={styles.button}>
-                Add News/Event
-              </button>
+              <div className={styles.editingButtons}>
+                <button onClick={handleAddItem} className={`${styles.button} ${styles.signInOutButton}`}>
+                  Add News/Event
+                </button>
+                <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>
+                  Sign Out
+                </button>
+              </div>
             </div>
-            <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>
-              Sign Out
-            </button>
           </>
-        ) : (
-          <button onClick={handleSignIn} className={`${styles.button} ${styles.signInOutButton}`}>
-            Sign In to Add Event
-          </button>
-        )}
+        ) }
       </div>
     </div>
   );
