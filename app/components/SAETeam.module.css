@@ -6,11 +6,36 @@
   background-color: transparent;
 }
 
-.sectionTitle {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #f5f5f5;
-  text-align: center;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem;
+  width: 100%;
+}
+
+.headerTitle {
+  flex: 1;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.headerDescription {
+  flex: 1;
+  text-align: left;
+  padding-right: 2rem;
+}
+
+.sectionTitle { 
+  font-size: 3rem; 
+  color: white; 
+} 
+ 
+.sectionDescription { 
+  font-size: 1.1rem; 
+  color: white; 
 }
 
 .textContainer {

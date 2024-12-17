@@ -5,9 +5,10 @@ interface ProfileCardProps {
   imageSrc: string;
   linkedinUrl: string;
   instagramUrl: string;
+  position: string;
 }
 
-const ProfileCard = ({ name, imageSrc, linkedinUrl, instagramUrl }: ProfileCardProps) => {
+const ProfileCard = ({ name, imageSrc, linkedinUrl, instagramUrl, position }: ProfileCardProps) => {
   return (
     <div className={styles.profile_card}>
       <div className={styles.profile_Image}>

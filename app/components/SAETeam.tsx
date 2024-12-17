@@ -8,12 +8,19 @@ import {  logout } from "./authservice";
 import styles from "./SAETeam.module.css";
 import ProfileCard from "./ProfileCard";
 
+const POSITIONS = [
+  { value: "coreTeam", label: "Core Team", description: "The Core Team is responsible for the day-to-day operations of the club. They are the driving force behind the club's activities and initiatives." },
+  { value: "executiveTeam", label: "Executive Team", description: "The Core Team is responsible for the day-to-day operations of the club. They are the driving force behind the club's activities and initiatives." },
+  { value: "members", label: "Members", description: "The Core Team is responsible for the day-to-day operations of the club. They are the driving force behind the club's activities and initiatives." }
+];
+
 interface Member {
   id: string;
   Name: string;
   Image: string;
   Linkedin: string;
   Instagram: string;
+  Position: string;
 }
 
 const SAETeam: React.FC = () => {
@@ -21,6 +28,7 @@ const SAETeam: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [editing, setEditing] = useState<string | null>(null);
   const [editName, setEditName] = useState<string>("");
+  const [editPosition, setEditPosition] = useState<string>("");
   const [editImageFile, setEditImageFile] = useState<File | null>(null);
   const [editImageURL, setEditImageURL] = useState<string>(""); 
   const [editLinkedin, setEditLinkedin] = useState<string>("");
@@ -29,6 +37,7 @@ const SAETeam: React.FC = () => {
   const [newImage, setNewImage] = useState<File | null>(null); 
   const [newLinkedin, setNewLinkedin] = useState<string>("");
   const [newInstagram, setNewInstagram] = useState<string>("");
+  const [newPosition, setNewPosition] = useState<string>("");
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -56,7 +65,7 @@ const SAETeam: React.FC = () => {
   };
 
   const handleAddItem = async () => {
-    if (!newName || !newImage) return;
+    if (!newName || !newImage || !newPosition) return;
 
     try {
       const storageRef = ref(storage, `Members/${newImage.name}`);
@@ -68,28 +77,32 @@ const SAETeam: React.FC = () => {
         Image: imageUrl,
         Linkedin: newLinkedin,
         Instagram: newInstagram,
+        Position: newPosition,
       });
 
       setItems((prevItems) => [
         ...prevItems,
-        { id: docRef.id, Name: newName, Image: imageUrl, Linkedin: newLinkedin, Instagram: newInstagram },
+        { id: docRef.id, Name: newName, Image: imageUrl, Linkedin: newLinkedin, Instagram: newInstagram, Position: newPosition },
       ]);
 
+      // Reset form fields
       setNewName("");
       setNewImage(null);
       setNewLinkedin("");
       setNewInstagram("");
+      setNewPosition("");
     } catch (error: any) {
       console.error("Error adding item:", error);
     }
   };
 
-  const handleEdit = (id: string, Name: string, Image: string, Linkedin: string, Instagram: string) => {
+  const handleEdit = (id: string, Name: string, Image: string, Linkedin: string, Instagram: string, Position: string) => {
     setEditing(id);
     setEditName(Name);
     setEditImageURL(Image); 
     setEditLinkedin(Linkedin);
     setEditInstagram(Instagram);
+    setEditPosition(Position);
     setEditImageFile(null); 
   };
 
@@ -109,12 +122,13 @@ const SAETeam: React.FC = () => {
         Image: imageUrl,
         Linkedin: editLinkedin,
         Instagram: editInstagram,
+        Position: editPosition,
       });
 
       setItems((prevItems) =>
         prevItems.map((item) =>
           item.id === id
-            ? { ...item, Name: editName, Image: imageUrl, Linkedin: editLinkedin, Instagram: editInstagram }
+            ? { ...item, Name: editName, Image: imageUrl, Linkedin: editLinkedin, Instagram: editInstagram, Position: editPosition }
             : item
         )
       );
@@ -141,74 +155,102 @@ const SAETeam: React.FC = () => {
 
   return (
     <div>
-      <h3 className={styles.sectionTitle}>Core Team</h3>
-      <section className={styles.profile}>
-        {items.map((member) => (
-          <div key={member.id}>
-            {editing === member.id ? (
-              <div>
-                <input
-                  type="text"
-                  value={editName}
-                  onChange={(e) => setEditName(e.target.value)}
-                  className={styles.input}
-                />
-                <input
-                  type="file"
-                  onChange={(e) => setEditImageFile(e.target.files ? e.target.files[0] : null)} // Update file state
-                  className={styles.input}
-                />
-                <input
-                  type="text"
-                  value={editLinkedin}
-                  onChange={(e) => setEditLinkedin(e.target.value)}
-                  className={styles.input}
-                />
-                <input
-                  type="text"
-                  value={editInstagram}
-                  onChange={(e) => setEditInstagram(e.target.value)}
-                  className={styles.input}
-                />
-                <div className={styles.editingButtons}>
-                  <button onClick={() => saveEdit(member.id)} className={styles.button}>
-                    Save
-                  </button>
-                  <button
-                    onClick={() => setEditing(null)}
-                    className={`${styles.button} ${styles.cancelButton}`}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <ProfileCard
-                name={member.Name}
-                imageSrc={member.Image}
-                linkedinUrl={member.Linkedin}
-                instagramUrl={member.Instagram}
-              />
-            )}
-            {isAuthenticated && editing !== member.id && (
-              <div>
-                <button
-                  onClick={() => handleEdit(member.id, member.Name, member.Image, member.Linkedin, member.Instagram)}
-                  className={styles.button}
-                >
-                  Edit
-                </button>
-                <button
-                  onClick={() => handleDelete(member.id, member.Image)}
-                  className={`${styles.button} ${styles.deleteButton}`}
-                >
-                  Delete
-                </button>
-              </div>
-            )}
+      {POSITIONS.map((positionGroup) => (
+        <div key={positionGroup.value}>
+          <div className={styles.header}>
+            <div className={styles.headerTitle}>
+              <h1 className={styles.sectionTitle}>{positionGroup.label}</h1>
+            </div>
+            <div className={styles.headerDescription}>
+              <p className={styles.sectionDescription}>{positionGroup.description}</p>
+            </div>
           </div>
-        ))}
-      </section>
+          <section className={styles.profile}>
+            {items
+              .filter((member) => member.Position === positionGroup.value)
+              .map((member) => (
+                <div key={member.id}>
+                  {editing === member.id ? (
+                    <div>
+                      <input
+                        type="text"
+                        value={editName}
+                        onChange={(e) => setEditName(e.target.value)}
+                        className={styles.input}
+                        placeholder="Name"
+                      />
+                      <input
+                        type="file"
+                        onChange={(e) => setEditImageFile(e.target.files ? e.target.files[0] : null)}
+                        className={styles.input}
+                      />
+                      <select
+                        value={editPosition}
+                        onChange={(e) => setEditPosition(e.target.value)}
+                        className={styles.input}
+                      >
+                        {POSITIONS.map((option) => (
+                          <option key={option.value} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                      <input
+                        type="text"
+                        value={editLinkedin}
+                        onChange={(e) => setEditLinkedin(e.target.value)}
+                        className={styles.input}
+                        placeholder="LinkedIn URL"
+                      />
+                      <input
+                        type="text"
+                        value={editInstagram}
+                        onChange={(e) => setEditInstagram(e.target.value)}
+                        className={styles.input}
+                        placeholder="Instagram URL"
+                      />
+                      <div className={styles.editingButtons}>
+                        <button onClick={() => saveEdit(member.id)} className={styles.button}>
+                          Save
+                        </button>
+                        <button
+                          onClick={() => setEditing(null)}
+                          className={`${styles.button} ${styles.cancelButton}`}
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <ProfileCard
+                      name={member.Name}
+                      imageSrc={member.Image}
+                      linkedinUrl={member.Linkedin}
+                      instagramUrl={member.Instagram}
+                      position={member.Position}
+                    />
+                  )}
+                  {isAuthenticated && editing !== member.id && (
+                    <div>
+                      <button
+                        onClick={() => handleEdit(member.id, member.Name, member.Image, member.Linkedin, member.Instagram, member.Position)}
+                        className={styles.button}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => handleDelete(member.id, member.Image)}
+                        className={`${styles.button} ${styles.deleteButton}`}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+          </section>
+        </div>
+      ))}
 
       <div className={styles.container}>
         {isAuthenticated && (
@@ -225,6 +267,18 @@ const SAETeam: React.FC = () => {
               onChange={(e) => setNewImage(e.target.files ? e.target.files[0] : null)}
               className={styles.input}
             />
+            <select
+              value={newPosition}
+              onChange={(e) => setNewPosition(e.target.value)}
+              className={styles.input}
+            >
+              <option value="">Select Position</option>
+              {POSITIONS.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
             <input
               type="text"
               placeholder="Linkedin URL"
@@ -240,10 +294,17 @@ const SAETeam: React.FC = () => {
               className={styles.input}
             />
             <div className={styles.editingButtons}>
-              <button onClick={handleAddItem} className={`${styles.button} ${styles.signInOutButton}`}>
+              <button 
+                onClick={handleAddItem} 
+                className={`${styles.button} ${styles.signInOutButton}`}
+                disabled={!newName || !newImage || !newPosition}
+              >
                 Add Member
               </button>
-              <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>
+              <button 
+                onClick={handleSignOut} 
+                className={`${styles.button} ${styles.signInOutButton}`}
+              >
                 Sign Out
               </button>
             </div>
