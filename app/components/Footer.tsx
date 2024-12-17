@@ -60,13 +60,13 @@ const Footer = () => {
           <a href="https://www.facebook.com/SAEiitmandi/" target="_blank" rel="noopener noreferrer" className="social-link facebook">
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="social-link github">
+          <a href="https://github.com/SAE-IIT-Mandi" target="_blank" rel="noopener noreferrer" className="social-link github">
             <i className="fab fa-github"></i>
           </a>
           <a href="https://www.instagram.com/sae.iitmandi/" target="_blank" rel="noopener noreferrer" className="social-link instagram">
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="social-link youtube">
+          <a href="https://www.youtube.com/@SAEIITMandiRaptorRacing" target="_blank" rel="noopener noreferrer" className="social-link youtube">
             <i className="fab fa-youtube"></i>
           </a>
           <a href="https://x.com/sae_iitmandi" target="_blank" rel="noopener noreferrer" className="social-link twitter">
