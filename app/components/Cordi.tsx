@@ -13,7 +13,7 @@ const Cordi: React.FC = () => {
         "Welcome to our club! We are passionate about fostering an inclusive community where everyone has the opportunity to explore, learn, and engage with our diverse projects and activities. Feel free to get in touch if you have any questions or would like to get involved. We're always open to new ideas and collaborations, and your input helps us make this community even stronger."
         </p>
         <div className={styles.links}>
-          <a href="contactus" className={styles.link}>About Us</a>
+          <a href="aboutUs" className={styles.link}>About Us</a>
         </div>
       </div>
       

@@ -1,6 +1,6 @@
 // import CarViewer from '../components/CarViewer';
 import Cars from '../components/Cars';
-import styles from './Cars.module.css';
+import styles from './Projects.module.css';
 export default function ContactUs() {
   return (
       <main>
