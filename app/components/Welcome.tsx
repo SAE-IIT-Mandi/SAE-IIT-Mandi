@@ -11,7 +11,7 @@ const Welcome = () => {
         </p>
        
       </div>
-      <Image src="/images/main.jpg" alt="Car Image" className={styles.image}  width={300} height={200}/>
+      <Image src="/images/SAE-rriitm.jpg" alt="IIT Mandi RR Logo" className={styles.image}  width={300} height={200}/>
     </div>
   );
 };
