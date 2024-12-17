@@ -42,7 +42,7 @@ const Footer = () => {
                     <p>Address: SAE Club,IIT Mandi, Kamand, Himachal Pradesh, 175075 India</p>
         </div>
         <div className={styles.contact_info}>
-          <Image src="/images/sae.png" alt="Formula Bharat" width={170} height={120} />
+          <Image src="/images/Sae.png" alt="SAE logo" width={170} height={120} />
           {isAuthenticated ? (
             <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>
             Sign Out 
