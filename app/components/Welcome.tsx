@@ -7,7 +7,11 @@ const Welcome = () => {
       <div className={styles.textContainer}>
         <h1 className={styles.heading}>Raptor Racing IIT Mandi</h1>
         <p className={styles.paragraph}>
-        The Automobile Club of IIT Mandi is a dynamic team of young engineers driven by a shared passion for automotive innovation and engineering excellence. With a strong commitment to pushing the frontiers of design, fabrication, and cutting-edge technology, we continuously strive to turn visionary concepts into reality. Our journey has seen us compete in elite challenges like SAE SUPRA (2014, 2019), Efficycle (2024), and we are now gearing up for our ambitious participation in Formula Bharat 2026. Through these endeavors, we not only sharpen our technical skills but also foster a culture of creativity, collaboration, and hands-on learning that inspires and uplifts the entire IIT Mandi community. Our goal is to redefine what's possible and leave a lasting impact in the world of automotive engineering.
+          Welcome to the SAE Club - IIT Mandi
+          <br></br>
+          We are driven by innovation, passion, and the relentless pursuit of automotive and mobility excellence. Our club serves as a dynamic platform where students collaborate, learn, and build cutting-edge engineering solutions for the automotive world.
+          <br></br>
+          We are a team of enthusiastic engineers united by our love for mobility and technology. Our members come from diverse engineering backgrounds, pooling their expertise to design, build, and compete in national and international automotive competitions such as Formula Bharat, Efficycle, and SAE Supra. 
         </p>
        
       </div>
