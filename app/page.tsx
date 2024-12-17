@@ -36,7 +36,7 @@ export default function Home() {
                 />
                 <Project_card  
                   src="/gallery/22.webp" 
-                  name="SAE Forumula Bharat" 
+                  name="SAE Formula Bharat" 
                   writeup="rem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus suscipit eum cum voluptas
                             harum, quod optio at voluptates excepturi esse voluptatem illum ea obcaecati nesciunt quam maxime. Quasi
                             temporibus ditiu" 
