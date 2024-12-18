@@ -6,8 +6,9 @@
   background-color: transparent;
 }
 
+
 .header {
-  display: flex;
+  display: flex; 
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +30,7 @@
 }
 
 .sectionTitle { 
-  font-size: 3rem; 
+  font-size: 2rem; 
   color: white; 
 } 
  
@@ -114,60 +115,4 @@
 
 .cancelButton:hover {
   background-color: #555;
-}
-
-/* Media Queries */
-@media (max-width: 1024px) {
-  .sectionTitle {
-    font-size: 1.75rem;
-  }
-
-  .h3 {
-    font-size: 1.5rem;
-  }
-
-  .p {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .textContainer {
-    text-align: center;
-  }
-
-  .h3 {
-    font-size: 1.3rem;
-  }
-
-  .p {
-    font-size: 0.9rem;
-  }
-
-  .button {
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .h3 {
-    font-size: 1.2rem;
-  }
-
-  .p {
-    font-size: 0.85rem;
-  }
-
-  .button {
-    padding: 0.4rem 0.8rem;
-  }
-
-  .addItemForm {
-    padding: 15px;
-  }
-
-  .input,
-  .textarea {
-    padding: 0.6rem;
-  }
 }

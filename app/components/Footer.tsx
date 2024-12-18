@@ -35,14 +35,14 @@ const Footer = () => {
   return (
     <div className={styles.footerDiv}>
       <div className={styles.footerDiv1}>
-        <Image src="/images/SAE-rriitm.jpg" alt="IIT Mandi RR Logo" width={180} height={140} />
+        <Image src="/images/SAE-rriitm.jpg" alt="IIT Mandi RR Logo" width={180} height={120} />
         <div className={styles.contact_info}>
                     <h2>Get in Touch</h2>
                     <p><a href="mailto:sae@iitmandi.ac.in">sae@iitmandi.ac.in</a></p>
                     <p>Address: SAE Club,IIT Mandi, Kamand, Himachal Pradesh, 175075 India</p>
         </div>
         <div className={styles.contact_info}>
-          <Image src="/images/Sae.png" alt="SAE logo" width={170} height={120} />
+          <Image src="/images/iitmandi.png" alt="SAE logo" width={180} height={120} />
           {isAuthenticated ? (
             <button onClick={handleSignOut} className={`${styles.button} ${styles.signInOutButton}`}>
             Sign Out 

@@ -6,7 +6,10 @@
   position: relative;
   overflow: hidden;
   color: white;
-  padding: 40px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px; 
+  box-shadow: 0 0 8px 2px #FF4D4D;
 }
 
 .textContainer,

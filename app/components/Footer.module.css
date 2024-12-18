@@ -7,7 +7,7 @@
 
 .footer {
   color: #e2e8f0;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -19,9 +19,8 @@
 }
 
 .footerDiv1 img {
-  margin-left: 40px;
-  margin-right: 40px;
-  border-radius: 30%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .footerDiv1 p {
@@ -76,7 +75,6 @@
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-bottom: 16px;
 }
 
 .social-link {
@@ -110,14 +108,12 @@
 }
 
 .footer-text {
-  margin-top: 10px;
   font-size: 14px;
   color: #cbd5e0;
 }
 
 
 .part-info {
-  padding: 2rem;
   background-color: #f9f9f9;
   border-radius: 10px;
   margin-top: 1rem;
