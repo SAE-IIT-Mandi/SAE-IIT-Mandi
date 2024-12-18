@@ -10,6 +10,8 @@
     background-color: #1a202c;
     color: #fff;
     text-align: center;
+    border-radius: 8px; 
+    box-shadow: 0 0 8px 2px #FF4D4D;
 }
 
 .sponsorSection h2 {

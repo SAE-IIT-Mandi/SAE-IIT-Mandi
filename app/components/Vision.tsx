@@ -39,7 +39,7 @@ const Vision = () => {
         </p>
         <div className={styles.links}>
           <a href="gallery" className={styles.link}>Gallery</a>
-          <a href="cars" className={styles.link}>Our Projects</a>
+          <a href="projects" className={styles.link}>Our Projects</a>
         </div>
       </div>
       <div className={styles.imageContainer}>

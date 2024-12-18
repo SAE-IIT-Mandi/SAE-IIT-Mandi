@@ -16,13 +16,6 @@ main {
   padding: 2rem; 
 }
 
-section {
-  margin-bottom: 1rem; 
-  background-color: black;
-  border-radius: 8px; 
-  box-shadow: 0 0 8px 2px #FF4D4D;
-}
-
 .footer-social-icons {
   display: flex;
   justify-content: center;
