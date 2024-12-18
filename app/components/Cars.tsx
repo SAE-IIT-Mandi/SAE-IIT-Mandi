@@ -65,7 +65,7 @@ const Cars: React.FC = () => {
                 <h2>{car.feature2}</h2>
               </div>
               <div className={styles.logoContainer}>
-                {<Image src="/images/Sae.png" alt="SAE Logo" width={200} height={200} />}
+                {<Image src="/images/Sae_new.png" alt="SAE Logo" width={200} height={200} />}
               </div>
               <div className={styles.featureCard}>
                 <h2>{car.feature3}</h2>
