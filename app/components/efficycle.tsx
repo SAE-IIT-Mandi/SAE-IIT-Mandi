@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./efficycle.module.css";
+import styles from "./Efficycle.module.css";
 
 const Efficycle: React.FC = () => {
   return (
