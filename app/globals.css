@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Russo+One&display=swap');
 
 :root {
   --color-primary: #ff0000;    
@@ -25,12 +25,11 @@ p, span, div {
 
 .logo {
   font-family: 'Russo One', sans-serif;
-} */
+}
 
-
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Teko:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Share+Tech+Mono&display=swap');
 
-/* Custom font files - Premium Options */
 @font-face {
   font-family: 'Eurostile';
   src: url('/fonts/EurostileLTStd.woff2') format('woff2'),
@@ -47,23 +46,21 @@ p, span, div {
   font-display: swap;
 }
 
-/* Root Variables */
 :root {
-  /* Colors */
+
   --racing-red: #DC0000;
   --signal-red: #FF1E1E;
   --carbon-black: #0A0A0A;
   --titanium: #F8F8F8;
   --metallic-grey: #1E1E1E;
-  
-  /* Font Families */
+
   --font-primary: 'Eurostile', 'Russo One', sans-serif;
   --font-secondary: 'Teko', sans-serif;
   --font-body: 'Roboto Condensed', sans-serif;
   --font-technical: 'Share Tech Mono', monospace;
 }
 
-/* Typography Styles */
+
 h1, .heading-primary {
   font-family: var(--font-primary);
   font-weight: 700;
@@ -99,7 +96,7 @@ body, p {
   color: var(--titanium);
 }
 
-/* Special Elements */
+
 .logo {
   font-family: var(--font-primary);
   font-weight: 700;
@@ -124,7 +121,7 @@ body, p {
   color: var(--racing-red);
 }
 
-/* Buttons */
+
 .button {
   font-family: var(--font-secondary);
   font-weight: 600;
@@ -145,7 +142,6 @@ body, p {
   background-color: var(--signal-red);
 }
 
-/* Utility Classes */
 .text-red {
   color: var(--racing-red);
 }
@@ -162,7 +158,6 @@ body, p {
   text-transform: uppercase;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   :root {
     --font-scale: 0.9;
@@ -175,7 +170,7 @@ body, p {
   .nav-link {
     font-size: 1rem;
   }
-}
+} */
 
 body {
   font-family: Arial, sans-serif;
