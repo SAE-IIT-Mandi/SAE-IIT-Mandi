@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { auth, db, storage } from "./firebase";
 import { collection, getDocs, updateDoc, doc, addDoc, deleteDoc } from "firebase/firestore"; 
@@ -100,6 +100,9 @@ const SAETeam: React.FC = () => {
   const [newInstagram, setNewInstagram] = useState<string>("");
   const [newPosition, setNewPosition] = useState<string>("");
 
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
+
   useEffect(() => {
     const fetchItems = async () => {
       try {
@@ -123,56 +126,81 @@ const SAETeam: React.FC = () => {
     return () => unsubscribe();
   }, []);
 
-  const handleSectionScroll = (() => {
-    let canScroll = true;
-    return () => {
-      if (canScroll && currentSectionIndex < POSITIONS.length - 1) {
-        canScroll = false;
-        setCurrentSectionIndex(prev => prev + 1);
-      }else {
-        setCurrentSectionIndex(0);
-      }
-      setTimeout(() => (canScroll = true), 500);
-    };
-  })();
 
-  const handleReverseScroll = (() => {
-    let canScroll = true;
+  useEffect(() => {
+    const initialDelay = 5000;
+
+    const delayTimeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        setCurrentSectionIndex((prev) => (prev + 1) % 10);
+      }, 6000); 
+      return () => {
+        clearInterval(interval);
+      };
+    }, initialDelay);
     return () => {
-      if (canScroll && currentSectionIndex > 0) {
-        canScroll = false;
-        setCurrentSectionIndex(prev => prev - 1);
-      }else{
-        setCurrentSectionIndex(POSITIONS.length - 1);
-      }
-      setTimeout(() => (canScroll = true), 500);
+      clearTimeout(delayTimeout);
     };
-  })();
-  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    if (!editing) {
-      if (e.deltaY > 0) {
-        e.preventDefault()
-        handleSectionScroll();
-      } else if (e.deltaY < 0) {
-        e.preventDefault()
-        handleReverseScroll();
-      }
+  }, []);
+
+const handleSectionScroll = () => {
+  if (!isScrolling && currentSectionIndex < POSITIONS.length - 1) {
+    setIsScrolling(true);
+    setCurrentSectionIndex(prev => prev + 1);
+
+    if (scrollTimeout.current) {
+      clearTimeout(scrollTimeout.current);
+    }
+
+    scrollTimeout.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 500); 
+  }
+};
+
+const handleReverseScroll = () => {
+  if (!isScrolling && currentSectionIndex > 0) {
+    setIsScrolling(true);
+    setCurrentSectionIndex(prev => prev - 1);
+
+    if (scrollTimeout.current) {
+      clearTimeout(scrollTimeout.current);
+    }
+
+    scrollTimeout.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 500); 
+  }
+};
+
+const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+  e.preventDefault();
+  const scrollThreshold = 50;
+  if (!editing && !isScrolling) {
+    if (Math.abs(e.deltaY) < scrollThreshold) return;
+    if (e.deltaY > 0) {
+      handleSectionScroll();
+    } else if (e.deltaY < 0) {
+      handleReverseScroll();
+    }
+  }
+};
+
+useEffect(() => {
+  const mainContainer = document.getElementById('scroll-container');
+  const preventScroll = (e: WheelEvent) => {
+    if (mainContainer?.contains(e.target as Node)) {
+      e.preventDefault();
     }
   };
-  
-  useEffect(() => {
-    const mainContainer = document.getElementById('scroll-container');
-    const preventScroll = (e: WheelEvent) => {
-      if (mainContainer?.contains(e.target as Node)) {
-        e.preventDefault();
-      }
-    };
-      window.addEventListener('wheel', preventScroll, { passive: false });
-      return () => {
-        window.removeEventListener('wheel', preventScroll);
-      };
-    }, []);
+  window.addEventListener('wheel', preventScroll, { passive: false });
+  return () => {
+    window.removeEventListener('wheel', preventScroll);
+    if (scrollTimeout.current) {
+      clearTimeout(scrollTimeout.current);
+    }
+  };
+}, []);
 
   const handleSignOut = async () => {
     try {
@@ -320,9 +348,17 @@ const SAETeam: React.FC = () => {
   };
 
   return (
-    <div 
-    className="relative"
-  > 
+    <div className="relative"> 
+    <div className={styles.navigationContainer}>
+      {POSITIONS.map((position, index) => (
+        <button
+          key={index}
+          onClick={() => setCurrentSectionIndex(index)}
+          className={`${styles.navButton} ${index === currentSectionIndex ? styles.active : ''}`}
+          aria-label={`Go to section ${position.label}`}
+        />
+      ))}
+    </div>
     <div 
     id="scroll-container"
       onWheel={handleWheel}
@@ -535,17 +571,7 @@ const SAETeam: React.FC = () => {
           </div>
         </div>
       )}
-
-      <div className="relative right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
-        {POSITIONS.map((_, index) => (
-          <div 
-            key={index} 
-            className={`w-3 h-3 rounded-full ${
-              index === currentSectionIndex ? 'bg-red-500' : 'bg-gray-500'
-            }`}
-          />
-        ))}
-      </div>
+      
     </div>
   );
 };

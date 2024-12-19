@@ -116,3 +116,39 @@
 .cancelButton:hover {
   background-color: #555;
 }
+
+
+
+.navigationContainer {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: .5rem;
+  z-index: 50;
+}
+
+.navButton {
+  width: 1.5rem;
+  height: .5rem;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #d1d5db; 
+}
+
+.navButton:hover {
+  background-color: #9ca3af; 
+  transform: scale(1.1);
+}
+
+.navButton.active {
+  background-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3); 
+}
