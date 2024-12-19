@@ -1,11 +1,11 @@
-// import React from 'react';
-// import Efficycle from '../components/Efficycle';
+import React from 'react';
+import Efficycle from '../components/Efficycle';
 
-// export default function Highlights() {
-//   return (
-//     <main>
-//       <Efficycle/>
-//     </main>
-//   );
-// };
+export default function Highlights() {
+  return (
+    <main>
+      <Efficycle/>
+    </main>
+  );
+};
 
