@@ -1,5 +1,5 @@
 import React from 'react';
-import Efficycle from '../components/efficycle';
+import Efficycle from '../components/Efficycle';
 
 export default function Highlights() {
   return (
