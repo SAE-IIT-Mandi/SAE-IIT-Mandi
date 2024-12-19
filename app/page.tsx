@@ -1,6 +1,5 @@
 
 import styles from './Home.module.css';
-import Sponser_flow from './components/Sponsor_flow';
 import Project_card from './components/ProjectCard';
 import Welcome from './components/Welcome';
 import Cordi from './components/Cordi';
