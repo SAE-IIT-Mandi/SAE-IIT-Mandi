@@ -35,13 +35,13 @@ const carsData = [
   },
   {
     id: 4,
-    name: 'Car 4',
-    description: 'This is the description of Car 4. It is known for its fuel efficiency and design.',
+    name: 'Formula Bharat (In Progress)',
+    description: 'The Formula Bharat project represents IIT Mandi’s ambitious entry into the realm of competitive motorsports. Currently under development, this race car is a testament to the team’s relentless pursuit of innovation and engineering excellence.',
     imageUrl: '/images/Sae_new.png',
-    feature1: "Feature 1 description.",
-    feature2: "Feature 2 description.",
-    feature3: "Feature 3 description.",
-    feature4: "Feature 4 description.",
+    feature1: "Details to be revealed upon project completion.",
+    feature2: "Stay tuned for exciting updates as the project progresses.",
+    feature3: "Engineering efforts are ongoing to ensure top-notch performance.",
+    feature4: "The team is committed to delivering a cutting-edge solution.",
   }
 ];
 
