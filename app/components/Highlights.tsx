@@ -145,12 +145,12 @@ const NewsAndEvents: React.FC = () => {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.eventsSection}>
-            <h3 className={styles.sectionTitle}>Events</h3>
+            <h2 className={styles.sectionTitle}>Events</h2>
             <ul className={styles.ul}>
               {eventItems.map((event) => (
                 <li key={event.id} className={styles.li}>
                   <div className={styles.textContainer}>
-                    <h3 className={styles.h3}>{event.Headline}</h3>
+                    <h2 className={styles.h2}>{event.Headline}</h2>
                     {editing === event.id ? (
                       <div>
                         <input
@@ -212,12 +212,12 @@ const NewsAndEvents: React.FC = () => {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.newsSection}>
-            <h3 className={styles.sectionTitle}>News</h3>
+            <h2 className={styles.sectionTitle}>News</h2>
             <ul className={styles.ul}>
               {newsItems.map((news) => (
                 <li key={news.id} className={styles.li}>
                   <div className={styles.textContainer}>
-                    <h3 className={styles.h3}>{news.Headline}</h3>
+                    <h2 className={styles.h2}>{news.Headline}</h2>
                     {editing === news.id ? (
                       <div>
                         <input

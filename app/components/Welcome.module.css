@@ -16,10 +16,9 @@
 .heading {
   color: #FF4D4D;
   font-size: 3rem;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  text-shadow: 0 0 7px rgba(255, 0, 0, 0.8);
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #FF4D4D;
   animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end 4s forwards;
 }
 
@@ -28,7 +27,7 @@
     width: 0;
   }
   to {
-    width: 65%;
+    width: 80%;
   }
 }
 
