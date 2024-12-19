@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./Gallerybox.module.css";
 
 const Gallerybox: React.FC = () => {
-  const galleryPaths = Array.from({ length: 84 }, (_, i) => `/gallery/${i + 1}.webp`); // Fixed the path format
+  const galleryPaths = Array.from({ length: 35 }, (_, i) => `/gallery/${i + 1}.webp`); 
   const [images, setImages] = useState<string[]>(galleryPaths);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -47,8 +47,8 @@ const Gallerybox: React.FC = () => {
               src={src}
               alt={`Gallery item ${index}`}
               className={styles.image}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
             />
           </div>
         ))}

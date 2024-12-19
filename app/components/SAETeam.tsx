@@ -149,6 +149,7 @@ const SAETeam: React.FC = () => {
     };
   })();
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    e.preventDefault();
     if (!editing) {
       if (e.deltaY > 0) {
         e.preventDefault()
@@ -159,6 +160,19 @@ const SAETeam: React.FC = () => {
       }
     }
   };
+  
+  useEffect(() => {
+    const mainContainer = document.getElementById('scroll-container');
+    const preventScroll = (e: WheelEvent) => {
+      if (mainContainer?.contains(e.target as Node)) {
+        e.preventDefault();
+      }
+    };
+      window.addEventListener('wheel', preventScroll, { passive: false });
+      return () => {
+        window.removeEventListener('wheel', preventScroll);
+      };
+    }, []);
 
   const handleSignOut = async () => {
     try {
@@ -310,6 +324,7 @@ const SAETeam: React.FC = () => {
     className="relative"
   > 
     <div 
+    id="scroll-container"
       onWheel={handleWheel}
       className="maiDiv overflow-hidden min-h-screen"
     >
