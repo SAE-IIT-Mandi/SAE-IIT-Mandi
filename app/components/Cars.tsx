@@ -53,7 +53,7 @@ const Cars: React.FC = () => {
           <section className={styles.section}>
             <img src={car.imageUrl} alt={car.name} className={styles.carImage} />
             <div className={styles.carDetails}>
-            <h2 className={styles.carName}><Link href={`/projectDetail_${car.id}`}>{car.name}</Link></h2>
+            <h2 className={styles.carName}><Link href={"#"}>{car.name}</Link></h2>
               <p className={styles.carDescription}>{car.description}</p>
             </div>
           </section>
@@ -81,3 +81,4 @@ const Cars: React.FC = () => {
 };
 
 export default Cars;
+// `/projectDetail_${car.id}`
