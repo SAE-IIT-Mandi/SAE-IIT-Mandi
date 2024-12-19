@@ -18,7 +18,7 @@
 
 .teamHeading {
     font-size: 3rem;
-    color: #ffcc00;
+    color: #ffffff;
     margin-bottom: 10px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -26,7 +26,8 @@
 
 .teamSubheading {
     font-size: 1.5rem;
-    color: #00ccff;
+    color: #FF4D4D;
+    text-shadow: 0 0 7px rgba(255, 0, 0, 0.8);
     margin-bottom: 40px;
     line-height: 1.5;
 }
@@ -48,14 +49,10 @@
     transition: color 0.3s ease;
 }
 
-.teamPoint:hover {
-    color: #ffcc00;
-}
-
 .checkIcon {
     position: absolute;
     left: 0;
-    color: #00ccff;
+    color: #ff0000;
     font-size: 1.5rem;
 }
 

@@ -10,7 +10,7 @@ export default function Home() {
       <main className={styles.main}>
           <Welcome />
 
-            <h2 className={styles.heading}>Our Projects</h2>
+            <h1 className={styles.heading}>Our Projects</h1>
             <div className={styles.projects}>
                 <Project_card  
                   src="/homepage/sae-supra.png" 
