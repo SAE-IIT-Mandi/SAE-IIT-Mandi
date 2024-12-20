@@ -71,8 +71,8 @@ const NewsAndEvents: React.FC = () => {
       });
 
       setItems((prevItems) => [
-        ...prevItems,
         { id: docRef.id, Headline: newHeadline, Content: newContent, Image: imageUrl, News: newNews },
+        ...prevItems,
       ]);
 
       setNewHeadline("");
@@ -209,7 +209,7 @@ const NewsAndEvents: React.FC = () => {
         </div>
       </section>
 
-      {/* <section className={styles.section}>
+      <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.newsSection}>
             <h2 className={styles.sectionTitle}>News</h2>
@@ -274,7 +274,7 @@ const NewsAndEvents: React.FC = () => {
             </ul>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <div className={styles.container}>
         {isAuthenticated && (
