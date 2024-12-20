@@ -44,7 +44,7 @@ const Navbar = () => {
         }`}
       >
           <div className={`${styles.logo} ${isMenuOpen ? styles.hidden : ""}`}>
-              <Image src="/images/Sae_new.png" alt="SAE Logo" width={200} height={100} />
+              <Image src="/images/Sae_new.webp" alt="SAE Logo" width={200} height={100} />
           </div>
           <ul>
           <li>
