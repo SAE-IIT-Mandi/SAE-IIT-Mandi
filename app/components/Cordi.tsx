@@ -5,7 +5,7 @@ const Cordi: React.FC = () => {
   return (
     <section className={styles.whoAreWeSection}>
     <div className={styles.imageContainer}>
-      <Image src="/team/Vinamra.jpg" alt="SAE Logo" width={300} height={300} />
+      <Image src="/homepage/Badal.webp" alt="SAE Logo" width={300} height={300} />
       </div>
       <div className={styles.textContainer}>
         <h2>Cordinator's Note</h2>

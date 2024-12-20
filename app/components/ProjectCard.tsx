@@ -11,7 +11,7 @@ const Project_card: React.FC<MyComponentProps> = ({ src, name, writeup }) => {
     return (
         <div className={styles.project_item} style={{ backgroundImage: `url(${src})` }}>
             <div className={styles.project_name}>
-                {name}
+                <h2>{name}</h2>
             </div>
             <div className={styles.content}>
                 <p>{writeup}</p>

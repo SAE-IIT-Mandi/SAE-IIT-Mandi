@@ -5,7 +5,8 @@
   gap: 10px; 
   padding: 10px;
   background-color: #000;
-  box-shadow: 0 0 20px #ff4500, 0 0 40px #160202;
+  border-radius: 8px; 
+  box-shadow: 0 0 8px 2px #FF4D4D;
   position: relative; 
   overflow: hidden; 
 }
@@ -32,7 +33,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 20px #ff4500, 0 0 20px #ff0000; 
+  box-shadow: 0 0 20px #ff4d4d, 0 0 20px #ff4d4d; 
   z-index: 10;
 }
 
@@ -63,7 +64,7 @@
   border-radius: 10px;
   transition: transform 0.3s ease;
   object-fit: cover;
-  box-shadow: 0 0 20px #ff4500, 0 0 40px #ff0000; 
+  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d; 
 }
 
 .overlayImage:hover {

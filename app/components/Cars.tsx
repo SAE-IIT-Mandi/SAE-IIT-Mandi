@@ -59,7 +59,7 @@ const Cars: React.FC = () => {
               <p className={styles.carDescription}>{car.description}</p>
             </div>
           </section>
-          <section className={styles.featuresSection}>
+          <section className={styles.featureSection}>
               <div className={styles.featureCard}>
                 <h3>{car.feature1}</h3>
               </div>

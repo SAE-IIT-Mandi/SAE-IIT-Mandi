@@ -1,134 +1,15 @@
 .main section {
   margin-bottom: 1rem;
   background-color: #1a1a1a;
-  border-radius: 8px;
-  box-shadow: 0 0 8px 2px #f02f35;
+  border-radius: 8px; 
+  box-shadow: 0 0 8px 2px #FF4D4D;
   padding: 2rem;
 }
 
 .part-info {
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border-radius: 10px;
   margin-top: 1rem;
   text-align: left;
-}
-
-@media (max-width: 1024px) {
-  .main section {
-      padding: 1.5rem;
-  }
-
-  .part-info {
-      padding: 1.5rem;
-  }
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  overflow: hidden;
-  padding: 20px 0;
-  margin-bottom: 20px;
-  background-color: none;
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  .main section {
-      padding: 1rem;
-  }
-
-  .part-info {
-      text-align: center;
-      padding: 1rem;
-  }
-
-  .projects {
-      flex-direction: column;
-      padding: 10px 0;
-  }
-}
-
-.h2tag {
-  text-align: center;
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 2rem;
-}
-
-@media (max-width: 768px) {
-  .h2tag {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .h2tag {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-  }
-}
-
-.ovalNavbar {
-  background-color: #333;
-  border-radius: 50px;
-  padding: 10px 30px;
-  margin: 20px auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 1024px) {
-  .ovalNavbar {
-    width: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-  .ovalNavbar {
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .ovalNavbar {
-    width: 100%;
-    padding: 10px 15px;
-  }
-}
-
-.navbarContent div a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 300;
-  padding: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbarContent div a:hover {
-  color: #ff4d4d;
-}
-
-.navbarContent {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .navbarContent div a {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbarContent div a {
-    font-size: 0.9rem;
-  }
 }
