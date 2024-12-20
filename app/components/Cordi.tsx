@@ -10,8 +10,7 @@ const Cordi: React.FC = () => {
       <div className={styles.textContainer}>
         <h2>Cordinator's Note</h2>
         <p>
-        "Welcome to our club! We are passionate about fostering an inclusive community where everyone has the opportunity to explore, learn, and engage with our diverse projects and activities. Feel free to get in touch if you have any questions or would like to get involved. We're always open to new ideas and collaborations, and your input helps us make this community even stronger."
-        </p>
+        Welcome to IIT Mandi SAE Club's official webpage! As the Coordinator, I am honored to present our journey of innovation and engineering excellence. This platform highlights our projects that showcase the dedication and creativity of our team in transforming ideas into reality,and our valued sponsors, whose support fuels our aspirations. At SAE IIT Mandi, we are driven by a passion for pushing the boundaries of automotive engineering and fostering sustainable technological advancements.Through this website, we aim to connect with enthusiasts, professionals, and organizations to inspire collaboration and shape the future of engineering. Thank you for being a part of our journey!        </p>
         <div className={styles.links}>
           <a href="aboutUs" className={styles.link}>About Us</a>
         </div>
