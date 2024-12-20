@@ -132,7 +132,9 @@ const SAETeam: React.FC = () => {
 
     const delayTimeout = setTimeout(() => {
       const interval = setInterval(() => {
-        setCurrentSectionIndex((prev) => (prev + 1) % 10);
+        if(!isAuthenticated){
+           setCurrentSectionIndex((prev) => (prev + 1) % 10);
+        }
       }, 6000); 
       return () => {
         clearInterval(interval);
