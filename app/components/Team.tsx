@@ -27,7 +27,7 @@ const Team: React.FC = () => {
             </div>
             <div className={styles.teamImageWrapper}>
                 <Image 
-                    src="/homepage/team.png" 
+                    src="/homepage/team.webp" 
                     alt="The Team" 
                     width={500} 
                     height={400} 
