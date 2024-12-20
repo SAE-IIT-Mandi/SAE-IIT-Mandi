@@ -19,7 +19,7 @@
 .carName {
   font-size: 28px;
   margin-bottom: 10px;
-  color: #C0141A;
+  color: #FF0101;
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@
   padding: 0;
 }
 
-.featuresSection {
+.featureSection {
   border-radius: 8px; 
   box-shadow: 0 0 8px 2px #FF4D4D;
   margin: 10px;
@@ -50,7 +50,7 @@
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 0 8px 2px #C1131A;
+  box-shadow: 0 0 8px 2px #ff4d4d;
 }
 
 
