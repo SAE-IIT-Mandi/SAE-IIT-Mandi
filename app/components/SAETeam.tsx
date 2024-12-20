@@ -128,22 +128,23 @@ const SAETeam: React.FC = () => {
 
 
   useEffect(() => {
-    const initialDelay = 5000;
+    if (isAuthenticated) {
+      return;
+    }
+      const initialDelay = 5000;
 
-    const delayTimeout = setTimeout(() => {
-      const interval = setInterval(() => {
-        if(!isAuthenticated){
-           setCurrentSectionIndex((prev) => (prev + 1) % 10);
-        }
-      }, 6000); 
+      const delayTimeout = setTimeout(() => {
+        const interval = setInterval(() => {
+          setCurrentSectionIndex((prev) => (prev + 1) % 10);
+        }, 6000); 
+        return () => {
+          clearInterval(interval);
+        };
+      }, initialDelay);
       return () => {
-        clearInterval(interval);
+        clearTimeout(delayTimeout);
       };
-    }, initialDelay);
-    return () => {
-      clearTimeout(delayTimeout);
-    };
-  }, []);
+  }, [isAuthenticated]);
 
 const handleSectionScroll = () => {
   if (!isScrolling && currentSectionIndex < POSITIONS.length - 1) {
