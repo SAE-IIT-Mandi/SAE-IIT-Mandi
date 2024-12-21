@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 const carsData = [
   {
-    id: 1,
+    id: 'saeSupra',
     name: 'SAE Supra 2019',
     description: 'The Raptor Racing team from IIT Mandi participated in the SUPRA SAEINDIA 2019 competition with the goal of creating a race car that balances performance, safety, and cost-effectiveness. Designed for non-professional weekend racers, the Eagle 1.0 offers a robust, affordable, and reliable solution, providing high cornering speed, acceleration, and minimal maintenance.Click on the Car Name for more details.',
     imageUrl: '/homepage/sae-supra.webp',
@@ -14,7 +14,7 @@ const carsData = [
     feature4: "Safety-focused design with dry powder fire extinguisher, impact-absorbing roll cage, and quick-release steering wheel.",
   },
   {
-    id: 2,
+    id: 'efficycle23',
     name: 'Efficycle 2023',
     description: 'Efficycle 2023 is a hybrid electric and human-powered vehicle designed for sustainable urban mobility. Combining electric power with human pedal effort, this eco-friendly solution offers both performance and versatility, with features such as a stable tadpole configuration, comfortable seating, and advanced safety systems, making it a perfect solution for modern transportation challenges.Click on the Car Name for more details.',
     imageUrl: '/homepage/efficycle-23.webp',
@@ -24,7 +24,7 @@ const carsData = [
     feature4: "Comfortable ergonomic seating with soft foam material, optimized for long rides and driver ease.",
   },
   {
-    id: 3,
+    id: 'efficycle24',
     name: 'Efficycle 2024',
     description: 'Efficycle 2024 is the next iteration of IIT Mandi’s hybrid vehicle, designed to seamlessly combine manual and electric power for optimized performance. With its advanced chassis design, refined suspension, and custom power transmission system, Efficycle 2024 is tailored for both urban mobility and off-road adventures, providing a sustainable, versatile, and comfortable travel solution.Click on the Car Name for more details.',
     imageUrl: '/homepage/efficycle-24.webp',
@@ -34,7 +34,7 @@ const carsData = [
     feature4: "Innovative power transmission system ensuring seamless switching between manual pedaling and electric propulsion.",
   },
   {
-    id: 4,
+    id: 'formulaBharat',
     name: 'Formula Bharat (In Progress)',
     description: 'The Formula Bharat project represents IIT Mandi’s ambitious entry into the realm of competitive motorsports. Currently under development, this race car is a testament to the team’s relentless pursuit of innovation and engineering excellence.Click on the Car Name for more details.',
     imageUrl: '/homepage/formula-bharat.webp',
@@ -55,7 +55,7 @@ const Cars: React.FC = () => {
           <section className={styles.carSection}>
             <Image src={car.imageUrl} alt={car.name} className={styles.carImage} height={200} width={200} />
             <div className={styles.carDetails}>
-            <h2 className={styles.carName}><Link href={"#"} className={styles.carName}>{car.name}</Link></h2>
+            <h2 className={styles.carName}><Link href={`/projectDetails/${car.id}`} className={styles.carName}>{car.name}</Link></h2>
               <p className={styles.carDescription}>{car.description}</p>
             </div>
           </section>
@@ -83,4 +83,3 @@ const Cars: React.FC = () => {
 };
 
 export default Cars;
-// `/projectDetail_${car.id}`

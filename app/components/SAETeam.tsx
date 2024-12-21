@@ -365,7 +365,7 @@ useEffect(() => {
     <div 
     id="scroll-container"
       onWheel={handleWheel}
-      className="maiDiv overflow-hidden min-h-screen"
+      className="maiDiv min-h-screen"
     >
         <AnimatePresence mode="wait">
           {POSITIONS.map((positionGroup, index) => {
