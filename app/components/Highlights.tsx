@@ -27,24 +27,33 @@ const NewsAndEvents: React.FC = () => {
   const [newContent, setNewContent] = useState<string>("");
   const [newImageFile, setNewImageFile] = useState<File | null>(null); 
   const [newNews, setNewNews] = useState<boolean>(true);
-
-  const fetchItems = async () => {
-    try {
-      const querySnapshot = await getDocs(collection(db, "News"));
-      const data = querySnapshot.docs.map((doc) => {
-        const docData = doc.data();
-        return {
-          id: doc.id,
-          ...docData,
-          Date: docData.Date?.toDate ? docData.Date.toDate() : new Date(docData.Date), // Convert Firestore Timestamp to Date
-        };
-      });
-      data.sort((a, b) => b.Date.getTime() - a.Date.getTime()); // Sort by date
-      setItems(data as NewsItem[]);
-    } catch (error) {
-      console.error("Error fetching news items:", error);
-    }
-  };
+  
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "News"));
+        const data = querySnapshot.docs.map((doc) => {
+          const docData = doc.data();
+          return {
+            id: doc.id,
+            ...docData,
+            Date: docData.Date?.toDate
+              ? docData.Date.toDate()
+              : new Date(docData.Date), 
+          };
+        });
+  
+        // Sort by descending date
+        data.sort((a, b) => b.Date.getTime() - a.Date.getTime());
+        setItems(data as NewsItem[]);
+      } catch (error) {
+        console.error("Error fetching news items:", error);
+      }
+    };
+  
+    fetchItems();
+  }, []); 
+  
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
