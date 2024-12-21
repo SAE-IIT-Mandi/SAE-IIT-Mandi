@@ -28,24 +28,23 @@ const NewsAndEvents: React.FC = () => {
   const [newImageFile, setNewImageFile] = useState<File | null>(null); 
   const [newNews, setNewNews] = useState<boolean>(true);
 
-  useEffect(() => {
-    const fetchItems = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "News"));
-        const data = querySnapshot.docs
-          .map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }))
-          .sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime()); 
-        setItems(data as NewsItem[]);
-      } catch (error) {
-        console.error("Error fetching news items:", error);
-      }
-    };
-
-    fetchItems();
-  }, []);
+  const fetchItems = async () => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "News"));
+      const data = querySnapshot.docs.map((doc) => {
+        const docData = doc.data();
+        return {
+          id: doc.id,
+          ...docData,
+          Date: docData.Date?.toDate ? docData.Date.toDate() : new Date(docData.Date), // Convert Firestore Timestamp to Date
+        };
+      });
+      data.sort((a, b) => b.Date.getTime() - a.Date.getTime()); // Sort by date
+      setItems(data as NewsItem[]);
+    } catch (error) {
+      console.error("Error fetching news items:", error);
+    }
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
