@@ -6,13 +6,13 @@ import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage
 import { onAuthStateChanged } from "firebase/auth";
 import { logout } from "./authservice";
 import styles from "./Highlights.module.css";
-
 interface NewsItem {
   id: string;
   Headline: string;
   Content: string;
   Image: string;
   News: boolean;
+  Date: string;
 }
 
 const NewsAndEvents: React.FC = () => {
@@ -30,13 +30,20 @@ const NewsAndEvents: React.FC = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const querySnapshot = await getDocs(collection(db, "News"));
-      const data = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as NewsItem[];
-      setItems(data);
+      try {
+        const querySnapshot = await getDocs(collection(db, "News"));
+        const data = querySnapshot.docs
+          .map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }))
+          .sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime()); 
+        setItems(data as NewsItem[]);
+      } catch (error) {
+        console.error("Error fetching news items:", error);
+      }
     };
+
     fetchItems();
   }, []);
 
@@ -68,10 +75,11 @@ const NewsAndEvents: React.FC = () => {
         Content: newContent,
         Image: imageUrl,
         News: newNews,
+        Date: new Date().toISOString(),
       });
 
       setItems((prevItems) => [
-        { id: docRef.id, Headline: newHeadline, Content: newContent, Image: imageUrl, News: newNews },
+        { id: docRef.id, Headline: newHeadline, Content: newContent, Image: imageUrl, News: newNews, Date: new Date().toISOString() },
         ...prevItems,
       ]);
 
