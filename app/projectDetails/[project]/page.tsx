@@ -21,10 +21,8 @@ export default async function Page({params,
   return (
     <main>
       <Project
-        title={currentProject.title}
-        description={currentProject.description}
-        workDetails={currentProject.workDetails}
-        images={currentProject.images}
+        projectKey={projectName}
+        projectData={currentProject}
       />
     </main>
   );
