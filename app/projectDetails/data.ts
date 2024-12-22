@@ -1,6 +1,6 @@
 export const projectData = {
     saeSupra : { 
-      title: "SUPRA SAE INDIA",
+      title: "SAE SUPRA 2019",
       description: "Raptor Racing from the Indian Institute of Technology Mandi participated in the SUPRA SAEINDIA 2019 competition with a goal of creating a race car that balances performance, safety, and cost-effectiveness. The project aimed to design a vehicle for non-professional weekend racers, offering affordability, reliability, and minimal maintenance. The result of our hard work was the Eagle 1.0, a car built to meet the high standards of performance and safety while maintaining a focus on affordability and ease of maintenance.",
       workDetails: [
         [
@@ -56,7 +56,7 @@ export const projectData = {
       images: [
         { src: "/projectGallery/supra1.jpg", alt: "SUPRA SAEINDIA 2019 Image 1" },
         { src: "/projectGallery/supra2.jpg", alt: "SUPRA SAEINDIA 2019 Image 2" },
-        { src: "/projectGallery/supra3.jpeg", alt: "SUPRA SAEINDIA 2019 Image 3" },
+        { src: "/projectGallery/supra3.jpg", alt: "SUPRA SAEINDIA 2019 Image 3" },
         { src: "/projectGallery/supra4.JPG", alt: "SUPRA SAEINDIA 2019 Image 4" },
         { src: "/projectGallery/supra5.JPG", alt: "SUPRA SAEINDIA 2019 Image 5" },
         { src: "/projectGallery/supra6.JPG", alt: "SUPRA SAEINDIA 2019 Image 6" },

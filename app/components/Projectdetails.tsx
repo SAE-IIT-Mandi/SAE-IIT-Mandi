@@ -5,22 +5,52 @@ import styles from './Projectdetails.module.css';
 interface WorkItem {
   heading: string;
   description: string;
-  image?: { src: string; alt: string }; 
 }
 
-interface ProjectDetailsProps {
+interface ProjectData {
   title: string;
   description: string;
   workDetails: WorkItem[][];
-  images: { src: string; alt: string }[];
+  images: {
+    src: string;
+    alt: string;
+  }[];
+}
+
+interface ProjectDetailsProps {
+  projectKey: string;
+  projectData: ProjectData;
 }
 
 const Project: React.FC<ProjectDetailsProps> = ({
-  title = "Project Title",
-  description = "Project Description",
-  workDetails = [],
-  images = []
+  projectKey,
+  projectData
 }) => {
+  const { title, description, workDetails, images } = projectData;
+
+  const imagesPerSection = Math.floor(images.length / workDetails[0].length);
+
+  const [currentImageIndexes, setCurrentImageIndexes] = useState<number[]>(
+    workDetails[0].map((_, index) => index * imagesPerSection)
+  );
+
+  const cycleImage = (itemIndex: number) => {
+    setCurrentImageIndexes(prev => {
+      const newIndexes = [...prev];
+      const startIndex = itemIndex * imagesPerSection;
+      const endIndex = startIndex + imagesPerSection;
+      const currentIndex = newIndexes[itemIndex];
+      
+      // Cycle through images only within the section's range
+      let nextIndex = currentIndex + 1;
+      if (nextIndex >= endIndex || nextIndex >= images.length) {
+        nextIndex = startIndex;
+      }
+      
+      newIndexes[itemIndex] = nextIndex;
+      return newIndexes;
+    });
+  };
 
   return (
     <div className={styles.container}>
@@ -30,42 +60,55 @@ const Project: React.FC<ProjectDetailsProps> = ({
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.subtitle}>{description}</p>
         </div>
-        <div
-          className={styles.heroBg}
-        />
+        {images.length > 0 && (
+          <div
+            className={styles.heroBg}
+          />
+        )}
       </div>
 
       <div className={styles.content}>
-        {workDetails && workDetails.length > 0 && workDetails.map((section, sectionIndex) => (
+        {workDetails.map((section, sectionIndex) => (
           <div
             key={sectionIndex}
             className={styles.section}
           >
-            {section && section.map((item, itemIndex) => (
-              <div
-                key={itemIndex}
-                className={styles.workItem}
-              >
-                <div className={styles.workItemContent}>
-                  <h3 className={styles.workItemHeading}>
-                    {item.heading}
-                  </h3>
-                  <p className={styles.workItemText}>
-                    {item.description}
-                  </p>
-                </div>
-                {item.image && (
-                  <div className={styles.workItemImage}>
-                    <img
-                      src={item.image.src}
-                      alt={item.image.alt}
-                      loading="lazy"
-                    />
+            {section.map((item, itemIndex) => {
+              const startImageIndex = itemIndex * imagesPerSection;
+              const hasImages = startImageIndex < images.length;
+
+              return (
+                <div
+                  key={itemIndex}
+                  className={styles.workItem}
+                >
+                  <div className={styles.workItemContent}>
+                    <h3 className={styles.workItemHeading}>
+                      {item.heading}
+                    </h3>
+                    <p className={styles.workItemText}>
+                      {item.description}
+                    </p>
                   </div>
-                )}
-                <div className={styles.workItemDecoration} />
-              </div>
-            ))}
+                  {hasImages && (
+                    <div 
+                      className={styles.workItemImage}
+                      onClick={() => cycleImage(itemIndex)}
+                    >
+                      <img
+                        src={images[currentImageIndexes[itemIndex]].src}
+                        alt={images[currentImageIndexes[itemIndex]].alt}
+                        loading="lazy"
+                      />
+                      <div className={styles.imageCounter}>
+                        {`Image ${(currentImageIndexes[itemIndex] % imagesPerSection) + 1} of ${imagesPerSection}`}
+                      </div>
+                    </div>
+                  )}
+                  <div className={styles.workItemDecoration} />
+                </div>
+              );
+            })}
           </div>
         ))}
       </div>
