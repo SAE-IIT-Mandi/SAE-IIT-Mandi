@@ -37,20 +37,12 @@ const Project: React.FC<ProjectDetailsProps> = ({
   const cycleImage = (itemIndex: number) => {
     setCurrentImageIndexes(prev => {
       const newIndexes = [...prev];
-      const startIndex = itemIndex * imagesPerSection;
-      const endIndex = startIndex + imagesPerSection;
-      const currentIndex = newIndexes[itemIndex];
-      
-      // Cycle through images only within the section's range
-      let nextIndex = currentIndex + 1;
-      if (nextIndex >= endIndex || nextIndex >= images.length) {
-        nextIndex = startIndex;
-      }
-      
-      newIndexes[itemIndex] = nextIndex;
+      const totalImages = images.length;
+      newIndexes[itemIndex] = (newIndexes[itemIndex] + 1) % totalImages;
       return newIndexes;
     });
   };
+  
 
   return (
     <div className={styles.container}>
