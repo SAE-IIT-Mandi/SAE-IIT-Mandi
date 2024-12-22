@@ -110,12 +110,12 @@ export const projectData = {
           ],
         ],
         images: [
-            { src: "/projectGallery/efficycle2023_1.JPG", alt: "Efficycle 2024 Image 1" },
-            { src: "/projectGallery/efficycle2023_2.jpg", alt: "Efficycle 2024 Image 2" },
-            { src: "/projectGallery/efficycle2023_3.JPG", alt: "Efficycle 2024 Image 3" },
-            { src: "/projectGallery/efficycle2023_4.jpg", alt: "Efficycle 2024 Image 4" },
-            { src: "/projectGallery/efficycle2023_5.jpg", alt: "Efficycle 2024 Image 5" },
-            { src: "/projectGallery/efficycle2023_6.jpg", alt: "Efficycle 2024 Image 6" },  
+            { src: "/projectGallery/effi1.jpg", alt: "Efficycle 2024 Image 1" },
+            { src: "/projectGallery/effi2.jpg", alt: "Efficycle 2024 Image 2" },
+            { src: "/projectGallery/effi3.JPG", alt: "Efficycle 2024 Image 3" },
+            { src: "/projectGallery/effi4.jpg", alt: "Efficycle 2024 Image 4" },
+            { src: "/projectGallery/effi5.jpg", alt: "Efficycle 2024 Image 5" },
+            { src: "/projectGallery/effi6.jpg", alt: "Efficycle 2024 Image 6" },  
         ]        
     },
     efficycle24: {
