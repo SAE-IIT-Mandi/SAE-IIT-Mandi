@@ -51,16 +51,16 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/sponsors">Sponsors</Link>
-          </li>
-          <li>
             <Link href="/projects">  Projects</Link>
           </li>
           <li>
             <Link href="/highlights">Highlights</Link>
           </li>
           <li>
-            <Link href="/teamsae">Team SAE </Link>
+            <Link href="/sponsors">Sponsors</Link>
+          </li>
+          <li>
+            <Link href="/teamsae">Team </Link>
           </li>
           <li>
             <Link href="/gallery">Gallery</Link>
