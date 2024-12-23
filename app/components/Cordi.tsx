@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const Cordi: React.FC = () => {
   return (
-    <section className={styles.whoAreWeSection}>
+    <section className={styles.cordiSection}>
     <div className={styles.imageContainer}>
-      <Image src="/homepage/Badal.webp" alt="SAE Logo" width={300} height={300} />
+      <Image src="/homepage/Badal.webp" alt="SAE Logo" width={280} height={280} />
       </div>
       <div className={styles.textContainer}>
         <h2>Coordinator's Note</h2>
