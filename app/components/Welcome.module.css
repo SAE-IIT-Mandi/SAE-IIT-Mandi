@@ -17,8 +17,8 @@
   color: #FF0101;
   font-size: 3rem;
   text-shadow: 0 0 7px rgba(255, 0, 0, 0.8);
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
   animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end 4s forwards;
 }
 
@@ -27,7 +27,7 @@
     width: 0;
   }
   to {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -75,22 +75,23 @@
   }
 }
 
-@media (max-width: 768px) {
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 65%; 
-    }
-  }
+@media (max-width: 900px) {
+
   .welcome {
     flex-direction: column; 
     text-align: center; 
   }
-
+  .headingDiv {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
   .heading {
-    font-size: 2rem; 
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    animation: none;
   }
 
   .paragraph {
@@ -98,7 +99,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .heading {
     font-size: 1.5rem; 
   }

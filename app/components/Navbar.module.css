@@ -1,55 +1,44 @@
-
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
   background: 
     linear-gradient(129deg, transparent 50%, #C0141A 50%, #C0141A 52.5%, transparent 52.5%), 
-    linear-gradient(129deg, transparent 53%, #C0141A 53%, #C0141A 54.5%, transparent 54.5%);
-  background-color: black;
-  background-size: cover; 
-  background-attachment: fixed; 
+    linear-gradient(129deg, transparent 53%, #C0141A 53%, #C0141A 54.5%, transparent 54.5%),
+    black;
+  background-size: cover;
+  background-attachment: fixed;
   z-index: 10;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .navbar {
-  width: 100%;
   display: flex;
   align-items: center;
-  background-color: none;
   justify-content: center;
+  width: 100%;
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  list-style: none;
   margin: 0;
   padding: 0;
-  flex: 1;
-  justify-content: space-evenly;
 }
 
 .navbar li {
-  margin: 0;
-  margin-left: .3rem;
-  margin-right: .3rem;
+  margin: 0 0.3rem;
 }
 
 .navbar a {
+  color: white;
   font-size: 1rem;
   font-weight: 500;
-  color: white;
   text-decoration: none;
+  padding: 0 0.5rem;
   transition: color 0.3s ease;
-  padding: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .navbar a:hover {
@@ -58,54 +47,54 @@
 
 .logo {
   flex-shrink: 0;
-  margin: 0 .5rem;
-  border: black;
-  border-width: 10px;
+  margin: 0 0.5rem;
 }
 
 .navbarToggle {
   display: none;
-  cursor: pointer;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
+  top: 2.5rem;
+  left: 1.5rem;
   width: 30px;
   height: 30px;
-  transition: transform 0.3s ease;
+  border: 2px solid white;
+  border-radius: 10%;
+  cursor: pointer;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
 .navbarToggle span {
   display: block;
-  width: 100%;
-  height: 3px;
+  width: 20px;
+  height: 2px;
+  margin: 2px;
   background-color: white;
-  margin: 5px auto;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
 }
 
 .navbarToggle.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .navbarToggle.open span:nth-child(2) {
   opacity: 0;
+  transform: scale(0);
 }
 
 .navbarToggle.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 900px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-    padding-top: 8px;
-    border-radius: 0;
-    background: none;
-    width: 100%;
-    box-shadow: none;
+    padding: 8px 0.5rem 0.5rem;
   }
 
   .navbar ul {
@@ -114,36 +103,24 @@
     align-items: center;
   }
 
+  .navbar.active ul {
+    display: block;
+  }
+
   .navbar li {
+    width: 100%;
     margin: 0.5rem 0;
+    padding: 5px 0;
+    text-align: center;
     background-color: #4444;
     border-radius: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .navRight, .navLeft {
-    width: 100%; 
-  }
-
-  .navRight ul, .navLeft ul {
-    padding: 0;
-    justify-content: center; 
   }
 
   .logo.hidden {
     display: none;
   }
 
-  .navbar.active ul {
-    display: block;
-  }
-
   .navbarToggle {
-    display: block;
-    padding-right: 20px;
-    padding-top: 20px;
+    display: flex;
   }
 }

@@ -5,7 +5,7 @@ const Welcome = () => {
   return (
     <div className={styles.welcome}>
       <div className={styles.textContainer}>
-        <h1 className={styles.heading}>Raptor Racing IIT Mandi</h1>
+       <div className={styles.headingDiv}> <h1 className={styles.heading}>Raptor Racing IIT Mandi</h1></div>
         <p className={styles.paragraph}>
           Welcome to the SAE Club - IIT Mandi
           <br></br>

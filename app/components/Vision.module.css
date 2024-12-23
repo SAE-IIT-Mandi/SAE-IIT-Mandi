@@ -16,7 +16,7 @@
 .imageContainer {
   flex: 1;
   opacity: 0;
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s eSase, transform 1s ease;
   padding: 0 20px;
 }
 
@@ -77,12 +77,14 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .whoAreWeSection {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px;
-  }
+
+
+@media (max-width: 900px) {
+  .vision {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
 
   .textContainer,
   .imageContainer {
@@ -91,19 +93,9 @@
     animation: none; 
     opacity: 1; 
   }
-
-  .textContainer {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .whoAreWeSection {
-    padding: 20px;
-  }
-
   .imageContainer {
-    margin-top: 20px;
+    width: 100px;
+    height: 100px;
   }
 
   .link {
@@ -113,20 +105,11 @@
   }
   .image{
     width:50%;
-    height: 200px;
+    height: 50%;
   }
 }
 
-@media (max-width: 480px) {
-  .whoAreWeSection {
-    padding: 15px;
-  }
-
-  .textContainer,
-  .imageContainer {
-    padding: 0;
-  }
-
+@media (max-width: 500px) {
   .link {
     font-size: 0.9rem;
   }
