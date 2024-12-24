@@ -121,6 +121,12 @@
     .teamHeading {
         font-size: 2.5rem;
     }
+    .teamPoints {
+        align-items: center;
+    }
+    .teamSubheading{
+        font-weight: 300;
+    }
 }
 @media (max-width: 480px) {
 

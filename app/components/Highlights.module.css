@@ -132,6 +132,8 @@
 @media (max-width: 900px) {
   .section {
     gap: 10px;
+    padding: 10px;
+    margin: 5px;
   }
 
   .ul {
