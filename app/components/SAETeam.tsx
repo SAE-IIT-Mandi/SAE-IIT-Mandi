@@ -180,10 +180,10 @@ const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
   e.preventDefault();
   const scrollThreshold = 50;
   if (!editing && !isScrolling) {
-    if (Math.abs(e.deltaY) < scrollThreshold) return;
-    if (e.deltaY > 0) {
+    if (Math.abs(e.deltaY || e.deltaX) < scrollThreshold) return;
+    if (e.deltaY > 0 || e.deltaX > 0) {
       handleSectionScroll();
-    } else if (e.deltaY < 0) {
+    } else if (e.deltaY < 0 || e.deltaX < 0) {
       handleReverseScroll();
     }
   }
