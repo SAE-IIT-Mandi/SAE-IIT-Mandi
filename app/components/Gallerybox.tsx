@@ -4,10 +4,18 @@ import Image from "next/image";
 import styles from "./Gallerybox.module.css";
 
 const Gallerybox: React.FC = () => {
-  let galleryPaths =  Array.from({ length: 36 }, (_, i) => `/gallery/${i + 1}.webp`); 
-  if(screen.width > 1030){
-    galleryPaths = Array.from({ length: 35 }, (_, i) => `/gallery/${i + 1}.webp`); 
-  }
+  const [galleryPaths, setGalleryPaths] = useState([] as string[]);
+
+  useEffect(() => {
+    let paths= Array.from({ length: 36 }, (_, i) => `/gallery/${i + 1}.webp`);
+
+    if (typeof window !== "undefined" && screen.width > 1030) {
+      paths = Array.from({ length: 35 }, (_, i) => `/gallery/${i + 1}.webp`);
+    }
+
+    setGalleryPaths(paths);
+  }, []);
+
   const [images, setImages] = useState<string[]>(galleryPaths);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
