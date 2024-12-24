@@ -35,7 +35,7 @@ const Footer = () => {
   return (
     <div className={styles.footerDiv}>
       <div className={styles.footerDiv1}>
-        <Image src="/images/SAE-rriitm.webp" alt="IIT Mandi RR Logo" width={180} height={120} />
+        <Image src="/images/SAE-rriitm.webp" alt="IIT Mandi RR Logo" width={180} height={120} className={styles.logoimg}/>
         <div className={styles.contact_info}>
                     <h2>Get in Touch</h2>
                     <p><a href="mailto:sae@iitmandi.ac.in">sae@iitmandi.ac.in</a></p>

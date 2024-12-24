@@ -72,3 +72,35 @@
   width: 100px; 
   height: auto;
 }
+
+
+@media (max-width: 900px) {
+
+  .carDetails {
+    margin-left: 0;
+    text-align: center;
+  }
+  .logoContainer img {
+    width: 70px; 
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .carName {
+    font-size: 14px;
+  }
+
+  .carDescription {
+    font-size: 10px;
+  }
+
+  .carImage {
+    max-width: 150px;
+    max-height: 120px;
+  }
+
+  .logoContainer {
+    display: none;
+  }
+}

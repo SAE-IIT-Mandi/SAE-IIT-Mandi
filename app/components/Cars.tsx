@@ -48,6 +48,7 @@ const carsData = [
 
 const Cars: React.FC = () => {
   return (
+    
     <div className={styles.container}>
       {/* <div className={styles.headNote}><span>(Click on the Car Name for more details)</span></div> */}
       {carsData.map(car => (

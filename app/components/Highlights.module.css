@@ -129,3 +129,62 @@
 .cancelButton:hover {
   background-color: #555;
 }
+@media (max-width: 900px) {
+  .section {
+    gap: 10px;
+  }
+
+  .ul {
+    gap: 10px;
+  }
+
+  .li {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .image {
+    width: 80%;
+    height: auto;
+  }
+
+  .h3 {
+    font-size: 1.5rem;
+  }
+
+  .p {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 0.4rem 1rem;
+  }
+
+  .addItemForm {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .h3 {
+    font-size: 1.25rem;
+  }
+
+  .p {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 0.3rem 0.8rem;
+  }
+
+  .input,
+  .textarea {
+    font-size: 0.9rem;
+  }
+}

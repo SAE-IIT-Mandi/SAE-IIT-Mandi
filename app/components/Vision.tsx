@@ -43,7 +43,7 @@ const Vision = () => {
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <Image className='image' src="/images/vision.webp" alt="SAE Logo" width={500} height={200} />
+        <Image className={styles.img} src="/images/vision.webp" alt="SAE Logo" width={500} height={200} />
       </div>
     </section>
   );
