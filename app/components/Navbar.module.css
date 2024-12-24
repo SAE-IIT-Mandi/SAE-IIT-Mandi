@@ -123,4 +123,7 @@
   .navbarToggle {
     display: flex;
   }
+  .header{
+    background: black;
+  }
 }
