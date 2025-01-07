@@ -1,132 +1,163 @@
 export const projectData = {
-    saeSupra : { 
-      title: "SAE SUPRA 2019",
-      description: "Raptor Racing from the Indian Institute of Technology Mandi participated in the SUPRA SAEINDIA 2019 competition with a goal of creating a race car that balances performance, safety, and cost-effectiveness. The project aimed to design a vehicle for non-professional weekend racers, offering affordability, reliability, and minimal maintenance. The result of our hard work was the Eagle 1.0, a car built to meet the high standards of performance and safety while maintaining a focus on affordability and ease of maintenance.",
-      workDetails: [
-        [
-          {
-            heading: "Chassis Design",
-            description: `
+  saeSupra: {
+    title: "SAE SUPRA 2019",
+    description:
+      "Raptor Racing from the Indian Institute of Technology Mandi participated in the SUPRA SAEINDIA 2019 competition with a goal of creating a race car that balances performance, safety, and cost-effectiveness. The project aimed to design a vehicle for non-professional weekend racers, offering affordability, reliability, and minimal maintenance. The result of our hard work was the Eagle 1.0, a car built to meet the high standards of performance and safety while maintaining a focus on affordability and ease of maintenance.",
+    workDetails: [
+      [
+        {
+          heading: "Chassis Design",
+          description: `
               The chassis, made from 4130 mild steel, was optimized for high torsional stiffness using Altair Hyperworks.
               With a wheelbase of 1600 mm and front and rear tracks of 1300 mm and 1250 mm, respectively, the chassis provides
               stability during high-speed cornering while maintaining driver safety.
             `,
-          },
-          {
-            heading: "Steering System",
-            description: `
+        },
+        {
+          heading: "Steering System",
+          description: `
               The car utilized a parallel steer geometry with a 9:1 steer ratio to improve control during high-speed turns. The system incorporated
               moderate toe adjustments at the front for better turn-in response and 0° toe at the rear for stability. A quick-release steering wheel
               was also added for compactness and safety.
             `,
-          },
-          {
-            heading: "Braking System",
-            description: `
+        },
+        {
+          heading: "Braking System",
+          description: `
               A disc brake system was used at the front, and drum brakes were used at the rear, with diagonal braking to ensure redundancy in case of
               system failure. The braking system was biased towards the front with 70% braking force, resulting in a 4.9-meter stopping distance at 40 km/h.
             `,
-          },
-        ],
-        [
-          {
-            heading: "Engine Selection",
-            description: `
+        },
+      ],
+      [
+        {
+          heading: "Engine Selection",
+          description: `
               The team chose a Royal Enfield 500cc Carburettor-based engine, known for its durability, low cost, and easy maintenance.
               This 499cc Twinspark Air-cooled engine delivered 26.1 bhp at 5100 rpm and 40.9 Nm of torque at 3800 rpm.
             `,
-          },
-          {
-            heading: "Drivetrain and Tires",
-            description: `
+        },
+        {
+          heading: "Drivetrain and Tires",
+          description: `
               The vehicle was equipped with 13” rims and 19.992-inch rear wheels for better traction, with tires selected for optimal grip.
               The drivetrain was designed to ensure efficient power transmission and stability.
             `,
-          },
-          {
-            heading: "Innovation and Safety",
-            description: `
+        },
+        {
+          heading: "Innovation and Safety",
+          description: `
               Safety was prioritized with features like a dry powder fire extinguisher, roll cage designed for impact absorption, and seat
               belts, helmets, and a quick-release steering wheel. Ergonomics were improved with a custom steering wheel and vibration-free cockpit,
               ensuring driver comfort and safety.
             `,
-          },
-        ],
+        },
       ],
-      images: [
-        { src: "/projectGallery/supra1.webp", alt: "SUPRA SAEINDIA 2019 Image 1" },
-        { src: "/projectGallery/supra2.webp", alt: "SUPRA SAEINDIA 2019 Image 2" },
-        { src: "/projectGallery/supra3.webp", alt: "SUPRA SAEINDIA 2019 Image 3" },
-        { src: "/projectGallery/supra4.webp", alt: "SUPRA SAEINDIA 2019 Image 4" },
-        { src: "/projectGallery/supra5.webp", alt: "SUPRA SAEINDIA 2019 Image 5" },
-        { src: "/projectGallery/supra6.webp", alt: "SUPRA SAEINDIA 2019 Image 6" },
+    ],
+    images: [
+      {
+        src: "/projectGallery/supra1.webp",
+        alt: "SUPRA SAEINDIA 2019 Image 1",
+      },
+      {
+        src: "/projectGallery/supra2.webp",
+        alt: "SUPRA SAEINDIA 2019 Image 2",
+      },
+      {
+        src: "/projectGallery/supra3.webp",
+        alt: "SUPRA SAEINDIA 2019 Image 3",
+      },
+      {
+        src: "/projectGallery/supra4.webp",
+        alt: "SUPRA SAEINDIA 2019 Image 4",
+      },
+      {
+        src: "/projectGallery/supra5.webp",
+        alt: "SUPRA SAEINDIA 2019 Image 5",
+      },
+      {
+        src: "/projectGallery/supra6.webp",
+        alt: "SUPRA SAEINDIA 2019 Image 6",
+      },
+    ],
+  },
+  efficycle23: {
+    title: "Efficycle 2023",
+    description:
+      "Efficycle 2023 is a hybrid electric and human-powered vehicle designed to meet the global demand for sustainable and renewable energy sources. The vehicle combines electric power and human pedal power to provide an eco-friendly and versatile solution for urban mobility. It comfortably carries two passengers and features a stable tadpole configuration, ensuring easy handling and stability across various terrains. Designed for both urban and off-road use, Efficycle 2023 offers a simple, cost-effective, and reproducible design, making it a promising model for the future of personal transportation.",
+    workDetails: [
+      [
+        {
+          heading: "Drivetrain - Human Powered",
+          description:
+            "The vehicle features individual powertrains for both the driver and co-driver, each powered by a simple chain and sprocket mechanism. Pedaling is optional for both drivers, allowing for manual or combined human-electric propulsion depending on preference.",
+        },
+        {
+          heading: "Drivetrain - Electric Powered",
+          description:
+            "Efficycle 2023 is powered by a 48V, 12Ah battery bank and a 600W, 48V BLDC motor, reaching a maximum speed of 36 km/h with an acceleration of 1.37 m/s². The electric motor ensures an efficient, eco-friendly travel option.",
+        },
+        {
+          heading: "Drivetrain - Hybrid Powered",
+          description:
+            "In hybrid mode, Efficycle combines both human and electric power to enhance its velocity and acceleration. This hybrid system provides a dynamic driving experience for both urban and off-road conditions.",
+        },
+        {
+          heading: "Steering System",
+          description:
+            "The vehicle uses an Ackermann steering system, which minimizes friction and wear while providing excellent handling and a turning radius of 4 meters.",
+        },
+        {
+          heading: "Suspension System",
+          description:
+            "Efficycle 2023 features a combination of double wishbone suspension at the front and a forklift configuration for the rear. This provides excellent comfort and stability on various terrains.",
+        },
+        {
+          heading: "Wheels & Tyres",
+          description:
+            "The vehicle is equipped with 27.5-inch front wheels and 28-inch rear wheels, providing the perfect balance of grip and comfort. The front tyres are 2.1 inches wide, and the rear tires are 1.5 inches wide.",
+        },
+        {
+          heading: "Braking System",
+          description:
+            "Efficycle 2023 uses mechanical disc brakes on all three wheels, ensuring superior stopping power. The vehicle has a calculated stopping distance of 36.4 meters at its maximum speed.",
+        },
+        {
+          heading: "Seats and Comfort",
+          description:
+            "The seats are made of comfortable foam material and feature an 18-degree back angle for improved driver posture. The vehicle's ergonomic design ensures comfort even on long rides.",
+        },
+        {
+          heading: "Safety Features",
+          description:
+            "Efficycle 2023 is equipped with seat belts, side protection members, and overhead protection members made from AISI 4130 steel. These features provide enhanced safety for both the driver and the co-driver.",
+        },
+        {
+          heading: "Ergonomics and Comfort Features",
+          description:
+            "The ergonomic design of Efficycle 2023 emphasizes ease of use, comfort, and accessibility. The low pedal positioning and optimized seat-back angle ensure a comfortable driving posture.",
+        },
       ],
-    },
-    efficycle23:{
-        title: "Efficycle 2023",
-        description: "Efficycle 2023 is a hybrid electric and human-powered vehicle designed to meet the global demand for sustainable and renewable energy sources. The vehicle combines electric power and human pedal power to provide an eco-friendly and versatile solution for urban mobility. It comfortably carries two passengers and features a stable tadpole configuration, ensuring easy handling and stability across various terrains. Designed for both urban and off-road use, Efficycle 2023 offers a simple, cost-effective, and reproducible design, making it a promising model for the future of personal transportation.",
-        workDetails: [
-          [
-            {
-            heading: "Drivetrain - Human Powered",
-            description: "The vehicle features individual powertrains for both the driver and co-driver, each powered by a simple chain and sprocket mechanism. Pedaling is optional for both drivers, allowing for manual or combined human-electric propulsion depending on preference."
-            },
-            {
-            heading: "Drivetrain - Electric Powered",
-            description: "Efficycle 2023 is powered by a 48V, 12Ah battery bank and a 600W, 48V BLDC motor, reaching a maximum speed of 36 km/h with an acceleration of 1.37 m/s². The electric motor ensures an efficient, eco-friendly travel option."
-            },
-            {
-            heading: "Drivetrain - Hybrid Powered",
-            description: "In hybrid mode, Efficycle combines both human and electric power to enhance its velocity and acceleration. This hybrid system provides a dynamic driving experience for both urban and off-road conditions."
-            },
-            {
-            heading: "Steering System",
-            description: "The vehicle uses an Ackermann steering system, which minimizes friction and wear while providing excellent handling and a turning radius of 4 meters."
-            },
-            {
-            heading: "Suspension System",
-            description: "Efficycle 2023 features a combination of double wishbone suspension at the front and a forklift configuration for the rear. This provides excellent comfort and stability on various terrains."
-            },
-            {
-            heading: "Wheels & Tyres",
-            description: "The vehicle is equipped with 27.5-inch front wheels and 28-inch rear wheels, providing the perfect balance of grip and comfort. The front tyres are 2.1 inches wide, and the rear tires are 1.5 inches wide."
-            },
-            {
-            heading: "Braking System",
-            description: "Efficycle 2023 uses mechanical disc brakes on all three wheels, ensuring superior stopping power. The vehicle has a calculated stopping distance of 36.4 meters at its maximum speed."
-            },
-            {
-            heading: "Seats and Comfort",
-            description: "The seats are made of comfortable foam material and feature an 18-degree back angle for improved driver posture. The vehicle's ergonomic design ensures comfort even on long rides."
-            },
-            {
-            heading: "Safety Features",
-            description: "Efficycle 2023 is equipped with seat belts, side protection members, and overhead protection members made from AISI 4130 steel. These features provide enhanced safety for both the driver and the co-driver."
-            },
-            {
-            heading: "Ergonomics and Comfort Features",
-            description: "The ergonomic design of Efficycle 2023 emphasizes ease of use, comfort, and accessibility. The low pedal positioning and optimized seat-back angle ensure a comfortable driving posture."
-            }
-          ],
-        ],
-        images: [
-            { src: "/projectGallery/effi1.webp", alt: "Efficycle 2023 Image 1" },
-            { src: "/projectGallery/effi2.webp", alt: "Efficycle 2023 Image 2" },
-            { src: "/projectGallery/effi3.webp", alt: "Efficycle 2023 Image 3" },
-            { src: "/projectGallery/effi4.webp", alt: "Efficycle 2023 Image 4" },
-            { src: "/projectGallery/effi5.webp", alt: "Efficycle 2023 Image 5" },
-            { src: "/projectGallery/effi6.webp", alt: "Efficycle 2023 Image 6" },  
-            { src: "/projectGallery/effi1.webp", alt: "Efficycle 2023 Image 7" },
-            { src: "/projectGallery/effi2.webp", alt: "Efficycle 2023 Image 8" },
-            { src: "/projectGallery/effi3.webp", alt: "Efficycle 2023 Image 9" },
-            { src: "/projectGallery/effi4.webp", alt: "Efficycle 2023 Image 10" },
-        ]        
-    },
-    efficycle24: {
-      title: "Efficycle 2024",
-      description: "Efficycle 2024 is a continuation of a legacy started by our seniors at IIT Mandi. Under the mentorship of Dr. Gajendra Singh and the leadership of Mr. Keshav Verma, we refined the basic prototype into a fully functional vehicle. Efficycle is designed to operate both manually (pedal-powered) and electrically (battery-powered). This dual-mode functionality makes it a unique, environmentally friendly vehicle that is less labor-intensive compared to conventional bicycles.",
-      workDetails: [
-        [
+    ],
+    images: [
+      { src: "/projectGallery/effi1.webp", alt: "Efficycle 2023 Image 1" },
+      { src: "/projectGallery/effi2.webp", alt: "Efficycle 2023 Image 2" },
+      { src: "/projectGallery/effi3.webp", alt: "Efficycle 2023 Image 3" },
+      { src: "/projectGallery/effi4.webp", alt: "Efficycle 2023 Image 4" },
+      { src: "/projectGallery/effi5.webp", alt: "Efficycle 2023 Image 5" },
+      { src: "/projectGallery/effi6.webp", alt: "Efficycle 2023 Image 6" },
+      { src: "/projectGallery/effi1.webp", alt: "Efficycle 2023 Image 7" },
+      { src: "/projectGallery/effi2.webp", alt: "Efficycle 2023 Image 8" },
+      { src: "/projectGallery/effi3.webp", alt: "Efficycle 2023 Image 9" },
+      { src: "/projectGallery/effi4.webp", alt: "Efficycle 2023 Image 10" },
+    ],
+  },
+  efficycle24: {
+    title: "Efficycle 2024",
+    description:
+      "Efficycle 2024 is a continuation of a legacy started by our seniors at IIT Mandi. Under the mentorship of Dr. Gajendra Singh and the leadership of Mr. Keshav Verma, we refined the basic prototype into a fully functional vehicle. Efficycle is designed to operate both manually (pedal-powered) and electrically (battery-powered). This dual-mode functionality makes it a unique, environmentally friendly vehicle that is less labor-intensive compared to conventional bicycles.",
+    workDetails: [
+      [
         {
           heading: "Steering",
           description: `
@@ -165,13 +196,133 @@ export const projectData = {
         },
       ],
     ],
-      images: [
-        { src: "/projectGallery/efficycle1.webp", alt: "Efficycle 2024 Image 1" },
-        { src: "/projectGallery/efficycle2.webp", alt: "Efficycle 2024 Image 2" },
-        { src: "/projectGallery/efficycle3.webp", alt: "Efficycle 2024 Image 3" },
-        { src: "/projectGallery/efficycle4.webp", alt: "Efficycle 2024 Image 4" },
-        { src: "/projectGallery/efficycle5.webp", alt: "Efficycle 2024 Image 5" },
-        { src: "/projectGallery/efficycle6.webp", alt: "Efficycle 2024 Image 6" },
+    images: [
+      { src: "/projectGallery/efficycle1.webp", alt: "Efficycle 2024 Image 1" },
+      { src: "/projectGallery/efficycle2.webp", alt: "Efficycle 2024 Image 2" },
+      { src: "/projectGallery/efficycle3.webp", alt: "Efficycle 2024 Image 3" },
+      { src: "/projectGallery/efficycle4.webp", alt: "Efficycle 2024 Image 4" },
+      { src: "/projectGallery/efficycle5.webp", alt: "Efficycle 2024 Image 5" },
+      { src: "/projectGallery/efficycle6.webp", alt: "Efficycle 2024 Image 6" },
+    ],
+  },
+
+  transmissionGearbox: {
+    title: "Transmission Gearbox Model with Digital Tachometer",
+    description:
+      "This project demonstrates the design and simulation of a gearbox transmission mechanism integrated with a digital tachometer. The gearbox highlights the mechanics of power transfer using multiple gears, while the tachometer provides real-time RPM monitoring.",
+    workDetails: [
+      [
+        {
+          heading: "Simulation of Mechanical Transmission System",
+          description:
+            "The gearbox was simulated to showcase power transfer through various gear configurations, helping visualize the impact of different gear ratios on performance, rotational speed, and torque.",
+        },
+        {
+          heading: "Digital Tachometer Design",
+          description:
+            "A digital tachometer was developed using sensors and microcontrollers to measure and display the RPM of the gearbox's output shaft, ensuring real-time performance feedback.",
+        },
+        {
+          heading: "Mechanics and Electronics Integration",
+          description:
+            "The project integrated mechanical components, such as gears and shafts, with electronics, including sensors and displays, to create a seamless system.",
+        },
       ],
-    },
-}
+      [
+        {
+          heading: "Gear Ratio Analysis",
+          description:
+            "The system optimized gear ratios to enhance torque transmission efficiency, ensuring minimal losses and smooth operation under various loads.",
+        },
+        {
+          heading: "Material Selection and Design",
+          description:
+            "Materials like steel and aluminum were evaluated for strength and durability, while lightweight components were chosen for the tachometer to ease integration.",
+        },
+        {
+          heading: "CAD Modelling and Simulation",
+          description:
+            "The gearbox components were precisely modeled and simulated using SolidWorks, with emphasis on functionality and operational conditions.",
+        },
+      ],
+    ],
+    images: [
+      {
+        src: "/projectGallery/gearbox1.webp",
+        alt: "Transmission Gearbox Image 1",
+      },
+      {
+        src: "/projectGallery/gearbox2.webp",
+        alt: "Transmission Gearbox Image 2",
+      },
+      {
+        src: "/projectGallery/gearbox3.webp",
+        alt: "Transmission Gearbox Image 3",
+      },
+      {
+        src: "/projectGallery/gearbox4.webp",
+        alt: "Transmission Gearbox Image 4",
+      },
+    ],
+  },
+
+  vehicleTelemetry: {
+    title: "Vehicle Telemetry System",
+    description:
+      "A system designed to monitor vehicle performance in real-time, integrating hardware, software, and communication protocols to enhance safety, efficiency, and data analysis.",
+    workDetails: [
+      [
+        {
+          heading: "Real-time Monitoring",
+          description:
+            "Provides live data on vehicle performance, location, and conditions, ensuring safe and efficient operations by tracking parameters such as speed and engine status.",
+        },
+        {
+          heading: "Enhanced Safety",
+          description:
+            "Monitors driver behavior and sends alerts for unsafe actions. Enables rapid response in emergencies by notifying operators or services.",
+        },
+        {
+          heading: "Predictive Maintenance",
+          description:
+            "Analyzes data to predict potential failures, allowing timely servicing and reducing downtime through predictive algorithms.",
+        },
+      ],
+      [
+        {
+          heading: "Operational Efficiency",
+          description:
+            "Optimizes routes and fuel consumption using GPS and data analysis, improving fleet management and productivity.",
+        },
+        {
+          heading: "Data Logging and Analysis",
+          description:
+            "Maintains logs for future analysis to improve vehicle design and operational strategies through historical trends.",
+        },
+        {
+          heading: "Implementation Progress",
+          description:
+            "Front-end design completed, Firebase backend for data storage, and sensors like GPS, IMU, and OBD-II integrated for real-time data acquisition.",
+        },
+      ],
+    ],
+    images: [
+      {
+        src: "/projectGallery/telemetry1.webp",
+        alt: "Vehicle Telemetry Image 1",
+      },
+      {
+        src: "/projectGallery/telemetry2.webp",
+        alt: "Vehicle Telemetry Image 2",
+      },
+      {
+        src: "/projectGallery/telemetry3.webp",
+        alt: "Vehicle Telemetry Image 3",
+      },
+      {
+        src: "/projectGallery/telemetry4.webp",
+        alt: "Vehicle Telemetry Image 4",
+      },
+    ],
+  },
+};
