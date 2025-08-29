@@ -12,7 +12,7 @@ export default function Home() {
       <h1 className={styles.heading}>Our Projects</h1>
       <div className={styles.projects}>
         <Project_card
-          src="/homepage/formula-bharat.webp"
+          src="/homepage/FB.jpg"
           name="SAE Formula Bharat"
           writeup="The SAE Club of IIT Mandi is gearing up for Formula Bharat EV 2026, focusing on designing and building an electric Formula-style race car. With cutting-edge technology and teamwork, we aim to compete at the forefront of electric motorsport."
         />

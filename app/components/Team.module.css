@@ -1,136 +1,130 @@
 .teamSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    padding: 10px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 10px;
 }
 
 .teamContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
 }
 
 .teamHeading {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .teamSubheading {
-    font-size: 1.5rem;
-    color: #FF0101;
-    text-shadow: 0 0 7px rgba(255, 0, 0, 0.8);
-    margin-bottom: 40px;
-    line-height: 1.5;
+  font-size: 1.5rem;
+  color: #ff0101;
+  text-shadow: 0 0 7px rgba(255, 0, 0, 0.8);
+  margin-bottom: 40px;
+  line-height: 1.5;
 }
 
+/* ✅ Changed: enable bullets globally */
 .teamPoints {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: disc; /* normal bullets */
+  padding-left: 20px; /* indentation */
+  margin: 0;
 }
 
 .teamPoint {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    padding-left: 40px;
-    position: relative;
-    transition: color 0.3s ease;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: list-item; /* ensure it behaves like normal li */
+  align-items: center;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-.checkIcon {
-    position: absolute;
-    left: 0;
-    color: #FF0101;
-    font-size: 1.5rem;
+/* ✅ New: white bullets */
+.teamPoint::marker {
+  color: white;
+  font-size: 1.2rem; /* optional bigger bullets */
 }
 
 .teamImageWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 0 20px;
 }
 
 .teamImage {
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 .teamImage:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 @media (max-width: 1000px) {
-    .teamSection {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 60px 40px;
-    }
+  .teamSection {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 40px;
+  }
 
-    .teamContent {
-        width: 50%;
-        padding-right: 40px;
-    }
+  .teamContent {
+    width: 50%;
+    padding-right: 40px;
+  }
 
-    .teamHeading {
-        font-size: 2.5rem;
-        text-align: center;
-    }
+  .teamHeading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 
-    .teamSubheading {
-        font-size: 1.25rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+  .teamSubheading {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    .teamPoint {
-        font-size: 1rem;
-        padding-left: 20px;
-    }
+  .teamPoint {
+    color: white;
+  }
 
-    .teamImageWrapper {
-        margin-top: 30px;
-        padding: 0;
-        padding-bottom: 20px;
-    }
+  .teamImageWrapper {
+    margin-top: 30px;
+    padding: 0;
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 900px) {
-    .teamSection {
-        padding-top: 5px;
-        flex-direction: column;
-    }
-    .teamContent {
-        width: 100%;
-        padding: 0 1rem;
-        align-items: center;
-    }
-    .teamHeading {
-        font-size: 2.5rem;
-    }
-    .teamPoints {
-        align-items: center;
-    }
-    .teamSubheading{
-        font-weight: 300;
-    }
+  .teamSection {
+    padding-top: 5px;
+    flex-direction: column;
+  }
+  .teamContent {
+    width: 100%;
+    padding: 0 1rem;
+    align-items: center;
+  }
+  .teamHeading {
+    font-size: 2.5rem;
+  }
+  .teamSubheading {
+    font-weight: 300;
+  }
 }
-@media (max-width: 480px) {
 
-    /* .teamImage {
+@media (max-width: 480px) {
+  /* .teamImage {
         width: 96%; 
         height: 96%;
     } */
