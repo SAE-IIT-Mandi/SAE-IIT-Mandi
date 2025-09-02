@@ -6,9 +6,8 @@
   background-color: transparent;
 }
 
-
 .header {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -29,14 +28,14 @@
   padding-right: 2rem;
 }
 
-.sectionTitle { 
-  font-size: 2rem; 
-  color: white; 
-} 
- 
-.sectionDescription { 
-  font-size: 1.1rem; 
-  color: white; 
+.sectionTitle {
+  font-size: 2rem;
+  color: white;
+}
+
+.sectionDescription {
+  font-size: 1.1rem;
+  color: white;
 }
 
 .textContainer {
@@ -46,7 +45,7 @@
 .h3 {
   margin: 0 0 1rem 0;
   font-size: 1.75rem;
-  color: #FF4D4D;
+  color: #ff4d4d;
 }
 
 .p {
@@ -56,7 +55,7 @@
 }
 
 .button {
-  background-color: #C1131A;
+  background-color: #c1131a;
   color: #fff;
   border: none;
   padding: 0.5rem 1.5rem;
@@ -117,8 +116,6 @@
   background-color: #555;
 }
 
-
-
 .navigationContainer {
   position: relative;
   left: 50%;
@@ -129,30 +126,47 @@
   align-items: center;
   justify-content: center;
   justify-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   z-index: 5;
 }
 
 .navButton {
   width: 1.5rem;
-  height: .5rem;
+  height: 0.5rem;
   border-radius: 10%;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  background-color: #d1d5db; 
+  background-color: #d1d5db;
 }
 
 .navButton:hover {
-  background-color: #9ca3af; 
+  background-color: #9ca3af;
   transform: scale(1.1);
 }
 
 .navButton.active {
-  background-color: #FF4D4D;
-  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3); 
+  background-color: #ff4d4d;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
 }
 
+.imageContainer {
+  width: 120px; /* or any fixed width */
+  aspect-ratio: 1 / 1; /* 1:1 for square, or 3/4, 16/9, etc. */
+  overflow: hidden;
+  border-radius: 50%; /* optional, for circle */
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {

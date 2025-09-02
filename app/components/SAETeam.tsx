@@ -23,6 +23,13 @@ import ProfileCard from "./ProfileCard";
 
 const POSITIONS = [
   {
+    value: "Faculty Advisor",
+    label: "Faculty Advisor",
+    description:
+      "Experienced 4th and 3rd-year students act as mentors, leveraging their technical expertise and past experiences to guide junior members in projects and competitions. They play a crucial role in skill development and team coordination.",
+    // image: "path/to/mentorPhoto.jpg",
+  },
+  {
     value: "mentors",
     label: "Mentors",
     description:
@@ -84,6 +91,7 @@ interface Member {
 }
 
 const SECTION_DURATIONS = [
+  30000, //Faculty Advisor
   45000, // Mentors
   35000, // Club Coordinator and Co-Coordinator
   10000, // Project Lead
